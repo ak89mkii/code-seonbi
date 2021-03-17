@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
-import logo from '../../Img/logo.png'
+import '../../App.css';
+import logo from '../../Img/logo.png';
 
 const Nav = () => {
     return (
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand href="#home">
+                <div className="title">
                 <img
                 alt=""
                 src={logo}
@@ -13,7 +15,7 @@ const Nav = () => {
                 height="100"
                 className="d-inline-block align-center"
                 />{' '}
-                Code Seonbi
+                Code Seonbi</div>
             </Navbar.Brand>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />

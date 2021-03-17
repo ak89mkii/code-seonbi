@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+.title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
