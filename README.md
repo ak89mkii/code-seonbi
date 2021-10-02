@@ -24,9 +24,9 @@
 
 # References:
 #### Development Environment:
-// https://www.npmjs.com/package/react-howler
-// https://www.npmjs.com/package/react-copy-to-clipboard
-// https://www.npmjs.com/package/react-iframe
+// https://docs.djangoproject.com/en/3.2/intro/install/
+// https://www.python.org/downloads/
+// https://www.postgresql.org/download/
 #### Information References:
 #### Images References / Credits:
 #### Sounds References / Credits:
