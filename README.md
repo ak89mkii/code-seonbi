@@ -11,7 +11,7 @@
 - CSS
 - React.js
 - Semantic UI React
-- #### Back-End:
+#### Back-End:
 - Django
 - PostgreSQL
 #### Packages:
