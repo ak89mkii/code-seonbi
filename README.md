@@ -1,7 +1,7 @@
 # Code Seonbi: Coding References and Bug Tracker
 
 ## Description:
-(Front-End, React.js) | A web-based coding references and bug tracking application.
+(Full-Stack, Django, PostreSQL, React.js) | A web-based coding references and bug tracking application.
 
 ## Screenshots:
 
