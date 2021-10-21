@@ -28,6 +28,7 @@
 // https://www.python.org/downloads/
 // https://www.postgresql.org/download/
 #### Information References:
+// https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
