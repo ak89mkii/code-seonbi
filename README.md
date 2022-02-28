@@ -27,8 +27,10 @@
 // https://docs.djangoproject.com/en/3.2/intro/install/
 // https://www.python.org/downloads/
 // https://www.postgresql.org/download/
+// https://formulae.brew.sh/formula/postgresql
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
+// https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
