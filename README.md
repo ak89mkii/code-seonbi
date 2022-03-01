@@ -31,6 +31,7 @@
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
+// https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
