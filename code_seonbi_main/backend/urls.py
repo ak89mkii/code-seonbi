@@ -1,6 +1,6 @@
 from django.urls import path
-from.views import main
+from .views import BugView
 
 urlpatterns = [
-    path('', main)
+    path('home', BugView.as_view()),
 ]

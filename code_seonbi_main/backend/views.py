@@ -1,7 +1,10 @@
-from http.client import HTTPResponse
 from django.shortcuts import render
-from django.http import HttpResponse
+from rest_framework import generics
+from .serializers import BugSerializer
+from .models import Bug
 
 # Create your views here.
-def main(request):
-    return HttpResponse("Hello")
+
+class BugView(generics.CreateAPIView):
+    queryset = Bug.objects.all()
+    serializer_class = BugSerializer

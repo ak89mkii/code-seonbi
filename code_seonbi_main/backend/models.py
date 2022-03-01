@@ -17,6 +17,7 @@ STATUSES = (
 )
 
 class Bug(models.Model):
+    project = models.CharField(max_length=100, default='Over 9000!')
     technology = models.CharField(
         max_length=20,
         choices=TECHNOLOGIES,
@@ -30,6 +31,7 @@ class Bug(models.Model):
     description = models.CharField(max_length=1000)
     error = models.CharField(max_length=1000)
     links = models.CharField(max_length=1000)
+    solution = models.CharField(max_length=1000, default='Over 9000!')
     timestamp = models.DateField(auto_now_add=True)
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
 
