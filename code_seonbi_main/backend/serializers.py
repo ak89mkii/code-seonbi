@@ -4,4 +4,4 @@ from .models import Bug
 class BugSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bug
-        fields = ('id', 'technology', 'status', 'description', 'error', 'links', 'timestamp')
+        fields = ('id', 'project', 'technology', 'status', 'description', 'error', 'links', 'solution','timestamp')
