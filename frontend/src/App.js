@@ -10,7 +10,7 @@ import {
 // import 'semantic-ui-css/semantic.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav/Nav.jsx'
-import Home from './pages/Index/Index.jsx'
+import Home from './pages/Index/index.jsx'
 import Error404 from './pages/Error404/error404.jsx'
 
 class App extends Component {
