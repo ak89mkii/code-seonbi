@@ -19,12 +19,14 @@ class Footer extends Component {
         const { open } = this.state
         return (
             <div className='footer'>
-                <div class="row">
-                    <div class="col">
-                        © 2022 Code Seonbi | Ponder Enterprises LLC 
-                    </div>
-                    <div class="col">
-                        <The404Button />
+                <div class="container">
+                    <div class='row'>
+                        <div class="col">
+                            © 2022 Code Seonbi | Ponder Enterprises LLC 
+                        </div>
+                        <div class="col">
+                            <The404Button />
+                        </div>
                     </div>
                 </div>
             </div>
