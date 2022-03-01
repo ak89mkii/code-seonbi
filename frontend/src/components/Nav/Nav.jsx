@@ -19,6 +19,8 @@ const Nav = () => {
             </Navbar.Brand>
             <Form inline>
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                <br></br>
+                <br></br>
                 <Button variant="outline-primary">Search</Button>
             </Form>
         </Navbar>

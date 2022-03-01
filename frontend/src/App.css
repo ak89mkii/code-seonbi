@@ -42,3 +42,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* Footer: */
+
+.footer {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  padding: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.game {
+  margin: 0 auto;
+  display: block;
+}

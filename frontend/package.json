@@ -9,9 +9,12 @@
     "bootstrap": "^4.6.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
+    "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
@@ -37,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "### Resources: // https://fonts.google.com/specimen/Orbitron?preview.text_type=custom",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
