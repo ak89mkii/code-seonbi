@@ -26,7 +26,7 @@ const Nav = (props) => {
                 <FormControl type="text" placeholder="Search" className="mr-sm-2" />
                 <br></br>
                 <br></br>
-                <Button variant="outline-primary">Search</Button>
+                <Button variant="outline-light">Search</Button>            
             </Form>
             <Navbar.Brand></Navbar.Brand>
             <Toggle

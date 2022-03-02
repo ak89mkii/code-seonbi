@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
 import Welcome from '../../components/Welcome/Welcome.jsx'
@@ -13,6 +13,7 @@ class Home extends Component {
     state = {
         open: false,
         mode: 'dark',
+        mode2: 'darkNoText',
         icon: moon,
     }
 
@@ -20,11 +21,13 @@ class Home extends Component {
         if (this.state.mode == 'light') {
             this.setState({
                 mode: 'dark',
+                mode2: 'darkNoText',
                 icon: moon,
             })
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
+                mode2: 'lightNoText',
                 icon: sun,
             })
         }
@@ -48,7 +51,7 @@ class Home extends Component {
                     mode={this.state.mode} 
                 />
                 <CardsMain 
-                    mode={this.state.mode}
+                    mode2={this.state.mode2}
                 />
                 <Footer />
             </div>

@@ -50,9 +50,17 @@
   color: black;
 }
 
+.lightNoText {
+  background-color: white;  
+}
+
 .dark { 
   background-color: #252528;
   color: white;
+}
+
+.darkNoText { 
+  background-color: #252528;
 }
 
 /* Nav: */
@@ -67,6 +75,12 @@
   background-color: rgb(27, 27, 27);
   color: white;
   padding: 10px;
+}
+
+/* CardMain: */
+
+.break {
+  visibility: hidden;
 }
 
 /* 404 Page: */

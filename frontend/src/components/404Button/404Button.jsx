@@ -23,13 +23,10 @@ class The404Button extends Component {
         return (
             <div>
                 <Link to={this.state.random}>
-                    <button type="button" 
-                        class="btn btn-outline-light" 
-                        onClick={this.randomChoice}
-                    >
-                        <h2 className="text404">404</h2>
-                    
-                    </button>
+                    <Button variant="outline-light" onClick={this.randomChoice}>
+                        404
+                    </Button>
+                    {' '}
                 </Link>
             </div>
         )
