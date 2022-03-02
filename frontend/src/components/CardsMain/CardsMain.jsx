@@ -8,7 +8,7 @@ const CardsMain = (props) => {
             <div className={props.mode}><br></br></div>
             <CardGroup>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://cdn.wallpapersafari.com/21/2/zGAvKW.jpg" />
+                <Card.Img variant="top" src="https://www.comingsoon.net/assets/uploads/2021/05/dragon-ball.jpg" />
                 <Card.Body>
                     <Card.Title>Code References</Card.Title>
                     <Card.Text>
