@@ -4,6 +4,7 @@ import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
 import Welcome from '../../components/Welcome/Welcome.jsx'
+import CardsMain from '../../components/CardsMain/CardsMain.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
@@ -45,6 +46,9 @@ class Home extends Component {
                 />
                 <Welcome 
                     mode={this.state.mode} 
+                />
+                <CardsMain 
+                    mode={this.state.mode}
                 />
                 <Footer />
             </div>
