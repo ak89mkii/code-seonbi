@@ -7,9 +7,9 @@ const Welcome = (props) => {
         <div className={props.mode}>
             <figure class="text-center">
                 <div>
-                    <h1>Welcome to Code Seonbi</h1>
+                    <h1 className='title'>Welcome to Code Seonbi</h1>
                     <blockquote class="blockquote">
-                        <p>Code References Database | Bug Tracker | Job Search References & Tracker</p>
+                        <p className='title2'>Code References Database | Bug Tracker | Job Search References & Tracker</p>
                     </blockquote>
                     <br></br>
                     <p>Click on a card below to navigate to the corresponding section.</p>

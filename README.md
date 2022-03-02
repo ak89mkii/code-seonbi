@@ -33,6 +33,9 @@
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
 // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 // https://stackoverflow.com/questions/11434239/django-admin-page-doesnt-show-tables-of-database-djangobook-chapter-06
+// https://stackoverflow.com/questions/62246824/error-err-package-path-not-exported-no-exports-main-resolved-in-app-node-m
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
+// https://fonts.google.com/specimen/Nanum+Brush+Script?query=brush&preview.text=Code%20Seonbi&preview.text_type=custom
+// https://fonts.google.com/specimen/Orbitron?preview.text_type=custom

@@ -43,6 +43,10 @@
   }
 }
 
+.main {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* Mode: */
 
 .light {
@@ -87,6 +91,14 @@
 
 .title {
   text-align: center;
+  font-size: 60px;
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+.title2 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Nanum Brush Script', cursive;
 }
 
 /* Toggle Switch Styling: */

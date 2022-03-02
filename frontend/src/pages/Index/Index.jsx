@@ -47,6 +47,7 @@ class Home extends Component {
                     icon={this.state.icon}
                     toggleMode={this.toggleMode}
                 />
+                <div className='main'>
                 <Welcome 
                     mode={this.state.mode} 
                 />
@@ -54,6 +55,7 @@ class Home extends Component {
                     mode2={this.state.mode2}
                 />
                 <Footer />
+                </div>
             </div>
         )
     }
