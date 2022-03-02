@@ -7,7 +7,6 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-// import 'semantic-ui-css/semantic.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav/Nav.jsx'
 import Home from './pages/Index/index.jsx'

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar, Form, FormControl,Button } from 'react-bootstrap';
+import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'

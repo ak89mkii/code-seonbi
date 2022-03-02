@@ -21,7 +21,7 @@ class The404Button extends Component {
     render() {
         // Button:
         return (
-            <div className="S0">
+            <div>
                 <Link to={this.state.random}>
                     <button type="button" 
                         class="btn btn-outline-light" 

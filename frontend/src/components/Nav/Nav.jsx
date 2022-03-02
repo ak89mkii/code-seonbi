@@ -3,19 +3,20 @@ import { Link } from "react-router-dom";
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import logo from '../../Img/logo.png';
+import Toggle from '../Toggle/Toggle.jsx';
 
-const Nav = () => {
+const Nav = (props) => {
     return (
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand>
                 <div className="title">
                 <Link to="/">
                 <img
-                alt=""
-                src={logo}
-                width="100"
-                height="100"
-                className="d-inline-block align-center"
+                    alt=""
+                    src={logo}
+                    width="100"
+                    height="100"
+                    className="d-inline-block align-center"
                 />            
                 </Link>
                 {' '}
@@ -27,6 +28,11 @@ const Nav = () => {
                 <br></br>
                 <Button variant="outline-primary">Search</Button>
             </Form>
+            <Navbar.Brand></Navbar.Brand>
+            <Toggle
+                icon={props.icon}
+                toggleMode={props.toggleMode}
+            />
         </Navbar>
     )
 }

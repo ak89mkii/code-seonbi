@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Image, Grid, Button} from 'semantic-ui-react'
+import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
+import Welcome from '../../components/Welcome/Welcome.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
@@ -10,7 +11,7 @@ import moon from '../../Img/moon.png'
 class Home extends Component {
     state = {
         open: false,
-        mode: 'light',
+        mode: 'dark',
         icon: moon,
     }
 
@@ -40,6 +41,10 @@ class Home extends Component {
                     open={this.state.false}
                     mode={this.state.mode}
                     icon={this.state.icon}
+                    toggleMode={this.toggleMode}
+                />
+                <Welcome 
+                    mode={this.state.mode} 
                 />
                 <Footer />
             </div>
