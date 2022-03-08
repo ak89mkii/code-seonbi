@@ -9,7 +9,7 @@ const Welcome = (props) => {
                 <div>
                     <h1 className='title'>Welcome to Code Seonbi</h1>
                     <blockquote class="blockquote">
-                        <p className='title2'>Code References Database | Bug Tracker | Job Search References & Tracker</p>
+                        <p className='title2Alt'>Code References Database | Bug Tracker | Job Search References & Tracker</p>
                     </blockquote>
                     <br></br>
                     <p>Click on a card below to navigate to the corresponding section.</p>
