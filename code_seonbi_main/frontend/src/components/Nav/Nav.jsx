@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
-import '../../App.css';
-import logo from '../../Img/logo.png';
-import Toggle from '../Toggle/Toggle.jsx';
+// import '../../App.css';
+// import logo from '../../Img/logo.png';
+// import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
     return (
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand>
                 <div className="title">
-                <Link to="/">
+                {/* <Link to="/">
                 <img
                     alt=""
                     src={logo}
@@ -18,7 +18,7 @@ const Nav = (props) => {
                     height="100"
                     className="d-inline-block align-center"
                 />            
-                </Link>
+                </Link> */}
                 {' '}
                 Code Seonbi</div>
             </Navbar.Brand>
@@ -29,10 +29,10 @@ const Nav = (props) => {
                 <Button variant="outline-light">Search</Button>            
             </Form>
             <Navbar.Brand></Navbar.Brand>
-            <Toggle
+            {/* <Toggle
                 icon={props.icon}
                 toggleMode={props.toggleMode}
-            />
+            /> */}
         </Navbar>
     )
 }

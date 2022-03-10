@@ -10,7 +10,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        // Need this for webpack to load .jsx files.
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

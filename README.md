@@ -34,6 +34,9 @@
 // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
 // https://stackoverflow.com/questions/11434239/django-admin-page-doesnt-show-tables-of-database-djangobook-chapter-06
 // https://stackoverflow.com/questions/62246824/error-err-package-path-not-exported-no-exports-main-resolved-in-app-node-m
+// https://stackoverflow.com/questions/33469929/you-may-need-an-appropriate-loader-to-handle-this-file-type-with-webpack-and-b
+// https://dev.to/learndjango/django-nameerror-name-os-is-not-defined-21o3
+// https://medium.com/labcodes/configuring-django-with-react-4c599d1eae63
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
