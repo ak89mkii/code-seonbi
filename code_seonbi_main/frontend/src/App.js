@@ -31,7 +31,7 @@ class App extends Component {
             <Route component={Error404} />
           </Switch>
         </Router>       */}
-        <h1>App.js file hardcoded.</h1>
+        <h1>App.js hardcoded test.</h1>
         <Test />
         <Nav />
       </div>
