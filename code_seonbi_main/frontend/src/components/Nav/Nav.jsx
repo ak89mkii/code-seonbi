@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
-// import '../../App.css';
+import '../../App.css';
 import logo from '../../Img/logo.png';
 // import Toggle from '../Toggle/Toggle.jsx';
 
@@ -10,7 +10,7 @@ const Nav = (props) => {
         <Navbar bg="dark" variant="dark">
             <Navbar.Brand>
                 <div className="title">
-                <Link to="/"><p>Link Test</p>
+                <Link to="/">
                 <img
                     alt=""
                     src={logo}
