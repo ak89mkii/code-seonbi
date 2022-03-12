@@ -28,6 +28,7 @@
 // https://www.python.org/downloads/
 // https://www.postgresql.org/download/
 // https://formulae.brew.sh/formula/postgresql
+// https://www.npmjs.com/package/file-loader
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
@@ -37,6 +38,7 @@
 // https://stackoverflow.com/questions/33469929/you-may-need-an-appropriate-loader-to-handle-this-file-type-with-webpack-and-b
 // https://dev.to/learndjango/django-nameerror-name-os-is-not-defined-21o3
 // https://medium.com/labcodes/configuring-django-with-react-4c599d1eae63
+// https://stackoverflow.com/questions/35568114/cannot-load-png-files-with-webpack-unexpected-character
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:

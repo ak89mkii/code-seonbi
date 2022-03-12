@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 // import '../../App.css';
-import logo from '../../../static/images/logo.png';
+import logo from '../../Img/logo.png';
 // import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
@@ -11,13 +11,13 @@ const Nav = (props) => {
             <Navbar.Brand>
                 <div className="title">
                 <Link to="/"><p>Link Test</p>
-                {/* <img
+                <img
                     alt=""
                     src={logo}
                     width="100"
                     height="100"
                     className="d-inline-block align-center"
-                />             */}
+                />            
                 </Link>
                 {' '}
                 Code Seonbi</div>
