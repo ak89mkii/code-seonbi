@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-// import { Container, Row, Col, Button } from 'react-bootstrap';
-// import '../../App.css';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
-// import Welcome from '../../components/Welcome/Welcome.jsx'
-// import CardsMain from '../../components/CardsMain/CardsMain.jsx'
-// import Footer from '../../components/Footer/Footer.jsx'
-// import sun from '../../Img/sun.png'
-// import moon from '../../Img/moon.png'
+import Welcome from '../../components/Welcome/Welcome.jsx'
+import CardsMain from '../../components/CardsMain/CardsMain.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import sun from '../../Img/sun.png'
+import moon from '../../Img/moon.png'
 
 class Home extends Component {
     state = {
         open: false,
         mode: 'dark',
         mode2: 'darkNoText',
-        // icon: moon,
+        icon: moon,
     }
 
     toggleMode = () => {
@@ -47,13 +47,13 @@ class Home extends Component {
                     icon={this.state.icon}
                     toggleMode={this.toggleMode}
                 />
-                {/* <Welcome 
+                <Welcome 
                     mode={this.state.mode} 
                 />
                 <CardsMain 
                     mode2={this.state.mode2}
                 />
-                <Footer /> */}
+                <Footer />
             </div>
         )
     }

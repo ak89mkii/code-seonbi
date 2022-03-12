@@ -7,11 +7,11 @@ import {
   Link,
   Redirect
 } from "react-router-dom";
-// import './App.css';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav/Nav.jsx'
 import Home from './pages/Index/index.jsx'
-// import Error404 from './pages/Error404/error404.jsx'
+import Error404 from './pages/Error404/error404.jsx'
 
 import Test from './components/Test/Test.jsx'
 
@@ -28,7 +28,7 @@ class App extends Component {
           <Switch>
             {/* All our Routes goes here! */}
             <Route exact path="/" component={Home} />
-            {/* <Route component={Error404} /> */}
+            <Route component={Error404} />
           </Switch>
         </Router>      
       </div>

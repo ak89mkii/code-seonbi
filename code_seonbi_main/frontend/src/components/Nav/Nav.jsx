@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import logo from '../../Img/logo.png';
-// import Toggle from '../Toggle/Toggle.jsx';
+import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
     return (
@@ -29,10 +29,10 @@ const Nav = (props) => {
                 <Button variant="outline-light">Search</Button>            
             </Form>
             <Navbar.Brand></Navbar.Brand>
-            {/* <Toggle
+            <Toggle
                 icon={props.icon}
                 toggleMode={props.toggleMode}
-            /> */}
+            />
         </Navbar>
     )
 }
