@@ -3,16 +3,46 @@ import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
+import sun from '../../Img/sun.png'
+import moon from '../../Img/moon.png'
 
 class Error404 extends Component {
     state = {
-        
+        open: false,
+        mode: 'dark',
+        mode2: 'darkNoText',
+        icon: moon,
+    }
+
+    toggleMode = () => {
+        if (this.state.mode == 'light') {
+            this.setState({
+                mode: 'dark',
+                mode2: 'darkNoText',
+                icon: moon,
+            })
+        } else if (this.state.mode == 'dark') {
+            this.setState({
+                mode: 'light',
+                mode2: 'lightNoText',
+                icon: sun,
+            })
+        }
+    }
+
+    refreshPage = () => {
+        setTimeout(function () { window.location.reload(); }, 10)
     }
   
     render() {
         return (
-            <div>
-                <Nav />
+            <div className={this.state.mode}>
+                <Nav 
+                    open={this.state.false}
+                    mode={this.state.mode}
+                    icon={this.state.icon}
+                    toggleMode={this.toggleMode}
+                />
                 <br></br>
                 <br></br>
                 <div class="container">
