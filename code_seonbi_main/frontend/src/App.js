@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/Nav/Nav.jsx'
 import Home from './pages/Index/index.jsx'
 import Error404 from './pages/Error404/error404.jsx'
-
+// For testing components with Django integration.
 import Test from './components/Test/Test.jsx'
 
 class App extends Component {
