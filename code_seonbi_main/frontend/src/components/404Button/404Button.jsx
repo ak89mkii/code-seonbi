@@ -12,9 +12,9 @@ class The404Button extends Component {
     }
 
     randomChoice = () => {
-        let newNum = Math.floor(Math.random() * choices.length)
+        // let newNum = Math.floor(Math.random() * choices.length)
         this.setState({
-            random: choices[newNum]
+            random: choices[num]
         })
     }
 
