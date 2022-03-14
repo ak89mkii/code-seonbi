@@ -28,6 +28,7 @@ class App extends Component {
           <Switch>
             {/* All our Routes goes here! */}
             <Route exact path="/" component={Home} />
+            <Route exact path="/test" component={Test} />
             <Route component={Error404} />
           </Switch>
         </Router>      

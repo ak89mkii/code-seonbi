@@ -60,7 +60,7 @@ class Error404 extends Component {
                 <br></br>
                 <br></br>
                 <div>
-                    <iframe  class="container-fluid"frameborder="0" src="https://itch.io/embed-upload/4416194?color=333333" allowfullscreen="" width="1000" height="720"><a href="https://a-i-chasm-games.itch.io/bug-buster">Play Bug Buster on itch.io</a>
+                    <iframe  class="container-fluid"frameborder="0" src="https://itch.io/embed-upload/4416194?color=333333" allowfullscreen="" height="600"><a href="https://a-i-chasm-games.itch.io/bug-buster">Play Bug Buster on itch.io</a>
                     </iframe>       
                 </div>
                 <br></br>

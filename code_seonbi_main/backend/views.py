@@ -8,3 +8,8 @@ from .models import Bug
 class BugView(generics.CreateAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
+
+
+class GetBugList(generics.ListAPIView):
+    queryset = Bug.objects.all()
+    serializer_class = BugSerializer
