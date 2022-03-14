@@ -5,11 +5,12 @@ from .models import Bug
 
 # Create your views here.
 
-class BugView(generics.CreateAPIView):
+# GET and POST requests allowed.
+class BugViewAdd(generics.ListCreateAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
 
-
+# GET requests only.
 class GetBugList(generics.ListAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
