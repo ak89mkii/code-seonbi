@@ -41,6 +41,8 @@
 // https://medium.com/labcodes/configuring-django-with-react-4c599d1eae63
 // https://stackoverflow.com/questions/35568114/cannot-load-png-files-with-webpack-unexpected-character
 // https://stackoverflow.com/questions/62246824/error-err-package-path-not-exported-no-exports-main-resolved-in-app-node-m
+// https://stackoverflow.com/questions/60924083/react-typeerror-cannot-read-property-setstate-of-undefined
+// https://www.django-rest-framework.org/api-guide/generic-views/
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
