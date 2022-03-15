@@ -26,8 +26,7 @@ class Test extends Component {
         return (
             <div>
                 <Nav />
-                <Button onClick={this.getBugList()}>GET Request</Button>
-                
+                { this.getBugList() }
                 { this.state.newData.map((list) => (
                     <div>
                     <br></br>
@@ -43,7 +42,13 @@ class Test extends Component {
                                 <p>Error: {JSON.stringify(list.error)}</p>
                                 <p>Links: {JSON.stringify(list.links)}</p>
                                 <p>Solution: {JSON.stringify(list.solution)}</p>
+                                <p>Notes: {JSON.stringify(list.notes)}</p>
                                 <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
+                                
+                                <div className="mb-2">
+                                <Button variant="warning">Edit</Button>{' '}
+                                <Button variant="danger">Delete</Button>{' '}
+                                </div>
                                 </Card.Body>
                                 {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
                                 <Card.Footer className="text-center">{JSON.stringify(list.id)}</Card.Footer>

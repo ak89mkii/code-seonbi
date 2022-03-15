@@ -12,7 +12,8 @@ TECHNOLOGIES = (
 )
 
 STATUSES = (
-    ('Pending', 'Pending'),
+    ('Open', 'Open'),
+    ('To Revisit', 'To Revisit'),
     ('Solved', 'Solved')
 )
 
@@ -32,6 +33,7 @@ class Bug(models.Model):
     error = models.CharField(max_length=1000)
     links = models.CharField(max_length=1000)
     solution = models.CharField(max_length=1000, default='Over 9000!')
+    notes = models.CharField(max_length=1000, default='Over 9000!')
     timestamp = models.DateField(auto_now_add=True)
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
 
