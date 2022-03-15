@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {Navbar} from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 
 class Test extends Component {
     state = {
@@ -24,21 +24,30 @@ class Test extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.getBugList()}>GET Request</button>
-                <br></br>
+                <Button onClick={this.getBugList()}>GET Request</Button>
+                
                 { this.state.newData.map((list) => (
                     <div>
-                        <p>ID: {JSON.stringify(list.id)}</p>
-                        <p>Project: {JSON.stringify(list.project)}</p>
-                        <p>Status: {JSON.stringify(list.status)}</p>
-                        <p>Description: {JSON.stringify(list.description)}</p>
-                        <p>Error: {JSON.stringify(list.error)}</p>
-                        <p>Links: {JSON.stringify(list.links)}</p>
-                        <p>Solution: {JSON.stringify(list.solution)}</p>
-                        <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
-                    </div>
+                    <br></br>
+                    <br></br>
+                        <Card border="light">
+                            <Card.Header as="h5">Project: {JSON.stringify(list.project)}</Card.Header>
+                            <Card.Body>
+                            <Card.Text>ID: {JSON.stringify(list.id)}</Card.Text>
+                            <p>Status: {JSON.stringify(list.status)}</p>
+                            <p>Description: {JSON.stringify(list.description)}</p>
+                            <p>Error: {JSON.stringify(list.error)}</p>
+                            <p>Links: {JSON.stringify(list.links)}</p>
+                            <p>Solution: {JSON.stringify(list.solution)}</p>
+                            <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
+                            </Card.Body>
+                            <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" />
+                            <Card.Footer className="text-center">{JSON.stringify(list.id)}</Card.Footer>
+                        </Card>
+                    <br></br>
+                    <br></br>
+                   </div>
                 ))}
-
             </div>
         )
     }
