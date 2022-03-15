@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import '../../App.css'
 import { Card, Container, Col, Row, CardGroup } from 'react-bootstrap';
 
@@ -32,6 +33,7 @@ const CardsMain = (props) => {
                                 </Card.Body>
                             </Card>
                             <p className='break'>-</p>
+                            <Link to="/bug">
                             <Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" />
                                 <Card.Body>
@@ -42,6 +44,7 @@ const CardsMain = (props) => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
+                            </Link>
                             </CardGroup>
                         </Col>
                     </Row>               
