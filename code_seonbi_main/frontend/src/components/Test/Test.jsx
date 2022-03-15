@@ -24,18 +24,18 @@ class Test extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.getBugList}>GET Request</button>
+                <button onClick={this.getBugList()}>GET Request</button>
                 <br></br>
                 { this.state.newData.map((list) => (
                     <div>
                         <p>ID: {JSON.stringify(list.id)}</p>
                         <p>Project: {JSON.stringify(list.project)}</p>
-                        <p>Status: {this.state.status}</p>
-                        <p>Description: {this.state.description}</p>
-                        <p>Error: {this.state.error}</p>
-                        <p>Links: {this.state.links}</p>
-                        <p>Solution: {this.state.solution}</p>
-                        <p>Timestamp: {this.state.timestamp}</p>
+                        <p>Status: {JSON.stringify(list.status)}</p>
+                        <p>Description: {JSON.stringify(list.description)}</p>
+                        <p>Error: {JSON.stringify(list.error)}</p>
+                        <p>Links: {JSON.stringify(list.links)}</p>
+                        <p>Solution: {JSON.stringify(list.solution)}</p>
+                        <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
                     </div>
                 ))}
 
