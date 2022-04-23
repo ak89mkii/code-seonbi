@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, Button, Row, Container } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
 
-class Test extends Component {
+class Bug extends Component {
     state = {
         //  Temporary array before JSON data mapped from fetch.
         newData: []
@@ -64,4 +64,4 @@ class Test extends Component {
     }
 }
 
-export default Test;
+export default Bug;

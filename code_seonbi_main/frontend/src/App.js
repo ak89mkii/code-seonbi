@@ -13,7 +13,8 @@ import Nav from './components/Nav/Nav.jsx'
 import Home from './pages/Index/index.jsx'
 import Error404 from './pages/Error404/error404.jsx'
 // For testing components with Django integration.
-import Test from './pages/Bug/Bug.jsx'
+import Bug from './pages/Bug/Bug.jsx'
+import BugAdd from './pages/BugAdd/BugAdd.jsx'
 
 class App extends Component {
   state = {
@@ -28,7 +29,8 @@ class App extends Component {
           <Switch>
             {/* All our Routes goes here! */}
             <Route exact path="/" component={Home} />
-            <Route exact path="/bug" component={Test} />
+            <Route exact path="/bug" component={Bug} />
+            <Route exact path="/bug_add" component={BugAdd} />
             <Route component={Error404} />
           </Switch>
         </Router>      

@@ -46,6 +46,7 @@
 // https://stackoverflow.com/questions/62246824/error-err-package-path-not-exported-no-exports-main-resolved-in-app-node-m
 // https://stackoverflow.com/questions/60924083/react-typeerror-cannot-read-property-setstate-of-undefined
 // https://www.django-rest-framework.org/api-guide/generic-views/
+// https://reactjs.org/docs/forms.html
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:

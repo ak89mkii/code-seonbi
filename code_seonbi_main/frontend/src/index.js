@@ -14,6 +14,7 @@ import App from './App';
 // );
 
 // Used to work with Django REST Framework.
+// References the "index.html" in the "templates/frontend" folder.
 const altRootDiv = document.getElementById('atlRoot');
   render(<App />, altRootDiv);
 

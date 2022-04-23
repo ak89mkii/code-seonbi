@@ -6,7 +6,12 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "./static/frontend"),
     filename: "[name].js",
+    // publicPath: path.resolve(__dirname, '/js/')
   },
+  // devServer: {
+  //   contentBase: path.resolve(__dirname, './'),
+  //   publicPath: path.resolve(__dirname, '/js/'),
+  // },
   module: {
     rules: [
       {
