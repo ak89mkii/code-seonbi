@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Card, Button, Row, Container } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import sun from '../../Img/sun.png'
+import moon from '../../Img/moon.png'
 
 class Bug extends Component {
     state = {

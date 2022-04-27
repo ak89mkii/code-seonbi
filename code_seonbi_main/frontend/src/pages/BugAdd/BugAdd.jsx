@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import { Card, Button, Row, Container, Form } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
+import Footer from '../../components/Footer/Footer.jsx'
+import sun from '../../Img/sun.png'
+import moon from '../../Img/moon.png'
 
 class BugAdd extends Component {
     constructor(props) {
@@ -16,6 +19,10 @@ class BugAdd extends Component {
             links: 'test', 
             solution: 'test', 
             notes: 'test', 
+            open: false,
+            mode: 'dark',
+            mode2: 'darkNoText',
+            icon: moon,
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -30,7 +37,22 @@ class BugAdd extends Component {
             [name]: value
         });
     }
-  
+
+    toggleMode = () => {
+        if (this.state.mode == 'light') {
+            this.setState({
+                mode: 'dark',
+                mode2: 'darkNoText',
+                icon: moon,
+            })
+        } else if (this.state.mode == 'dark') {
+            this.setState({
+                mode: 'light',
+                mode2: 'lightNoText',
+                icon: sun,
+            })
+        }
+    }
 
     // Function: POST request for "BugAdd" form.
     postBugList = (e) => {
@@ -47,9 +69,25 @@ class BugAdd extends Component {
 
     render() {
         return (
-            <div>
-                <Nav />
+            <div className={this.state.mode}>
+                <Nav 
+                    open={this.state.false}
+                    mode={this.state.mode}
+                    icon={this.state.icon}
+                    toggleMode={this.toggleMode}
+                />
+                <figure class="text-center">
                     <div>
+                        <h1 className='title'>Welcome to Code Seonbi</h1>
+                        <blockquote class="blockquote">
+                            <p className='title2Alt'>Code References Database | Bug Tracker | Project Documentation</p>
+                        </blockquote>
+                        <br></br>
+                        <p>Click on a card below to navigate to the corresponding section.</p>
+                    </div>
+                </figure>
+                <br></br>
+                <div>
                     <br></br>
                     <br></br>
                     <Container>
@@ -78,13 +116,14 @@ class BugAdd extends Component {
                                         placeholder="Technology" 
                                     />
                                 </Form.Group> */}
-                                <button>Submit Bug</button>
+                                <Button type="submit">Submit Bug</Button>
                             </Form>
                         </Row>
                     </Container>
                     <br></br>
                     <br></br>
-                   </div>
+                </div>
+                <Footer />
             </div>
         )
     }
