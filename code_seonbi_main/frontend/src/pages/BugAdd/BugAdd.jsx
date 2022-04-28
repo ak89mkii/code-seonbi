@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Card, Button, Row, Container, Form } from 'react-bootstrap';
+import { Select, Button, Row, Container, Form } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
@@ -11,8 +11,8 @@ class BugAdd extends Component {
         super(props);
         this.state = {
         //  Temporary array before JSON data mapped from fetch.
-            project: 'test',
-            // technology: 'test',
+            project: '',
+            technology: 'React.js)',
             // status: 'test', 
             description: 'test' ,
             error:  'test', 
@@ -57,7 +57,7 @@ class BugAdd extends Component {
     // Function: POST request for "BugAdd" form.
     postBugList = (e) => {
         e.preventDefault();
-        const bug = { project: this.state.project, description: this.state.description, error: this.state.error, links: this.state.links, solution: this.state.solution, notes: this.state.notes, };
+        const bug = { project: this.state.project, technology: this.state.technology, description: this.state.description, error: this.state.error, links: this.state.links, solution: this.state.solution, notes: this.state.notes, };
         console.log(bug)
 
         fetch("/backend/bug-add", {
@@ -78,12 +78,12 @@ class BugAdd extends Component {
                 />
                 <figure class="text-center">
                     <div>
-                        <h1 className='title'>Welcome to Code Seonbi</h1>
+                        <h1 className='title'>Bug Tracker Form</h1>
                         <blockquote class="blockquote">
-                            <p className='title2Alt'>Code References Database | Bug Tracker | Project Documentation</p>
+                            <p className='title2Alt'>Organized Bug Tracking</p>
                         </blockquote>
                         <br></br>
-                        <p>Click on a card below to navigate to the corresponding section.</p>
+                        <p>Write relevant bug information in the fields below.</p>
                     </div>
                 </figure>
                 <br></br>
@@ -99,23 +99,80 @@ class BugAdd extends Component {
                             >
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Project</Form.Label>
+                                    <Form.Label>Project:</Form.Label>
                                     <Form.Control 
                                         name="project"
                                         type="text" 
                                         value={this.state.project}
-                                        placeholder="Project" 
+                                        placeholder="Write project and/or directory name here..." 
                                         onChange={this.handleInputChange}
                                     />
+                                </Form.Group>                                <label>Technology</label>
+                                <Form.Group>
+                                <select 
+                                    className='dropdown'
+                                    onChange={(e) => this.setState({ technology: e.target.value })}
+                                >
+                                    <option value="Django">Django</option>
+                                    <option value="Django Rest Framework">Django Rest Framework</option>
+                                    <option value="JavaScript (ES9)">JavaScript (ES9)</option>
+                                    <option value="MongoDB">MongoDB</option>
+                                    <option value="PostgreSQL">PostgreSQL</option>
+                                    <option value="Python 3">Python 3</option>
+                                    <option value="MongoDB">React.js</option>
+                                    <option value="MongoDB">React Native</option>
+                                </select>
                                 </Form.Group>
-                                {/* <Form.Group 
+                                <label>Status</label>
+                                <Form.Group>
+                                <select 
+                                    className='dropdown'
+                                    onChange={(e) => this.setState({ status: e.target.value })}
+                                >                                
+                                    <option value="Django">Django</option>
+                                    <option value="Django">Django</option>
+                                    <option value="Django">Django</option>
+                                </select>
+                                </Form.Group>
+                                <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Technology</Form.Label>
+                                    <Form.Label>Description</Form.Label>
                                     <Form.Control 
                                         type="text" 
                                         placeholder="Technology" 
                                     />
-                                </Form.Group> */}
+                                </Form.Group>
+                                <Form.Group 
+                                    className="mb-3" controlId="formBasicPassword">
+                                    <Form.Label>Error Message:</Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        placeholder="Technology" 
+                                    />
+                                </Form.Group>
+                                <Form.Group 
+                                    className="mb-3" controlId="formBasicPassword">
+                                    <Form.Label>Links</Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        placeholder="Technology" 
+                                    />
+                                </Form.Group><Form.Group 
+                                    className="mb-3" controlId="formBasicPassword">
+                                    <Form.Label>Solution</Form.Label>
+                                    <Form.Control 
+                                        type="text" 
+                                        placeholder="Technology" 
+                                    />
+                                </Form.Group><Form.Group 
+                                    className="mb-3" controlId="formBasicPassword">
+                                    <Form.Label>Notes</Form.Label>
+                                    <Form.Control
+                                        as="textarea" rows={3} 
+                                        type="text" 
+                                        placeholder="Technology" 
+                                    />
+                                </Form.Group>
                                 <Button type="submit">Submit Bug</Button>
                             </Form>
                         </Row>

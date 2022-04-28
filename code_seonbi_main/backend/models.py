@@ -4,15 +4,19 @@ from django.db import models
 
 # Create your models here.
 TECHNOLOGIES = (
-    ('Python 3', 'Python 3'),
     ('Django', 'Django'),
+    ('Django REST Framework', 'Django REST Framework'),
     ('JavaScript (ES9)', 'JavaScript (ES9)'),
-    ('React.js)', 'React.js)'),
-    ('PostgreSQL', 'PostgreSQL')
+    ('MongoDB', 'MongoDB'),
+    ('PostgreSQL', 'PostgreSQL'),
+    ('Python 3', 'Python 3'),    
+    ('React.js', 'React.js'),
+    ('React Native', 'React Native'),
 )
 
 STATUSES = (
     ('Open', 'Open'),
+    ('Working on Solution', 'Working on Solution'),
     ('To Revisit', 'To Revisit'),
     ('Solved', 'Solved')
 )
@@ -20,12 +24,12 @@ STATUSES = (
 class Bug(models.Model):
     project = models.CharField(max_length=100, default='Over 9000!')
     technology = models.CharField(
-        max_length=20,
+        max_length=50,
         choices=TECHNOLOGIES,
         default=TECHNOLOGIES[0][0]
     )
     status = models.CharField(
-        max_length=20,
+        max_length=50,
         choices=STATUSES,
         default=STATUSES[0][0]
     )

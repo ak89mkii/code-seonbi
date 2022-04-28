@@ -107,6 +107,14 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+
+/* Dropdown: */
+.dropdown {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
 /* Toggle Switch Styling: */
 
 .game {
