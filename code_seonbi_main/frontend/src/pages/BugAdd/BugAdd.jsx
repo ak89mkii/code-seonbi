@@ -10,15 +10,16 @@ class BugAdd extends Component {
     constructor(props) {
         super(props);
         this.state = {
-        //  Temporary array before JSON data mapped from fetch.
+            //  Temporary array state before JSON data mapped from fetch.
             project: '',
-            technology: 'React.js)',
-            // status: 'test', 
-            description: 'test' ,
-            error:  'test', 
-            links: 'test', 
-            solution: 'test', 
-            notes: 'test', 
+            technology: '',
+            status: '', 
+            description: '' ,
+            error:  '', 
+            links: '', 
+            solution: '', 
+            notes: '', 
+            // Dark mode state.
             open: false,
             mode: 'dark',
             mode2: 'darkNoText',
@@ -57,7 +58,7 @@ class BugAdd extends Component {
     // Function: POST request for "BugAdd" form.
     postBugList = (e) => {
         e.preventDefault();
-        const bug = { project: this.state.project, technology: this.state.technology, description: this.state.description, error: this.state.error, links: this.state.links, solution: this.state.solution, notes: this.state.notes, };
+        const bug = { project: this.state.project, technology: this.state.technology, status: this.state.status, description: this.state.description, error: this.state.error, links: this.state.links, solution: this.state.solution, notes: this.state.notes, };
         console.log(bug)
 
         fetch("/backend/bug-add", {
@@ -107,14 +108,14 @@ class BugAdd extends Component {
                                         placeholder="Write project and/or directory name here..." 
                                         onChange={this.handleInputChange}
                                     />
-                                </Form.Group>                                <label>Technology</label>
+                                </Form.Group>                                <label>Technology:</label>
                                 <Form.Group>
                                 <select 
                                     className='dropdown'
                                     onChange={(e) => this.setState({ technology: e.target.value })}
                                 >
                                     <option value="Django">Django</option>
-                                    <option value="Django Rest Framework">Django Rest Framework</option>
+                                    <option value="Django REST Framework">Django REST Framework</option>
                                     <option value="JavaScript (ES9)">JavaScript (ES9)</option>
                                     <option value="MongoDB">MongoDB</option>
                                     <option value="PostgreSQL">PostgreSQL</option>
@@ -123,54 +124,70 @@ class BugAdd extends Component {
                                     <option value="MongoDB">React Native</option>
                                 </select>
                                 </Form.Group>
-                                <label>Status</label>
+                                <label>Status:</label>
                                 <Form.Group>
                                 <select 
                                     className='dropdown'
                                     onChange={(e) => this.setState({ status: e.target.value })}
                                 >                                
-                                    <option value="Django">Django</option>
-                                    <option value="Django">Django</option>
-                                    <option value="Django">Django</option>
+                                    <option value="Open">Open</option>
+                                    <option value="Working on Solution">Working on Solution</option>
+                                    <option value="To Revisit">To Revisit</option>
+                                    <option value="Solved">Solved</option>
                                 </select>
                                 </Form.Group>
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Description</Form.Label>
-                                    <Form.Control 
+                                    <Form.Label>Description:</Form.Label>
+                                    <Form.Control
+                                        name="description"
                                         type="text" 
-                                        placeholder="Technology" 
+                                        value={this.state.description}
+                                        placeholder="Write project description here..." 
+                                        onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
                                     <Form.Label>Error Message:</Form.Label>
                                     <Form.Control 
+                                        name="error"
                                         type="text" 
-                                        placeholder="Technology" 
+                                        value={this.state.error}
+                                        placeholder="Paste error message(s) here..." 
+                                        onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Links</Form.Label>
+                                    <Form.Label>Links:</Form.Label>
                                     <Form.Control 
+                                        name="links"
                                         type="text" 
-                                        placeholder="Technology" 
+                                        value={this.state.links}
+                                        placeholder="Paste helpful reference(s) link(s) here..." 
+                                        onChange={this.handleInputChange}
                                     />
                                 </Form.Group><Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Solution</Form.Label>
+                                    <Form.Label>Solution:</Form.Label>
                                     <Form.Control 
+                                        name="solution"
                                         type="text" 
-                                        placeholder="Technology" 
+                                        value={this.state.solution}
+                                        placeholder="Write bug solution here..." 
+                                        onChange={this.handleInputChange}
                                     />
                                 </Form.Group><Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Notes</Form.Label>
+                                    <Form.Label>Notes:</Form.Label>
                                     <Form.Control
                                         as="textarea" rows={3} 
+                                        name="notes"
                                         type="text" 
-                                        placeholder="Technology" 
+                                        value={this.state.notes}
+                                        placeholder="Write notes here..." 
+                                        onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
                                 <Button type="submit">Submit Bug</Button>
