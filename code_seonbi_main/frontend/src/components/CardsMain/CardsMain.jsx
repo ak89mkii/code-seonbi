@@ -23,9 +23,10 @@ const CardsMain = (props) => {
                                 </Card.Body>
                             </Card>
                             <p className='break'>-</p>
-                            {/* <Link to=""> */}
                             <Card style={{ width: '18rem' }}>
+                            <Link to="/bug">
                                 <Card.Img variant="top" src="https://images2.alphacoders.com/602/thumb-1920-602223.jpg" />
+                            </Link>
                                 <Card.Body>
                                     <Card.Title>Code References:</Card.Title>
                                     <Card.Text>
@@ -33,11 +34,11 @@ const CardsMain = (props) => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            {/* </Link> */}
                             <p className='break'>-</p>
-                            <Link to="/bug">
                             <Card style={{ width: '18rem' }}>
+                            <Link to="/bug">
                                 <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" />
+                            </Link>
                                 <Card.Body>
                                     <Card.Title>Project Documentation</Card.Title>
                                     <Card.Text>
@@ -46,7 +47,6 @@ const CardsMain = (props) => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                            </Link>
                             </CardGroup>
                         </Col>
                     </Row>               
