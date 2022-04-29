@@ -40,10 +40,9 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" />
                             </Link>
                                 <Card.Body>
-                                    <Card.Title>Project Documentation</Card.Title>
+                                    <Card.Title>Project Documentation:</Card.Title>
                                     <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    Write and refer to project docs.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
