@@ -40,20 +40,22 @@ class Home extends Component {
     render() {
 
         return (
-            <div className='main'>                
-                <Nav
-                    open={this.state.false}
-                    mode={this.state.mode}
-                    icon={this.state.icon}
-                    toggleMode={this.toggleMode}
-                />
-                <Welcome 
-                    mode={this.state.mode} 
-                />
-                <CardsMain 
-                    mode2={this.state.mode2}
-                />
-                <Footer />
+            <div className={this.state.mode2}>   
+                <div className='halo'>         
+                    <Nav
+                        open={this.state.false}
+                        mode={this.state.mode}
+                        icon={this.state.icon}
+                        toggleMode={this.toggleMode}
+                    />
+                    <Welcome 
+                        mode={this.state.mode} 
+                    />
+                    <CardsMain 
+                        mode2={this.state.mode2}
+                    />
+                    <Footer />
+                </div>    
             </div>
         )
     }

@@ -11,27 +11,29 @@ const CardsMain = (props) => {
                     <Row className="justify-content-md-center">
                         <Col md="auto">
                             <CardGroup>
-                            <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src="https://www.comingsoon.net/assets/uploads/2021/05/dragon-ball.jpg" />
+                            <Card style={{ width: '18rem' }}>                            
+                            <Link to="/bug">
+                                <Card.Img variant="top" src="https://www.comingsoon.net/assets/uploads/2021/05/dragon-ball.jpg" />                              
+                            </Link>
                                 <Card.Body>
-                                    <Card.Title>Code References</Card.Title>
+                                    <Card.Title>Bug Tracker:</Card.Title>
                                     <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    Keep track of your programming bugs in an organized and efficicent manner.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                             <p className='break'>-</p>
+                            {/* <Link to=""> */}
                             <Card style={{ width: '18rem' }}>
                                 <Card.Img variant="top" src="https://images2.alphacoders.com/602/thumb-1920-602223.jpg" />
                                 <Card.Body>
-                                    <Card.Title>Bug Tracker</Card.Title>
+                                    <Card.Title>Code References:</Card.Title>
                                     <Card.Text>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                    Useful programming and syntax documentation, tips, and references.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
+                            {/* </Link> */}
                             <p className='break'>-</p>
                             <Link to="/bug">
                             <Card style={{ width: '18rem' }}>
