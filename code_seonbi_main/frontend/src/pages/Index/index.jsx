@@ -54,8 +54,8 @@ class Home extends Component {
                     <CardsMain 
                         mode2={this.state.mode2}
                     />
-                    <Footer />
                 </div>    
+                <Footer />
             </div>
         )
     }

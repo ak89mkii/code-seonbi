@@ -8,7 +8,11 @@ html, body {
 }
 
 .halo {
-  height: 100vh;
+  height:100vh;
+}
+
+.halo2 {
+  height:100%;
 }
 
 /* Mode: */
@@ -44,7 +48,7 @@ html, body {
   color: white;
   padding: 10px;
   width:100%;
-  position: fixed;
+  position: relative;
   bottom: 0;
 }
 

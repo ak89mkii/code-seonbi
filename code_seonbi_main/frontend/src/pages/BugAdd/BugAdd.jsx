@@ -12,8 +12,8 @@ class BugAdd extends Component {
         this.state = {
             //  Temporary array state before JSON data mapped from fetch.
             project: '',
-            technology: '',
-            status: '', 
+            technology: 'Django',
+            status: 'Open', 
             description: '' ,
             error:  '', 
             links: '', 
@@ -66,6 +66,8 @@ class BugAdd extends Component {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(bug)
         })
+
+        location.href = "/bug"
     }
 
     render() {
@@ -86,6 +88,7 @@ class BugAdd extends Component {
                         <br></br>
                         <p>Write relevant bug information in the fields below.</p>
                     </div>
+                    <Link to="/bug"><Button>View Bugs</Button></Link>
                 </figure>
                 <br></br>
                 <div>
@@ -120,8 +123,8 @@ class BugAdd extends Component {
                                     <option value="MongoDB">MongoDB</option>
                                     <option value="PostgreSQL">PostgreSQL</option>
                                     <option value="Python 3">Python 3</option>
-                                    <option value="MongoDB">React.js</option>
-                                    <option value="MongoDB">React Native</option>
+                                    <option value="React.js">React.js</option>
+                                    <option value="React Native">React Native</option>
                                 </select>
                                 </Form.Group>
                                 <label>Status:</label>
@@ -194,6 +197,8 @@ class BugAdd extends Component {
                             </Form>
                         </Row>
                     </Container>
+                    <br></br>
+                    <br></br>
                     <br></br>
                     <br></br>
                 </div>
