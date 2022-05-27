@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import '../../App.css'
-import { Card, Container, Col, Row, CardGroup } from 'react-bootstrap';
+import { Card, Container, Col, Row, CardGroup, Button, Modal, Tooltip } from 'react-bootstrap';
 
 const CardsMain = (props) => {
     return (
@@ -24,9 +24,9 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card style={{ width: '18rem' }}>
-                            <Link to="/bug">
-                                <Card.Img variant="top" src="https://images2.alphacoders.com/602/thumb-1920-602223.jpg" />
-                            </Link>
+                            {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src="https://images2.alphacoders.com/602/thumb-1920-602223.jpg" onClick={props.handleShow}/>
+                            {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title>Code References:</Card.Title>
                                     <Card.Text>
@@ -36,9 +36,9 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card style={{ width: '18rem' }}>
-                            <Link to="/bug">
-                                <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" />
-                            </Link>
+                            {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" onClick={props.handleShow}/>
+                            {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title>Project Documentation:</Card.Title>
                                     <Card.Text>
@@ -50,6 +50,19 @@ const CardsMain = (props) => {
                         </Col>
                     </Row>               
                 </Container>
+
+                <Modal show={props.show} onHide={props.handleClose}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>Under Construction</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>This section is currently under construction.</Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={props.handleClose}>
+                        Close
+                    </Button>
+                    </Modal.Footer>
+                </Modal>
+
             <div className={props.mode2}><br></br></div>
         </div>
     )

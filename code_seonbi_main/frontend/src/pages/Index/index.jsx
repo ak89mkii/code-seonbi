@@ -15,6 +15,7 @@ class Home extends Component {
         mode: 'dark',
         mode2: 'darkNoText',
         icon: moon,
+        show: false
     }
 
     toggleMode = () => {
@@ -32,6 +33,10 @@ class Home extends Component {
             })
         }
     }
+
+    handleShow = () => this.setState((prevState) => ({ show: !prevState.show }))
+    // handleShow = () => this.setState({ show: true })
+    handleClose = () => this.setState({ show: false })
 
     refreshPage = () => {
         setTimeout(function () { window.location.reload(); }, 10)
@@ -53,6 +58,9 @@ class Home extends Component {
                     />
                     <CardsMain 
                         mode2={this.state.mode2}
+                        show={this.state.show}
+                        handleShow={this.handleShow}
+                        handleClose={this.handleClose}
                     />
                 </div>    
                 <Footer />
