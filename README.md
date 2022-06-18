@@ -51,7 +51,8 @@
 // https://www.youtube.com/watch?v=TqYhkkL1Ils
 // https://stackoverflow.com/questions/34226076/why-is-my-onclick-being-called-on-render-react-js
 // https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request
-// 
+// https://www.youtube.com/watch?v=rwfnQk4wp1I
+// https://stackoverflow.com/questions/15209978/where-to-store-secret-keys-django
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
