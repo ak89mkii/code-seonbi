@@ -47,7 +47,11 @@
 // https://stackoverflow.com/questions/60924083/react-typeerror-cannot-read-property-setstate-of-undefined
 // https://www.django-rest-framework.org/api-guide/generic-views/
 // https://reactjs.org/docs/forms.html
-// https://stackoverflow.com/questions/40843834/get-select-option-value-on-submit-with-react
+// https://stackoverflow.com/questions/40843834/get-select-option-value-on-submit-with-react 
+// https://www.youtube.com/watch?v=TqYhkkL1Ils
+// https://stackoverflow.com/questions/34226076/why-is-my-onclick-being-called-on-render-react-js
+// https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request
+// 
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:

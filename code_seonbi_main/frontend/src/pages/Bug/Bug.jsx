@@ -46,6 +46,7 @@ class Bug extends Component {
             })
     }
 
+    // Function: Sends delete request to backend based on id.
     deleteBugList  = (id) => {
         fetch('/backend/bug-delete/' + id, {method: 'DELETE',})
             .then(res => {
@@ -75,7 +76,7 @@ class Bug extends Component {
                         </div>
                         <Link to="/bug_add"><Button>Add Bug</Button></Link>
                     </figure>
-                <br></br>
+                    <br></br>
                     { this.getBugList() }
                     { this.state.newData.map((list) => (
                         <div>
@@ -97,7 +98,12 @@ class Bug extends Component {
                                     
                                     <div className="mb-2">
                                     <Button variant="warning">Edit</Button>{' '}
-                                    <Button variant="danger" onClick={ () => this.deleteBugList(list.id) }>Delete</Button>{' '}
+                                    <Button 
+                                        variant="danger" 
+                                        onClick={ () => this.deleteBugList(list.id) }
+                                    >
+                                        Delete
+                                    </Button>{' '}
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
