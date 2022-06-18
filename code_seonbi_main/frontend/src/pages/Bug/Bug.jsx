@@ -46,6 +46,14 @@ class Bug extends Component {
             })
     }
 
+    deleteBugList  = () => {
+        fetch('/backend/bug-delete/89', {method: 'DELETE',})
+            .then(res => {
+                return res.json()
+            }) 
+            .then(data => console.log(data))
+    }
+
     render() {
         return (
             <div className={this.state.mode2}>
@@ -89,7 +97,7 @@ class Bug extends Component {
                                     
                                     <div className="mb-2">
                                     <Button variant="warning">Edit</Button>{' '}
-                                    <Button variant="danger">Delete</Button>{' '}
+                                    <Button variant="danger" onClick={this.deleteBugList}>Delete</Button>{' '}
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}

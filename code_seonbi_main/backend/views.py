@@ -14,3 +14,8 @@ class CreateBugItem(generics.CreateAPIView):
 class GetBugAll(generics.ListAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
+
+# DELETE requests only.
+class DeleteBugItem(generics.RetrieveDestroyAPIView):
+    queryset = Bug.objects.all()
+    serializer_class = BugSerializer
