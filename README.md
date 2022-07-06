@@ -33,6 +33,9 @@
 // https://formulae.brew.sh/formula/postgresql
 // https://www.npmjs.com/package/file-loader
 // https://webpack.js.org/concepts/#loaders
+#### Deployment:
+// https://www.youtube.com/watch?v=SBBzVbZBOvc
+// 
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
