@@ -32,8 +32,8 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'code-seonbi.herokuapp.com']
-
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'code-seonbi.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -136,6 +136,9 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'frontend/static'),
 )
+
+STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
