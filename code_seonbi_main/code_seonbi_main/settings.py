@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'code_seonbi_main.urls'
+ROOT_URLCONF = 'code_seonbi_main.code_seonbi_main.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'code_seonbi_main.wsgi.application'
+WSGI_APPLICATION = 'code_seonbi_main.code_seonbi_main.wsgi.application'
 
 
 # Database
