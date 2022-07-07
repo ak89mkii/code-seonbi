@@ -87,11 +87,13 @@ WSGI_APPLICATION = 'code_seonbi_main.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'code_seonbi',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'code_seonbi',
+    # }
 }
+
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
