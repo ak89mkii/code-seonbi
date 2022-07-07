@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1:8000', 'https://code-seonbi.herokuapp.c
 # Application definition
 
 INSTALLED_APPS = [
-    # 'code_seonbi_main.apps.Code_Seonbi_MainConfig',
+    'code_seonbi_main.apps.Code_Seonbi_MainConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
