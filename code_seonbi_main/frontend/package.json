@@ -25,6 +25,7 @@
     "dev": "webpack --mode development --watch",
     "start": "react-scripts start",
     "build": "webpack --mode production",
+    "build:react": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

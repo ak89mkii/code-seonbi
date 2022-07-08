@@ -67,7 +67,7 @@ class BugAdd extends Component {
             body: JSON.stringify(bug)
         })
 
-        location.href = "/bug"
+        window.location.href = "/bug"
     }
 
     render() {
