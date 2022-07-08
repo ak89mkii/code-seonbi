@@ -34,10 +34,18 @@
 // https://www.npmjs.com/package/file-loader
 // https://webpack.js.org/concepts/#loaders
 #### Deployment:
+// https://devcenter.heroku.com/articles/procfile
+// https://devcenter.heroku.com/articles/python-gunicorn
 // https://www.youtube.com/watch?v=SBBzVbZBOvc
 // https://pypi.org/project/whitenoise/#description
 // https://pypi.org/project/django-heroku
 // https://devcenter.heroku.com/articles/django-app-configuration
+#### Depoyment Troubleshooting:
+// https://stackoverflow.com/questions/29082028/heroku-django-oserror-errno-2-no-such-file-or-directory-static-static
+// https://medium.com/@speedforcerun/heroku-deploy-no-web-process-running-6f6b4059765d
+// https://dev.to/mdrhmn/deploying-react-django-app-using-heroku-2gfa
+// https://alphacoder.xyz/deploy-react-django-app-on-heroku/
+// https://mattsegal.dev/django-spa-infrastructure.html
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
