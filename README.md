@@ -4,7 +4,7 @@
 (Full-Stack, Django, PostgreSQL, React.js) | A web-based coding references and bug tracking application.
 
 ## Screenshots:
-![Screenshot](Img/01.png)
+![Screenshot](/01.png)
 
 ## Technologies Used:
 #### Front-End:
