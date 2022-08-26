@@ -5,6 +5,8 @@
 
 ## Screenshots:
 ![Screenshot](/01.png)
+![Screenshot](/01.png)
+![Screenshot](/01.png)
 
 ## Technologies Used:
 #### Front-End:
