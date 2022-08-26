@@ -4,7 +4,7 @@
 (Full-Stack, Django, PostgreSQL, React.js) | A web-based coding references and bug tracking application.
 
 ## Screenshots:
-![image info](/Users/spock-117/code/projects/full-stack/code_seonbi/code_seonbi_main/frontend/src/Img/01.png)
+![alt text](/Users/spock-117/code/projects/full-stack/code_seonbi/code_seonbi_main/frontend/src/Img/01.png)
 
 ## Technologies Used:
 #### Front-End:
