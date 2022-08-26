@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-import django_heroku
 import dj_database_url
 from pathlib import Path
 from dotenv import load_dotenv, find_dotenv
@@ -149,5 +148,5 @@ STATICFILES_STORAGE='whitenoise.django.GzipManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Django App for Heroku.
+import django_heroku
 django_heroku.settings(locals())
-
