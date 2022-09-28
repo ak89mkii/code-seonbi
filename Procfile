@@ -1,3 +1,3 @@
-web: gunicorn code_seonbi_main.wsgi
+web: gunicorn code_seonbi.wsgi
 manage.py collectstatic --noinput
 manage.py migrate
