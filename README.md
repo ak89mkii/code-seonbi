@@ -3,6 +3,9 @@
 ## Description:
 (Full-Stack, Django, PostgreSQL, React.js) | A web-based coding references and bug tracking application.
 
+## Deployment Link:
+https://code-seonbi-v2.herokuapp.com/
+
 ## Screenshots:
 ![Screenshot](/01.png)
 ![Screenshot](/02.png)
