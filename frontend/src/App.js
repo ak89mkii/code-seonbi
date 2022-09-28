@@ -15,6 +15,12 @@ import Error404 from './pages/Error404/error404.jsx'
 // For testing components with Django integration.
 import Bug from './pages/Bug/Bug.jsx'
 import BugAdd from './pages/BugAdd/BugAdd.jsx'
+import icon from './Img/favicon.ico';
+
+useEffect(() => {
+    const favicon = document.getElementById('favicon');
+    favicon.setAttribute('href', icon);
+}, []);
 
 class App extends Component {
   state = {
