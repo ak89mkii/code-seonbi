@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    # 'code_seonbi_main.apps.Code_Seonbi_MainConfig',
+    'code_seonb_.apps.Code_SeonbiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
