@@ -46,6 +46,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://pypi.org/project/whitenoise/#description
 // https://pypi.org/project/django-heroku
 // https://devcenter.heroku.com/articles/django-app-configuration
+// https://medium.com/@qazi/how-to-deploy-a-django-app-to-heroku-in-2018-the-easy-way-48a528d97f9c
 #### Depoyment Troubleshooting:
 // https://stackoverflow.com/questions/29082028/heroku-django-oserror-errno-2-no-such-file-or-directory-static-static
 // https://medium.com/@speedforcerun/heroku-deploy-no-web-process-running-6f6b4059765d
