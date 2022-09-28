@@ -52,6 +52,9 @@ https://code-seonbi-v2.herokuapp.com/
 // https://dev.to/mdrhmn/deploying-react-django-app-using-heroku-2gfa
 // https://alphacoder.xyz/deploy-react-django-app-on-heroku/
 // https://mattsegal.dev/django-spa-infrastructure.html
+// https://www.youtube.com/watch?v=TFFtDLZnbSs
+// https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku
+// 
 #### Information References:
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
@@ -72,6 +75,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request
 // https://www.youtube.com/watch?v=rwfnQk4wp1I
 // https://stackoverflow.com/questions/15209978/where-to-store-secret-keys-django
+// 
 #### Images References / Credits:
 #### Sounds References / Credits:
 #### Fonts / Credits:
