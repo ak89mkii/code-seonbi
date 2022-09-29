@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { Navbar, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Form, InputGroup, Button, Container } from 'react-bootstrap';
 import '../../App.css';
 import logo from '../../Img/logo.png';
 import Toggle from '../Toggle/Toggle.jsx';
 
 const Nav = (props) => {
-    return (
+    return (<div>
         <Navbar bg="dark" variant="dark">
+            <Container>
             <Navbar.Brand>
                 <div className="title">
                 <Link to="/">
@@ -22,18 +23,25 @@ const Nav = (props) => {
                 {' '}
                 Code Seonbi</div>
             </Navbar.Brand>
-            <Form inline>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <br></br>
-                <br></br>
-                <Button variant="outline-light">Search</Button>            
-            </Form>
-            <Navbar.Brand></Navbar.Brand>
             <Toggle
                 icon={props.icon}
                 toggleMode={props.toggleMode}
             />
+            </Container>
         </Navbar>
+        <br></br>
+        <Container>
+            <InputGroup className="mb-3">
+            <Form.Control
+            placeholder="Write Search Here..."
+            />
+            <Button variant="outline-secondary" id="button-addon2">
+            Search
+            </Button>
+            </InputGroup>
+        </Container>
+        </div>
+       
     )
 }
 

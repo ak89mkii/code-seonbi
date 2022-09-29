@@ -1,10 +1,11 @@
 import React from 'react'
 import '../../App.css'
-import {  } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const Welcome = (props) => {
     return (
         <div className={props.mode}>
+            <Container>
             <figure class="text-center">
                 <div>
                     <h1 className='title'>Welcome to Code Seonbi</h1>
@@ -16,6 +17,7 @@ const Welcome = (props) => {
                 </div>
             </figure>
             <br></br>
+            </Container>
         </div>
     )
 }
