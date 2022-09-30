@@ -21,16 +21,16 @@ const Nav = (props) => {
                 />            
                 </Link>
                 {' '}
-                Code Seonbi</div>
+                Code Seonbi
+                </div>
             </Navbar.Brand>
+            </Container>
+        </Navbar>
+        <Container>
             <Toggle
                 icon={props.icon}
                 toggleMode={props.toggleMode}
             />
-            </Container>
-        </Navbar>
-        <br></br>
-        <Container>
             <InputGroup className="mb-3">
             <Form.Control
             placeholder="Write Search Here..."
