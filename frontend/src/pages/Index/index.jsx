@@ -14,6 +14,7 @@ class Home extends Component {
         open: false,
         mode: 'dark',
         mode2: 'darkNoText',
+        cardMode: 'light',
         icon: moon,
         show: false
     }
@@ -23,12 +24,14 @@ class Home extends Component {
             this.setState({
                 mode: 'dark',
                 mode2: 'darkNoText',
+                cardMode: 'light',
                 icon: moon,
             })
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
                 mode2: 'lightNoText',
+                cardMode: 'dark',
                 icon: sun,
             })
         }
@@ -58,6 +61,7 @@ class Home extends Component {
                     />
                     <CardsMain 
                         mode2={this.state.mode2}
+                        cardMode={this.state.cardMode}
                         show={this.state.show}
                         handleShow={this.handleShow}
                         handleClose={this.handleClose}

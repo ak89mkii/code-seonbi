@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import '../../App.css'
 import { Card, Container, CardGroup, Button, Modal, } from 'react-bootstrap';
+import django from '../../Img/django.png'
+import python from '../../Img/python.png'
+import drf from '../../Img/drf.png'
 
 const CardsMain = (props) => {
     return (
@@ -9,13 +12,13 @@ const CardsMain = (props) => {
             <div className={props.mode2}><br></br></div>
                 <Container>
                     <Container>
-                        <CardGroup>
-                            <Card>                            
+                        <CardGroup className='cardGroup'>
+                            <Card border={props.cardMode}>                            
                                 <Link to="/bug">
-                                <Card.Img variant="top" src="https://www.comingsoon.net/assets/uploads/2021/05/dragon-ball.jpg" />                              
+                                <Card.Img id='bugImage' variant="top" src='https://qph.cf2.quoracdn.net/main-qimg-c7bf8a644276ec5ad35d658a19bc938e' onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
-                                    <Card.Title>Bug Tracker:</Card.Title>
+                                    <Card.Title><div className='title2'>Bug Tracker</div></Card.Title>
                                     <Card.Text>
                                         Keep track of your programming bugs in an organized and efficicent manner.
                                     </Card.Text>
@@ -24,24 +27,100 @@ const CardsMain = (props) => {
                             <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src="https://images2.alphacoders.com/602/thumb-1920-602223.jpg" onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title>Code References:</Card.Title>
+                                    <Card.Title><div className='title2'>Django</div></Card.Title>
                                     <Card.Text>
-                                        Useful programming and syntax documentation, tips, and references.
+                                    <b>Frontend</b>: Bootstrap | <b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                             <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src="https://i.ytimg.com/vi/K7Yh_YywD-U/maxresdefault.jpg" onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={drf} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title>Project Documentation:</Card.Title>
+                                    <Card.Title><div className='title2'>Django REST FW</div></Card.Title>
                                     <Card.Text>
-                                        Write and refer to project docs.
+                                    <b>Frontend</b>: Bootstrap, React.js |<b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku 
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardGroup>
+
+                        <CardGroup className='cardGroup'>
+                            <Card>                            
+                                <Link to="/bug">
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>Git & GitHub</div></Card.Title>
+                                    <Card.Text>
+                                        Keep track of your programming bugs in an organized and efficicent manner.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>Heroku</div></Card.Title>
+                                    <Card.Text>
+                                    <b>Frontend</b>: Bootstrap | <b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>PostgreSQL</div></Card.Title>
+                                    <Card.Text>
+                                    <b>Frontend</b>: Bootstrap, React.js |<b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku 
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardGroup>
+
+                        <CardGroup className='cardGroup'>
+                            <Card>                            
+                                <Link to="/bug">
+                                <Card.Img variant="top" src={python} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>Python 3</div></Card.Title>
+                                    <Card.Text>
+                                        Keep track of your programming bugs in an organized and efficicent manner.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>React.js</div></Card.Title>
+                                    <Card.Text>
+                                    <b>Frontend</b>: Bootstrap | <b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>React Native</div></Card.Title>
+                                    <Card.Text>
+                                    <b>Frontend</b>: Bootstrap, React.js |<b>Database</b>: PostgreSQL | <b>Deployment</b>: Heroku 
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
