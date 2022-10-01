@@ -76,6 +76,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://stackoverflow.com/questions/31061838/how-do-i-cancel-an-http-fetch-request
 // https://www.youtube.com/watch?v=rwfnQk4wp1I
 // https://stackoverflow.com/questions/15209978/where-to-store-secret-keys-django
+// https://sebhastian.com/react-filter/
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
