@@ -12,6 +12,20 @@ TECHNOLOGIES = (
     ('Python 3', 'Python 3'),    
     ('React.js', 'React.js'),
     ('React Native', 'React Native'),
+    ('Deployment', 'Deployment'),
+    ('Other', 'Other'),
+)
+
+TECHNOLOGIES_02 = (
+    ('Django', 'Django'),
+    ('Django REST Framework', 'Django REST Framework'),
+    ('Git & GitHub', 'Git & GitHub'),
+    ('Heroku', 'Heroku'),
+    ('PostgreSQL', 'PostgreSQL'),
+    ('Python 3', 'Python 3'),    
+    ('React.js', 'React.js'),
+    ('React Native', 'React Native'),
+    ('Other', 'Other'),
 )
 
 STATUSES = (
@@ -37,6 +51,22 @@ class Bug(models.Model):
     error = models.CharField(max_length=1000)
     links = models.CharField(max_length=1000)
     solution = models.CharField(max_length=1000, default='Over 9000!')
+    notes = models.CharField(max_length=1000, default='Over 9000!')
+    timestamp = models.DateField(auto_now_add=True)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    # def __str__(self):
+    #     return self.skill
+
+
+class Command(models.Model):
+    technology = models.CharField(
+        max_length=50,
+        choices=TECHNOLOGIES_02,
+        default=TECHNOLOGIES_02[0][0]
+    )    
+    description = models.CharField(max_length=100, default='Over 9000!')
+    command = models.CharField(max_length=100, default='Over 9000!')
     notes = models.CharField(max_length=1000, default='Over 9000!')
     timestamp = models.DateField(auto_now_add=True)
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
