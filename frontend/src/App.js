@@ -15,6 +15,8 @@ import Error404 from './pages/Error404/error404.jsx'
 // For testing components with Django integration.
 import Bug from './pages/Bug/Bug.jsx'
 import BugAdd from './pages/BugAdd/BugAdd.jsx'
+import Django from './pages/Django/Django.jsx'
+import CommandAdd from './pages/CommandAdd/CommandAdd.jsx'
 
 class App extends Component {
   state = {
@@ -31,6 +33,8 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/bug" component={Bug} />
             <Route exact path="/bug_add" component={BugAdd} />
+            <Route exact path="/django" component={Django} />
+            <Route exact path="/command_add" component={CommandAdd} />
             <Route component={Error404} />
           </Switch>
         </Router>      

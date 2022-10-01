@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import BugSerializer
-from .models import Bug
+from .serializers import BugSerializer, CommandSerializer
+from .models import Bug, Command
 
 # Create your views here.
 
@@ -25,15 +25,15 @@ class DeleteBugItem(generics.DestroyAPIView):
 # Command Class:
 # POST requests only.
 class CreateCommandItem(generics.CreateAPIView):
-    queryset = Bug.objects.all()
-    serializer_class = BugSerializer
+    queryset = Command.objects.all()
+    serializer_class = CommandSerializer
 
 # GET requests only.
 class GetCommandAll(generics.ListAPIView):
-    queryset = Bug.objects.all()
-    serializer_class = BugSerializer
+    queryset = Command.objects.all()
+    serializer_class = CommandSerializer
 
 # DELETE requests only.
 class DeleteCommandItem(generics.DestroyAPIView):
-    queryset = Bug.objects.all()
-    serializer_class = BugSerializer
+    queryset = Command.objects.all()
+    serializer_class = CommandSerializer

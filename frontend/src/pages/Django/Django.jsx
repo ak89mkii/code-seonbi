@@ -6,7 +6,7 @@ import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
 
-class Bug extends Component {
+class Django extends Component {
     state = {
         //  Temporary array before JSON data mapped from fetch.
         newData: [],
@@ -35,8 +35,8 @@ class Bug extends Component {
 
     // Function: Sets state to data from backend Bug model.
     // Need arrow function to use setState.
-    getBugList = () => {
-        fetch("/backend/bug-list")
+    getCommandList = () => {
+        fetch("/backend/command-list")
             .then((response) => response.json())
             .then((data) => {
                 this.setState ({
@@ -47,8 +47,8 @@ class Bug extends Component {
     }
 
     // Function: Sends delete request to backend based on id.
-    deleteBugList  = (id) => {
-        fetch('/backend/bug-delete/' + id, {method: 'DELETE',})
+    deleteCommandList  = (id) => {
+        fetch('/backend/command-delete/' + id, {method: 'DELETE',})
             .then(res => {
                 return res.json()
             }) 
@@ -67,15 +67,15 @@ class Bug extends Component {
                     />
                     <figure class="text-center">
                         <div className={this.state.mode}>
-                            <h1 className='title'>Bug Tracker Data</h1>
+                            <h1 className='title'>Django References and Commands</h1>
                             <blockquote class="blockquote">
-                                <p className='title2Alt'>Organized Bug Tracking</p>
+                                <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
                         </div>
-                        <Link to="/bug_add"><Button>Add Bug</Button></Link>
+                        <Link to="/command_add"><Button>Add Command</Button></Link>
                     </figure>
                     <br></br>
-                    { this.getBugList() }
+                    { this.getCommandList() }
                     { this.state.newData.map((list) => (
                         <div>
                         <br></br>
@@ -86,11 +86,8 @@ class Bug extends Component {
                                     <Card.Header as="h5">Project: {JSON.stringify(list.project)}</Card.Header>
                                     <Card.Body>
                                     <Card.Text>ID: {JSON.stringify(list.id)}</Card.Text>                                <p>Technology: {JSON.stringify(list.technology)}</p>
-                                    <p>Status: {JSON.stringify(list.status)}</p>
                                     <p>Description: {JSON.stringify(list.description)}</p>
-                                    <p>Error: {JSON.stringify(list.error)}</p>
-                                    <p>Links: {JSON.stringify(list.links)}</p>
-                                    <p>Solution: {JSON.stringify(list.solution)}</p>
+                                    <p>Command: {JSON.stringify(list.command)}</p>
                                     <p>Notes: {JSON.stringify(list.notes)}</p>
                                     <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
                                     
@@ -98,7 +95,7 @@ class Bug extends Component {
                                     <Button variant="warning">Edit</Button>{' '}
                                     <Button 
                                         variant="danger" 
-                                        onClick={ () => this.deleteBugList(list.id) }
+                                        onClick={ () => this.deleteCommandList(list.id) }
                                     >
                                         Delete
                                     </Button>{' '}
@@ -122,4 +119,4 @@ class Bug extends Component {
     }
 }
 
-export default Bug;
+export default Django;

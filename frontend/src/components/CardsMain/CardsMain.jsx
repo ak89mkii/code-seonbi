@@ -31,9 +31,9 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card>
-                                {/* <Link to="/bug"> */}
+                                <Link to="/django">
                                 <Card.Img variant="top" src={django} onClick={props.handleShow}/>
-                                {/* </Link> */}
+                                </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Django</div></Card.Title>
                                     <Card.Text>
