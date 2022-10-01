@@ -63,7 +63,7 @@ class CommandAdd extends Component {
             body: JSON.stringify(command)
         })
 
-        window.location.href = "/django"
+        window.location.href = "/"
     }
 
     render() {

@@ -57,9 +57,9 @@ const CardsMain = (props) => {
 
                         <CardGroup className='cardGroup'>
                             <Card>                            
-                                <Link to="/bug">
+                                {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={git} onClick={props.handleShow}/>
-                                </Link>
+                                {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Git & GitHub</div></Card.Title>
                                     <Card.Text>
@@ -95,9 +95,9 @@ const CardsMain = (props) => {
 
                         <CardGroup className='cardGroup'>
                             <Card>                            
-                                <Link to="/bug">
+                                {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={python} onClick={props.handleShow}/>
-                                </Link>
+                                {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Python 3</div></Card.Title>
                                     <Card.Text>
