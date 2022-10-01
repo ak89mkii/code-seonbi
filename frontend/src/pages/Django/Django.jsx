@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Card, Button, Row, Container } from 'react-bootstrap';
+import { Card, Button, Row, Container, Alert } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
@@ -76,21 +76,24 @@ class Django extends Component {
                     </figure>
                     <br></br>
                     { this.getCommandList() }
-                    { this.state.newData.map((list) => (
+                    { this.state.newData.filter(list => list.technology === 'Django').map((list) => (
                         <div>
                         <br></br>
                         <br></br>
                         <Container>
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
-                                    <Card.Header as="h5">Project: {JSON.stringify(list.project)}</Card.Header>
-                                    <Card.Body>
-                                    <Card.Text>ID: {JSON.stringify(list.id)}</Card.Text>                                <p>Technology: {JSON.stringify(list.technology)}</p>
-                                    <p>Description: {JSON.stringify(list.description)}</p>
-                                    <p>Command: {JSON.stringify(list.command)}</p>
-                                    <p>Notes: {JSON.stringify(list.notes)}</p>
-                                    <p>Timestamp: {JSON.stringify(list.timestamp)}</p>
-                                    
+                                    <Card.Header><p></p>
+                                    <p><b>Description:</b> {JSON.stringify(list.description)}</p></Card.Header>
+                                    <Card.Body>                               
+                                    <p><b>Command:</b></p>
+                                    <Alert variant='primary'>
+                                    {JSON.stringify(list.command)}
+                                    </Alert>
+                                    <p><b>Notes:</b></p>
+                                    <Alert variant='dark'>
+                                    {JSON.stringify(list.notes)}
+                                    </Alert>
                                     <div className="mb-2">
                                     <Button variant="warning">Edit</Button>{' '}
                                     <Button 
@@ -102,7 +105,9 @@ class Django extends Component {
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
-                                    <Card.Footer className="text-center">{JSON.stringify(list.id)}</Card.Footer>
+                                    <Card.Footer className="text-center"><p>{JSON.stringify(list.technology)}</p><p>
+                                    {JSON.stringify(list.timestamp)}</p>
+                                    </Card.Footer>
                                 </Card>
                             </Row>
                         </Container>
