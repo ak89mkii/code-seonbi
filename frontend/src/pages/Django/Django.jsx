@@ -84,11 +84,11 @@ class Django extends Component {
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
                                     <Card.Header><p></p>
-                                    <p><b>Description:</b> {JSON.stringify(list.description)}</p></Card.Header>
+                                    <p><b>Description:</b> {(list.description)}{console.log('test')}</p></Card.Header>
                                     <Card.Body>                               
                                     <p><b>Command:</b></p>
                                     <Alert variant='primary'>
-                                    {JSON.stringify(list.command)}
+                                    {(list.command)}
                                     </Alert>
                                     <p><b>Notes:</b></p>
                                     <Alert variant='dark'>
@@ -105,7 +105,7 @@ class Django extends Component {
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
-                                    <Card.Footer className="text-center"><p>{JSON.stringify(list.technology)}</p><p>
+                                    <Card.Footer className="text-center"><p>{(list.technology)}</p><p>
                                     {(list.timestamp)}</p>
                                     </Card.Footer>
                                 </Card>
