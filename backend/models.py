@@ -3,6 +3,8 @@ from django.db import models
 # from django.contrib.auth.models import User
 
 # Create your models here.
+
+# Bug Class:
 TECHNOLOGIES = (
     ('Django', 'Django'),
     ('Django REST Framework', 'Django REST Framework'),
@@ -16,6 +18,14 @@ TECHNOLOGIES = (
     ('Other', 'Other'),
 )
 
+STATUSES = (
+    ('Open', 'Open'),
+    ('Working on Solution', 'Working on Solution'),
+    ('To Revisit', 'To Revisit'),
+    ('Solved', 'Solved')
+)
+
+# Command Class:
 TECHNOLOGIES_02 = (
     ('Django', 'Django'),
     ('Django REST Framework', 'Django REST Framework'),
@@ -28,12 +38,11 @@ TECHNOLOGIES_02 = (
     ('Other', 'Other'),
 )
 
-STATUSES = (
-    ('Open', 'Open'),
-    ('Working on Solution', 'Working on Solution'),
-    ('To Revisit', 'To Revisit'),
-    ('Solved', 'Solved')
+TYPES = (
+    ('Command', 'Command'),
+    ('Documentation Link', 'Documentation Link'),
 )
+
 
 class Bug(models.Model):
     project = models.CharField(max_length=100, default='Over 9000!')
@@ -67,6 +76,11 @@ class Command(models.Model):
     )    
     description = models.CharField(max_length=100, default='Over 9000!')
     command = models.CharField(max_length=100, default='Over 9000!')
+    type = models.CharField(
+        max_length=50,
+        choices=TYPES,
+        default=TYPES[0][0]
+    )    
     notes = models.CharField(max_length=1000, default='Over 9000!')
     timestamp = models.DateField(auto_now_add=True)
     # user = models.ForeignKey(User, on_delete=models.CASCADE)

@@ -99,19 +99,19 @@ class CommandAdd extends Component {
                             >
                                 <label>Technology:</label>
                                 <Form.Group>
-                                <select 
-                                    className='dropdown'
-                                    onChange={(e) => this.setState({ technology: e.target.value })}
-                                >
-                                    <option value="Django">Django</option>
-                                    <option value="Django REST Framework">Django REST Framework</option>
-                                    <option value="JavaScript (ES9)">JavaScript (ES9)</option>
-                                    <option value="MongoDB">MongoDB</option>
-                                    <option value="PostgreSQL">PostgreSQL</option>
-                                    <option value="Python 3">Python 3</option>
-                                    <option value="React.js">React.js</option>
-                                    <option value="React Native">React Native</option>
-                                </select>
+                                    <select 
+                                        className='dropdown'
+                                        onChange={(e) => this.setState({ technology: e.target.value })}
+                                    >
+                                        <option value="Django">Django</option>
+                                        <option value="Django REST Framework">Django REST Framework</option>
+                                        <option value="Git & GitHub">Git & GitHub</option>
+                                        <option value="Heroku">Heroku</option>
+                                        <option value="PostgreSQL">PostgreSQL</option>
+                                        <option value="Python 3">Python 3</option>
+                                        <option value="React.js">React.js</option>
+                                        <option value="React Native">React Native</option>
+                                    </select>
                                 </Form.Group>                             
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
@@ -124,15 +124,25 @@ class CommandAdd extends Component {
                                         onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
+                                <label>Type:</label>
+                                <Form.Group>
+                                    <select 
+                                        className='dropdown'
+                                        onChange={(e) => this.setState({ type: e.target.value })}
+                                    >
+                                        <option value="Command">Command</option>
+                                        <option value="Documentation Link">Link</option>
+                                    </select>
+                                </Form.Group>  
                                 <Form.Group 
                                     className="mb-3" controlId="formBasicPassword">
-                                    <Form.Label>Command:</Form.Label>
+                                    <Form.Label>Command or Link:</Form.Label>
                                     <Form.Control
                                         as="textarea" rows={3} 
                                         name="command"
                                         type="text" 
                                         value={this.state.command}
-                                        placeholder="Write terminal command here..." 
+                                        placeholder="Write terminal command or docs link here..." 
                                         onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
