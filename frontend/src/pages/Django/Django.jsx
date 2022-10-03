@@ -52,6 +52,7 @@ class Django extends Component {
             .then(res => {
                 return res.json()
             }) 
+            .then(window.location.reload())
             .then(data => console.log(data))
     }
 
@@ -88,11 +89,21 @@ class Django extends Component {
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
                                     <Card.Header><p></p>
-                                    <p><b>Description:</b> {(list.description)}{console.log('test')}</p></Card.Header>
+                                    <p><b>Description:</b> {(list.description)}</p></Card.Header>
+
+
+                                    {/* Fetch test for infinite loop. */}
+                                    {console.log('Fetch test for infinite loop.')}
+
                                     <Card.Body>                               
                                     <p><b>Command:</b></p>
                                     <Alert variant='primary'>
                                     {(list.command)}
+                                    <div className="d-flex justify-content-end">
+                                    <Button onClick={() => setShow(false)} variant="outline-dark">
+                                        Copy
+                                    </Button>
+                                    </div>
                                     </Alert>
                                     <p><b>Notes:</b></p>
                                     <Alert variant='dark'>

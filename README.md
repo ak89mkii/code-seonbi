@@ -77,6 +77,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://www.youtube.com/watch?v=rwfnQk4wp1I
 // https://stackoverflow.com/questions/15209978/where-to-store-secret-keys-django
 // https://sebhastian.com/react-filter/
+// https://stackoverflow.com/questions/46634718/functions-inside-componentdidmount-are-undefined
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
