@@ -10,4 +10,4 @@ class BugSerializer(serializers.ModelSerializer):
 class CommandSerializer(serializers.ModelSerializer):
     class Meta:
         model = Command
-        fields = ('id', 'technology', 'description', 'command', 'notes', 'timestamp')
+        fields = ('id', 'technology', 'description', 'type', 'command', 'notes', 'timestamp')

@@ -120,9 +120,9 @@ class Django extends Component {
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
-                                    <Card.Footer className="text-center"><p>{(list.technology)}</p>
-                                    <p>{(list.timestamp)}</p>
+                                    <Card.Footer className="text-center">
                                     <p>{(list.technology)}</p>
+                                    <p>{(list.timestamp)}</p>
                                     </Card.Footer>
                                 </Card>
                             </Row>
