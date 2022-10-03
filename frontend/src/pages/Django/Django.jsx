@@ -55,6 +55,10 @@ class Django extends Component {
             .then(data => console.log(data))
     }
 
+    componentDidMount() {
+        this.getCommandList();
+    }
+
     render() {
         return (
             <div className={this.state.mode2}>
@@ -75,7 +79,7 @@ class Django extends Component {
                         <Link to="/command_add"><Button>Add Command</Button></Link>
                     </figure>
                     <br></br>
-                    { this.getCommandList() }
+                    {/* { this.getCommandList() } */}
                     { this.state.newData.filter(list => list.technology === 'Django').map((list) => (
                         <div>
                         <br></br>
