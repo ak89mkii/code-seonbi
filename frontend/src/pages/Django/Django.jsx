@@ -92,7 +92,7 @@ class Django extends Component {
                                     </Alert>
                                     <p><b>Notes:</b></p>
                                     <Alert variant='dark'>
-                                    {JSON.stringify(list.notes)}
+                                    {(list.notes)}
                                     </Alert>
                                     <div className="mb-2">
                                     <Button variant="warning">Edit</Button>{' '}
@@ -106,7 +106,7 @@ class Django extends Component {
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
                                     <Card.Footer className="text-center"><p>{JSON.stringify(list.technology)}</p><p>
-                                    {JSON.stringify(list.timestamp)}</p>
+                                    {(list.timestamp)}</p>
                                     </Card.Footer>
                                 </Card>
                             </Row>
