@@ -52,8 +52,8 @@ class Django extends Component {
             .then(res => {
                 return res.json()
             }) 
-            .then(window.location.reload())
             .then(data => console.log(data))
+            .then(window.location.reload())
     }
 
     componentDidMount() {
