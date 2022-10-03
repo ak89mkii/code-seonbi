@@ -55,6 +55,10 @@ class Bug extends Component {
             .then(data => console.log(data))
     }
 
+    componentDidMount() {
+        this.getBugList();
+    }
+
     render() {
         return (
             <div className={this.state.mode2}>
@@ -75,11 +79,14 @@ class Bug extends Component {
                         <Link to="/bug_add"><Button>Add Bug</Button></Link>
                     </figure>
                     <br></br>
-                    { this.getBugList() }
                     { this.state.newData.map((list) => (
                         <div>
                         <br></br>
                         <br></br>
+                        
+                        {/* Fetch test for infinite loop. */}
+                        {console.log('Fetch test for infinite loop.')}
+                         
                         <Container>
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
