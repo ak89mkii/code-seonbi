@@ -25,6 +25,7 @@ https://code-seonbi-v2.herokuapp.com/
 - webpack
 - file-loader
 - css-loader
+- https://www.npmjs.com/package/react-copy-to-clipboard
 #### Version Control:
 - Git
 - GitHub
