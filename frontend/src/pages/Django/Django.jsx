@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Card, Button, Row, Container, Alert } from 'react-bootstrap';
+import { Card, Button, Row, Container, Alert, } from 'react-bootstrap';
+
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Popover from 'react-bootstrap/Popover';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
 import sun from '../../Img/sun.png'
 import moon from '../../Img/moon.png'
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class Django extends Component {
     state = {
@@ -15,6 +19,10 @@ class Django extends Component {
         mode: 'dark',
         mode2: 'darkNoText',
         icon: moon,
+        value: '',
+        copied: false,
+        show: 'Copy',
+        showed: 'Copied'
     }
 
     toggleMode = () => {
@@ -99,9 +107,15 @@ class Django extends Component {
                                     <Alert variant='primary'>
                                     {(list.command)}
                                     <div className="d-flex justify-content-end">
-                                    <Button onClick={() => setShow(false)} variant="outline-dark">
-                                        Copy
-                                    </Button>
+                                    
+                                    
+                                    <CopyToClipboard text={(list.command)}
+                                        onCopy={() => this.setState({copied: true})}>
+                                        <Button variant='outline-dark'>
+                                            {this.state.show}
+                                        </Button>                        
+                                    </CopyToClipboard>
+
                                     </div>
                                     </Alert>
                                     <p><b>Notes:</b></p>
