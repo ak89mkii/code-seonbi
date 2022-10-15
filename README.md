@@ -78,6 +78,8 @@ https://code-seonbi-v2.herokuapp.com/
 // https://stackoverflow.com/questions/15209978/where-to-store-secret-keys-django
 // https://sebhastian.com/react-filter/
 // https://stackoverflow.com/questions/46634718/functions-inside-componentdidmount-are-undefined
+// https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
+https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
