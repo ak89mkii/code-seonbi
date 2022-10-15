@@ -58,6 +58,7 @@ class CommandAdd extends Component {
         console.log(command)
 
         fetch("/backend/command-add", {
+            credentials: 'include',
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(command)
