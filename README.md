@@ -48,7 +48,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://pypi.org/project/django-heroku
 // https://devcenter.heroku.com/articles/django-app-configuration
 // https://medium.com/@qazi/how-to-deploy-a-django-app-to-heroku-in-2018-the-easy-way-48a528d97f9c
-#### Depoyment Troubleshooting:
+#### Deployment Troubleshooting:
 // https://stackoverflow.com/questions/29082028/heroku-django-oserror-errno-2-no-such-file-or-directory-static-static
 // https://medium.com/@speedforcerun/heroku-deploy-no-web-process-running-6f6b4059765d
 // https://dev.to/mdrhmn/deploying-react-django-app-using-heroku-2gfa
@@ -58,6 +58,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://stackoverflow.com/questions/36665889/collectstatic-error-while-deploying-django-app-to-heroku
 // 
 #### Information References:
+// https://www.django-rest-framework.org/
 // https://www.youtube.com/watch?v=JD-age0BPVo&t=2s
 // https://stackoverflow.com/questions/69424563/data-directory-was-initialized-by-postgresql-version-13-which-is-not-compatible
 // https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
