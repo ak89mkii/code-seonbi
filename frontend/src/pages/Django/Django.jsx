@@ -84,11 +84,11 @@ class Django extends Component {
                                 <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
                         </div>
-                        <Link to="/command_add"><Button>Add Command</Button></Link>
+                        <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>
                     </figure>
                     <br></br>
                     {/* { this.getCommandList() } */}
-                    { this.state.newData.filter(list => list.technology === 'Django').map((list) => (
+                    { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Command').map((list) => (
                         <div>
                         <br></br>
                         <br></br>
