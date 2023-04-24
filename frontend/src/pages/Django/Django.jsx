@@ -87,6 +87,7 @@ class Django extends Component {
                         <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>
                     </figure>
                     <br></br>
+                    <h1 className='title'>Commands:</h1>
                     {/* { this.getCommandList() } */}
                     { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Command').map((list) => (
                         <div>
