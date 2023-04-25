@@ -24,6 +24,12 @@ const Nav = (props) => {
                 Code Seonbi
                 </div>
             </Navbar.Brand>
+            <Navbar.Collapse className="justify-content-end">
+            <Toggle
+                icon={props.icon}
+                toggleMode={props.toggleMode}
+            />
+
             </Container>
         </Navbar>
         <Container>
