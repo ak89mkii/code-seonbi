@@ -143,6 +143,71 @@ class Django extends Component {
                         </Container>
                         <br></br>
                         <br></br>
+
+
+                        <br></br>
+                        <br></br>
+                    </div>
+                    ))}
+
+                    <h1 className='title'>Documentation Links:</h1>
+                    {/* { this.getCommandList() } */}
+                    { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Documentation Link').map((list) => (
+                        <div>
+                        <br></br>
+                        <br></br>
+                        <Container>
+                            <Row className="justify-content-md-center">
+                                <Card style={{ width: '40rem' }} border="dark">
+                                    <Card.Header><p></p>
+                                    <p><b>Description:</b> {(list.description)}</p></Card.Header>
+
+
+                                    {/* Fetch test for infinite loop. */}
+                                    {console.log('Fetch test for infinite loop.')}
+
+                                    <Card.Body>                               
+                                    <p><b>{(list.type)}:</b></p>
+                                    <Alert variant='primary'>
+                                    {(list.command)}
+                                    <div className="d-flex justify-content-end">
+                                    
+                                    
+                                    <CopyToClipboard text={(list.command)}
+                                        onCopy={() => this.setState({copied: true})}>
+                                        <Button variant='outline-dark'>
+                                            {this.state.show}
+                                        </Button>                        
+                                    </CopyToClipboard>
+
+                                    </div>
+                                    </Alert>
+                                    <p><b>Notes:</b></p>
+                                    <Alert variant='dark'>
+                                    {(list.notes)}
+                                    </Alert>
+                                    <div className="mb-2">
+                                    <Button variant="warning">Edit</Button>{' '}
+                                    <Button 
+                                        variant="danger" 
+                                        onClick={ () => this.deleteCommandList(list.id) }
+                                    >
+                                        Delete
+                                    </Button>{' '}
+                                    </div>
+                                    </Card.Body>
+                                    {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
+                                    <Card.Footer className="text-center">
+                                    <p><b>{(list.technology)}</b></p>
+                                    <p>{(list.timestamp)}</p>
+                                    </Card.Footer>
+                                </Card>
+                            </Row>
+                        </Container>
+                        <br></br>
+                        <br></br>
+
+
                         <br></br>
                         <br></br>
                     </div>
