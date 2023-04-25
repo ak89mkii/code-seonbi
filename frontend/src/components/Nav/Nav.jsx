@@ -29,7 +29,7 @@ const Nav = (props) => {
                 icon={props.icon}
                 toggleMode={props.toggleMode}
             />
-
+        </Navbar.Collapse>
             </Container>
         </Navbar>
         <Container>
