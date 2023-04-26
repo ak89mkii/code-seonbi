@@ -86,6 +86,8 @@ class Django extends Component {
                         </div>
                         <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>
                     </figure>
+                    
+                    {/* Section 01: Commands */}
                     <br></br>
                     <h1 className='title'>Commands:</h1>
                     {/* { this.getCommandList() } */}
@@ -143,13 +145,12 @@ class Django extends Component {
                         </Container>
                         <br></br>
                         <br></br>
-
-
                         <br></br>
                         <br></br>
                     </div>
                     ))}
 
+                    {/* Section 02: Documentation */}
                     <h1 className='title'>Documentation Links:</h1>
                     {/* { this.getCommandList() } */}
                     { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Documentation Link').map((list) => (
@@ -196,7 +197,6 @@ class Django extends Component {
                                     </Button>{' '}
                                     </div>
                                     </Card.Body>
-                                    {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
                                     <Card.Footer className="text-center">
                                     <p><b>{(list.technology)}</b></p>
                                     <p>{(list.timestamp)}</p>
