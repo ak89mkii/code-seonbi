@@ -32,11 +32,8 @@ const Nav = (props) => {
         </Navbar.Collapse>
             </Container>
         </Navbar>
+        <br></br>
         <Container>
-            <Toggle
-                icon={props.icon}
-                toggleMode={props.toggleMode}
-            />
             <InputGroup className="mb-3">
             <Form.Control
             placeholder="Write Search Here..."
