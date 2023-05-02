@@ -90,6 +90,9 @@ class Django extends Component {
 
                     {/* Section 01: Commands */}
                     <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
                     <div className={this.state.mode}>
                         <h1 className='title'>Commands:</h1>
                     </div>
