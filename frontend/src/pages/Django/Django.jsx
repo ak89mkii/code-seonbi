@@ -14,12 +14,13 @@ class Django extends Component {
     state = {
         //  Temporary array before JSON data mapped from fetch.
         newData: [],
-        // Dark mode state.
+        // Dark Mode state.
         open: false,
         mode: 'dark',
         mode2: 'darkNoText',
         icon: moon,
         value: '',
+        // CopyToClipboard state.
         copied: false,
         show: 'Copy',
         showed: 'Copied'
