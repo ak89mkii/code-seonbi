@@ -25,7 +25,8 @@ class Django extends Component {
         // CopyToClipboard state.
         copied: false,
         show: 'Copy',
-        showed: 'Copied'
+        showed: 'Copied',
+        idCheck: '1'
     }
 
     toggleMode = () => {
@@ -71,6 +72,8 @@ class Django extends Component {
     }
 
     render() {
+        
+
         return (
             <div className={this.state.mode2}>
                 <div className='halo2'>         
@@ -122,10 +125,8 @@ class Django extends Component {
                                     
                                     
                                     <CopyToClipboard text={(list.command)}
-                                        onCopy={() => this.setState({copied: true})}>
-                                        <Button variant='outline-dark'>
-                                            {this.state.show}
-                                        </Button>                        
+                                        onCopy={() => this.setState({copied: true, idCheck: list.id})}>
+                                        {(list.id) === this.state.idCheck ? <Button variant='outline-dark'>Copied!</Button> : <Button variant='outline-dark'>Copy</Button>}                      
                                     </CopyToClipboard>
 
                                     </div>
