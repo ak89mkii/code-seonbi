@@ -12,8 +12,10 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class Django extends Component {
     state = {
-        //  Temporary array before JSON data mapped from fetch.
-        newData: [],
+        // Temporary array before JSON data mapped from fetch.
+        newData: [],        
+        // Determines whether state should be rendred from localStorage check.
+        check: 0,
         // Dark Mode state.
         open: false,
         mode: 'dark',
