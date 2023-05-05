@@ -73,7 +73,6 @@ class Django extends Component {
 
     render() {
         
-
         return (
             <div className={this.state.mode2}>
                 <div className='halo2'>         
