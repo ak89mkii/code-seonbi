@@ -26,7 +26,7 @@ class Django extends Component {
         copied: false,
         show: 'Copy',
         showed: 'Copied',
-        idCheck: '1'
+        idCheck: undefined
     }
 
     toggleMode = () => {
@@ -69,6 +69,14 @@ class Django extends Component {
 
     componentDidMount() {
         this.getCommandList();
+    }
+
+    // Function: Clears then sets a timer for "add to list" message.
+    componentDidUpdate() {
+        if (this.state.copied == true) {
+            clearTimeout(this.timer);
+            this.timer = setTimeout(() => this.setState({idCheck: undefined}), 5000)
+        }
     }
 
     render() {
