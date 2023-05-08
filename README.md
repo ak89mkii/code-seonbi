@@ -82,6 +82,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://stackoverflow.com/questions/46634718/functions-inside-componentdidmount-are-undefined
 // https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
+// https://stackoverflow.com/questions/40477245/is-it-possible-to-use-if-else-statement-in-react-render-function
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
