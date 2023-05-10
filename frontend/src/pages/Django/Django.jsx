@@ -36,6 +36,7 @@ class Django extends Component {
                 mode2: 'darkNoText',
                 icon: moon,
             })
+            // this.handleFormSubmitDark();
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
