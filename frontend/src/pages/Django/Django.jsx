@@ -43,6 +43,7 @@ class Django extends Component {
                 mode2: 'lightNoText',
                 icon: sun,
             })
+            // this.handleFormSubmitLight();
         }
     }
 
