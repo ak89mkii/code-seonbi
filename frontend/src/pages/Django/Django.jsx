@@ -47,6 +47,33 @@ class Django extends Component {
         }
     }
 
+    // Save mode: light in local Storage:
+    handleFormSubmitLight = () => {
+        localStorage.setItem('mode', 'light');
+        localStorage.setItem('photo', 'photo');
+        localStorage.setItem('nav', 'nav');
+        localStorage.setItem('menu', 'ui menu');
+        localStorage.setItem('contact', 'contact');
+        localStorage.setItem('s1TitleSub', 's1TitleSub');
+        localStorage.setItem('s2', 's2');
+        localStorage.setItem('s2TitleSub', 's2TitleSub');
+        localStorage.setItem('icon', sun);
+    };
+
+    // Save mode: dark in local Storage:
+    handleFormSubmitDark = () => {
+        localStorage.setItem('check', 1);
+        localStorage.setItem('mode', 'dark');
+        localStorage.setItem('photo', 'photoDark');
+        localStorage.setItem('nav', 'navDark');
+        localStorage.setItem('menu', 'ui inverted menu');
+        localStorage.setItem('contact', 'contactDark');
+        localStorage.setItem('s1TitleSub', 's1TitleSubDark');
+        localStorage.setItem('s2', 's2Dark');
+        localStorage.setItem('s2TitleSub', 's2TitleSubDark');
+        localStorage.setItem('icon', moon);
+    };
+
     // Function: Sets state to data from backend Bug model.
     // Need arrow function to use setState.
     getCommandList = () => {
