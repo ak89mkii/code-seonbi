@@ -57,14 +57,7 @@ class Django extends Component {
     // Save mode: dark in local Storage:
     handleFormSubmitDark = () => {
         localStorage.setItem('check', 1);
-        localStorage.setItem('mode', 'dark');
-        localStorage.setItem('photo', 'photoDark');
-        localStorage.setItem('nav', 'navDark');
-        localStorage.setItem('menu', 'ui inverted menu');
-        localStorage.setItem('contact', 'contactDark');
-        localStorage.setItem('s1TitleSub', 's1TitleSubDark');
-        localStorage.setItem('s2', 's2Dark');
-        localStorage.setItem('s2TitleSub', 's2TitleSubDark');
+        localStorage.setItem('mode2', 'darkNoText');
         localStorage.setItem('icon', moon);
     };
 
