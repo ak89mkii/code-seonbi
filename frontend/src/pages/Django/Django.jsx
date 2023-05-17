@@ -50,13 +50,7 @@ class Django extends Component {
     // Save mode: light in local Storage:
     handleFormSubmitLight = () => {
         localStorage.setItem('mode', 'light');
-        localStorage.setItem('photo', 'photo');
-        localStorage.setItem('nav', 'nav');
-        localStorage.setItem('menu', 'ui menu');
-        localStorage.setItem('contact', 'contact');
-        // localStorage.setItem('s1TitleSub', 's1TitleSub');
-        // localStorage.setItem('s2', 's2');
-        // localStorage.setItem('s2TitleSub', 's2TitleSub');
+        localStorage.setItem('mode2', 'darkNoText');
         localStorage.setItem('icon', sun);
     };
 
