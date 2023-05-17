@@ -153,6 +153,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Django App for Heroku.
+# FOR DEBUG: Comment out.
 import django_heroku
 django_heroku.settings(locals())
 
