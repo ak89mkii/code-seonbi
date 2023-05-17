@@ -36,27 +36,28 @@ class Django extends Component {
                 mode2: 'darkNoText',
                 icon: moon,
             })
-            // this.handleFormSubmitDark();
+            this.handleFormSubmitDark();
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
                 mode2: 'lightNoText',
                 icon: sun,
             })
-            // this.handleFormSubmitLight();
+            this.handleFormSubmitLight();
         }
     }
 
     // Save mode: light in local Storage:
     handleFormSubmitLight = () => {
         localStorage.setItem('mode', 'light');
-        localStorage.setItem('mode2', 'darkNoText');
+        localStorage.setItem('mode2', 'lightNoText');
         localStorage.setItem('icon', sun);
     };
 
     // Save mode: dark in local Storage:
     handleFormSubmitDark = () => {
         localStorage.setItem('check', 1);
+        localStorage.setItem('mode', 'dark');
         localStorage.setItem('mode2', 'darkNoText');
         localStorage.setItem('icon', moon);
     };
@@ -85,6 +86,22 @@ class Django extends Component {
 
     componentDidMount() {
         this.getCommandList();
+        // Retreive mode in localStorage:
+        const check = localStorage.getItem('check');
+        this.setState({ check });
+        console.log({check})
+
+        if (check == 1) {
+        // console.log("halo")
+
+        const mode = localStorage.getItem('mode');
+        this.setState({ mode });
+        const mode2 = localStorage.getItem('mode2');
+        this.setState({ mode2 });
+        const icon = localStorage.getItem('icon');
+        this.setState({ icon });
+
+        }
     }
 
     // Function: Clears then sets a timer for "add to list" message.
