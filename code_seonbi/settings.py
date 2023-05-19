@@ -28,9 +28,9 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # FOR DEBUG: Comment out.
-DEBUG = False
+# DEBUG = False
 # FOR Deployment: Comment out.
-# DEBUG = True
+DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'code-seonbi.herokuapp.com']
 ALLOWED_HOSTS = ['*']
