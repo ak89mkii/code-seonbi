@@ -11,6 +11,9 @@ import moon from '../../Img/moon.png'
 
 class Home extends Component {
     state = {
+        // Determines whether state should be rendred from localStorage check.
+        check: 0,
+        // Dark Mode state.
         open: false,
         mode: 'dark',
         mode2: 'darkNoText',
