@@ -22,6 +22,7 @@ class Home extends Component {
         show: false
     }
 
+    // 
     toggleMode = () => {
         if (this.state.mode == 'light') {
             this.setState({
