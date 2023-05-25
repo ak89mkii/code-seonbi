@@ -31,6 +31,7 @@ class Home extends Component {
                 cardMode: 'light',
                 icon: moon,
             })
+            this.handleFormSubmitDark();
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
@@ -38,6 +39,7 @@ class Home extends Component {
                 cardMode: 'dark',
                 icon: sun,
             })
+            this.handleFormSubmitLight();
         }
     }
 
