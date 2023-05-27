@@ -83,8 +83,11 @@ class Home extends Component {
         this.setState({ mode });
         const mode2 = localStorage.getItem('mode2');
         this.setState({ mode2 });
+        const cardMode = localStorage.getItem('cardMode');
+        this.setState({ cardMode });
         const icon = localStorage.getItem('icon');
         this.setState({ icon });
+
 
         }
     }
