@@ -28,7 +28,7 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # FOR DEBUG: Comment out.
-# DEBUG = False
+DEBUG = False
 # FOR Deployment: Comment out.
 # DEBUG = True
 
