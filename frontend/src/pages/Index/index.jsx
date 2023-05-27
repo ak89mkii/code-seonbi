@@ -28,7 +28,6 @@ class Home extends Component {
             this.setState({
                 mode: 'dark',
                 mode2: 'darkNoText',
-                cardMode: 'light',
                 icon: moon,
             })
             this.handleFormSubmitDark();
@@ -36,7 +35,6 @@ class Home extends Component {
             this.setState({
                 mode: 'light',
                 mode2: 'lightNoText',
-                cardMode: 'dark',
                 icon: sun,
             })
             this.handleFormSubmitLight();
@@ -48,7 +46,6 @@ class Home extends Component {
         localStorage.setItem('check', 1);
         localStorage.setItem('mode', 'light');
         localStorage.setItem('mode2', 'lightNoText');
-        localStorage.setItem('cardMode', 'light');
         localStorage.setItem('icon', sun);
     };
 
@@ -57,7 +54,6 @@ class Home extends Component {
         // localStorage.setItem('check', 1);
         localStorage.setItem('mode', 'dark');
         localStorage.setItem('mode2', 'darkNoText');
-        localStorage.setItem('cardMode', 'dark');
         localStorage.setItem('icon', moon);
     };
 
@@ -70,7 +66,6 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        this.getCommandList();
         // Retreive mode in localStorage:
         const check = localStorage.getItem('check');
         this.setState({ check });
@@ -83,10 +78,9 @@ class Home extends Component {
         this.setState({ mode });
         const mode2 = localStorage.getItem('mode2');
         this.setState({ mode2 });
-        const cardMode = localStorage.getItem('cardMode');
-        this.setState({ cardMode });
         const icon = localStorage.getItem('icon');
         this.setState({ icon });
+
 
         }
     }
