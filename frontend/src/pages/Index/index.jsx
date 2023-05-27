@@ -67,6 +67,26 @@ class Home extends Component {
         setTimeout(function () { window.location.reload(); }, 10)
     }
 
+    componentDidMount() {
+        this.getCommandList();
+        // Retreive mode in localStorage:
+        const check = localStorage.getItem('check');
+        this.setState({ check });
+        console.log({check})
+
+        if (check == 1) {
+        // console.log("halo")
+
+        const mode = localStorage.getItem('mode');
+        this.setState({ mode });
+        const mode2 = localStorage.getItem('mode2');
+        this.setState({ mode2 });
+        const icon = localStorage.getItem('icon');
+        this.setState({ icon });
+
+        }
+    }
+
     render() {
 
         return (
