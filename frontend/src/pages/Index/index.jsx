@@ -48,6 +48,7 @@ class Home extends Component {
         localStorage.setItem('check', 1);
         localStorage.setItem('mode', 'light');
         localStorage.setItem('mode2', 'lightNoText');
+        localStorage.setItem('cardMode', 'light');
         localStorage.setItem('icon', sun);
     };
 
@@ -56,6 +57,7 @@ class Home extends Component {
         // localStorage.setItem('check', 1);
         localStorage.setItem('mode', 'dark');
         localStorage.setItem('mode2', 'darkNoText');
+        localStorage.setItem('cardMode', 'dark');
         localStorage.setItem('icon', moon);
     };
 
