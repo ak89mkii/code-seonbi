@@ -72,7 +72,6 @@ class Home extends Component {
         console.log({check})
 
         if (check == 1) {
-        // console.log("halo")
 
         const mode = localStorage.getItem('mode');
         this.setState({ mode });
