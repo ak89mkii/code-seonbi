@@ -80,7 +80,6 @@ class Home extends Component {
         const icon = localStorage.getItem('icon');
         this.setState({ icon });
 
-
         }
     }
 
