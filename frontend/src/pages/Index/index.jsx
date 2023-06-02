@@ -69,7 +69,6 @@ class Home extends Component {
         // Retreive mode in localStorage:
         const check = localStorage.getItem('check');
         this.setState({ check });
-        console.log({check})
 
         if (check == 1) {
 
