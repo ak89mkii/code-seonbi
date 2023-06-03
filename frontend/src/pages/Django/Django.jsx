@@ -45,7 +45,7 @@ class Django extends Component {
             })
             this.handleFormSubmitLight();
         }
-    }
+    };
 
     // Save mode: light in local Storage:
     handleFormSubmitLight = () => {
