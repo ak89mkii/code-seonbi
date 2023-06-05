@@ -20,7 +20,7 @@ class Home extends Component {
         cardMode: 'light',
         icon: moon,
         show: false
-    }
+    };
 
     // Mode Toggle.
     toggleMode = () => {
@@ -39,7 +39,7 @@ class Home extends Component {
             })
             this.handleFormSubmitLight();
         }
-    }
+    };
 
     // Save mode: light in local Storage:
     handleFormSubmitLight = () => {
