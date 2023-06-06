@@ -63,7 +63,7 @@ class Home extends Component {
 
     refreshPage = () => {
         setTimeout(function () { window.location.reload(); }, 10)
-    }
+    };
 
     componentDidMount() {
         // Retreive mode in localStorage:
