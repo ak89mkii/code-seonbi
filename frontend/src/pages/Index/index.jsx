@@ -80,7 +80,7 @@ class Home extends Component {
         this.setState({ icon });
 
         }
-    }
+    };
 
     render() {
 
