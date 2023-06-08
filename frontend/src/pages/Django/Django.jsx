@@ -126,7 +126,7 @@ class Django extends Component {
                     />
                     <figure class="text-center">
                         <div className={this.state.mode}>
-                            <h1 className='title'>Django References and Commands</h1>
+                            <h1 className='title2'>Django References and Commands</h1>
                             <blockquote class="blockquote">
                                 <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
@@ -141,7 +141,7 @@ class Django extends Component {
                     <br></br>
                     <br></br>
                     <div className={this.state.mode}>
-                        <h1 className='title'>Commands:</h1>
+                        <h1 className='sectTitle'>Commands:</h1>
                     </div>
                     {/* { this.getCommandList() } */}
                     { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Command').map((list) => (
@@ -203,7 +203,7 @@ class Django extends Component {
 
                     {/* Section 02: Documentation */}
                     <div className={this.state.mode}>
-                        <h1 className='title'>Documentation Links:</h1>
+                        <h1 className='sectTitle'>Documentation Links:</h1>
                     </div>
                     {/* { this.getCommandList() } */}
                     { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Documentation Link').map((list) => (
