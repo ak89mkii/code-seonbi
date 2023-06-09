@@ -27,7 +27,7 @@ class Django extends Component {
         show: 'Copy',
         showed: 'Copied',
         idCheck: undefined
-    }
+    };
 
     toggleMode = () => {
         if (this.state.mode == 'light') {
