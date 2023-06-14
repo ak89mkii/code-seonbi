@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../../App.css';
 import Nav from '../../components/Nav/Nav.jsx'
 import Welcome from '../../components/Welcome/Welcome.jsx'
