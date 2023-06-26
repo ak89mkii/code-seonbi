@@ -73,7 +73,7 @@ class Django extends Component {
                     newData: data
                 })
             })
-    }
+    };
 
     // Function: Sends delete request to backend based on id.
     deleteCommandList  = (id) => {
