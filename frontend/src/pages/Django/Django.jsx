@@ -82,7 +82,7 @@ class Django extends Component {
                 return res.json()
             }) 
             .then(window.location.reload())
-    }
+    };
 
     componentDidMount() {
         this.getCommandList();
