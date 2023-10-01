@@ -40,6 +40,7 @@ https://code-seonbi-v2.herokuapp.com/
 // https://formulae.brew.sh/formula/postgresql
 // https://www.npmjs.com/package/file-loader
 // https://webpack.js.org/concepts/#loaders
+// https://londonappdeveloper.com/installing-python-on-macos-using-pyenv/
 #### Deployment:
 // https://devcenter.heroku.com/articles/procfile
 // https://devcenter.heroku.com/articles/python-gunicorn
