@@ -94,18 +94,18 @@ const CardsMain = (props) => {
                         </CardGroup>
 
                         <CardGroup className='cardGroup'>
-                        <p className='break'>-</p>
                             <Card>
                                 <Link to="/ps">
                                 <Card.Img variant="top" src={django} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>PowerShell</div></Card.Title>
+                                    <Card.Title><div className='title2'>PowerShell CLI</div></Card.Title>
                                     <Card.Text>
                                     Windows OS Scripting | <b>Command Line Interface</b>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
+                            <p className='break'>-</p>
                             <Card>                            
                                 {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={python} onClick={props.handleShow}/>
@@ -131,8 +131,7 @@ const CardsMain = (props) => {
                             </Card>
                         </CardGroup>
 
-                        <CardGroup>
-                            <p className='break'>-</p>
+                        <CardGroup className="cardGroup">
                             <Card>
                                 {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
@@ -150,7 +149,19 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>React Native</div></Card.Title>
+                                    <Card.Title><div className='title2'>Linux | MacOS Terminal</div></Card.Title>
+                                    <Card.Text>
+                                    JavaScript Framework for Android and iOS Native Applications
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>Hyperlink Share</div></Card.Title>
                                     <Card.Text>
                                     JavaScript Framework for Android and iOS Native Applications
                                     </Card.Text>
