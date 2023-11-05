@@ -94,6 +94,18 @@ const CardsMain = (props) => {
                         </CardGroup>
 
                         <CardGroup className='cardGroup'>
+                        <p className='break'>-</p>
+                            <Card>
+                                <Link to="/ps">
+                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>PowerShell</div></Card.Title>
+                                    <Card.Text>
+                                    Windows OS Scripting | <b>Command Line Interface</b>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
                             <Card>                            
                                 {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={python} onClick={props.handleShow}/>
@@ -114,6 +126,21 @@ const CardsMain = (props) => {
                                     <Card.Title><div className='title2'>React.js</div></Card.Title>
                                     <Card.Text>
                                     Front-End JavaScript Library
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </CardGroup>
+
+                        <CardGroup>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>React Native</div></Card.Title>
+                                    <Card.Text>
+                                    JavaScript Framework for Android and iOS Native Applications
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
