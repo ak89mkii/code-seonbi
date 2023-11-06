@@ -32,6 +32,7 @@ TECHNOLOGIES_02 = (
     ('Git & GitHub', 'Git & GitHub'),
     ('Heroku', 'Heroku'),
     ('PostgreSQL', 'PostgreSQL'),
+    ('PowerShell', 'PowerShell'),    
     ('Python 3', 'Python 3'),    
     ('React.js', 'React.js'),
     ('React Native', 'React Native'),

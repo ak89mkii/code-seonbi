@@ -33,7 +33,7 @@ const Nav = (props) => {
             </Container>
         </Navbar>
         <br></br>
-        <Container>
+        {/* <Container>
             <InputGroup className="mb-3">
             <Form.Control
             placeholder="Write Search Here..."
@@ -42,7 +42,7 @@ const Nav = (props) => {
             Search
             </Button>
             </InputGroup>
-        </Container>
+        </Container> */}
         </div>
        
     )

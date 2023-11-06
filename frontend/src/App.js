@@ -17,6 +17,7 @@ import Bug from './pages/Bug/Bug.jsx'
 import BugAdd from './pages/BugAdd/BugAdd.jsx'
 import Django from './pages/Django/Django.jsx'
 import CommandAdd from './pages/CommandAdd/CommandAdd.jsx'
+import PowerShell from './pages/PowerShell/PowerShell.jsx';
 
 class App extends Component {
   state = {
@@ -34,6 +35,7 @@ class App extends Component {
             <Route exact path="/bug" component={Bug} />
             <Route exact path="/bug_add" component={BugAdd} />
             <Route exact path="/django" component={Django} />
+            <Route exact path="/ps" component={PowerShell} />
             <Route exact path="/command_add" component={CommandAdd} />
             <Route component={Error404} />
           </Switch>
