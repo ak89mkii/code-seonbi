@@ -10,6 +10,9 @@ import react from '../../Img/react.png'
 import rn from '../../Img/rn.png'
 import git from '../../Img/git.png'
 import db from '../../Img/db.png'
+import terminal from '../../Img/terminal.png'
+import link from '../../Img/link.png'
+import ps from '../../Img/ps.png'
 
 const CardsMain = (props) => {
     return (
@@ -96,7 +99,7 @@ const CardsMain = (props) => {
                         <CardGroup className='cardGroup'>
                             <Card>
                                 <Link to="/ps">
-                                <Card.Img variant="top" src={django} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>PowerShell CLI</div></Card.Title>
@@ -146,7 +149,7 @@ const CardsMain = (props) => {
                             <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Linux | MacOS Terminal</div></Card.Title>
@@ -158,7 +161,7 @@ const CardsMain = (props) => {
                             <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={link} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Hyperlink Share</div></Card.Title>
