@@ -87,7 +87,7 @@ class CommandAdd extends Component {
                         <p>Write terminal command info in the fields below.</p>
                     </div>
                     {/* <Link to="/django"><Button>View Commands</Button></Link> */}
-                    <Button onClick={() => navigate(-1)}>View Commands</Button>
+                    <button onClick={() => navigate(-1)}>View Commands</button>
                 </figure>
                 <br></br>
                 <div>
