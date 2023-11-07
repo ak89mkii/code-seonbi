@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Select, Button, Row, Container, Form } from 'react-bootstrap';
 import Nav from '../../components/Nav/Nav.jsx'
 import Footer from '../../components/Footer/Footer.jsx'
@@ -68,6 +68,7 @@ class CommandAdd extends Component {
     }
 
     render() {
+        const navigate = useNavigate();
         return (
             <div className={this.state.mode}>
                 <Nav 
@@ -85,7 +86,8 @@ class CommandAdd extends Component {
                         <br></br>
                         <p>Write terminal command info in the fields below.</p>
                     </div>
-                    <Link to="/django"><Button>View Django Commands</Button></Link>
+                    {/* <Link to="/django"><Button>View Commands</Button></Link> */}
+                    <Button onClick={() => navigate(-1)}>View Commands</Button>
                 </figure>
                 <br></br>
                 <div>
