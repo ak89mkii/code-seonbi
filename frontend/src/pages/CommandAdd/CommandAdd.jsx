@@ -68,7 +68,7 @@ class CommandAdd extends Component {
     }
 
     render() {
-        const navigate = useNavigate();
+        // const navigate = useNavigate();
         return (
             <div className={this.state.mode}>
                 <Nav 
@@ -86,8 +86,8 @@ class CommandAdd extends Component {
                         <br></br>
                         <p>Write terminal command info in the fields below.</p>
                     </div>
-                    {/* <Link to="/django"><Button>View Commands</Button></Link> */}
-                    <button onClick={() => navigate(-1)}>View Commands</button>
+                    <Link to={-1}><Button>View Commands</Button></Link>
+                    {/* <button onClick={() => navigate(-1)}>View Commands</button> */}
                 </figure>
                 <br></br>
                 <div>
