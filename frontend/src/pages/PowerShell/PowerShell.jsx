@@ -205,7 +205,7 @@ class PowerShell extends Component {
                         <h1 className='sectTitle'>Documentation Links:</h1>
                     </div>
                     {/* { this.getCommandList() } */}
-                    { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Documentation Link').map((list) => (
+                    { this.state.newData.filter(list => list.technology === 'PowerShell' && list.type === 'Documentation Link').map((list) => (
                         <div>
                         <br></br>
                         <br></br>

@@ -109,6 +109,7 @@ class CommandAdd extends Component {
                                         <option value="Git & GitHub">Git & GitHub</option>
                                         <option value="Heroku">Heroku</option>
                                         <option value="PostgreSQL">PostgreSQL</option>
+                                        <option value="PowerShell">PowerShell</option>
                                         <option value="Python 3">Python 3</option>
                                         <option value="React.js">React.js</option>
                                         <option value="React Native">React Native</option>
@@ -159,7 +160,7 @@ class CommandAdd extends Component {
                                         onChange={this.handleInputChange}
                                     />
                                 </Form.Group>
-                                <Button type="submit">Submit Command</Button>
+                                <Button type="submit">Submit</Button>
                             </Form>
                         </Row>
                     </Container>
