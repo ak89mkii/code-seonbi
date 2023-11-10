@@ -91,4 +91,3 @@ https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 // https://fonts.google.com/specimen/Nanum+Brush+Script?query=brush&preview.text=Code%20Seonbi&preview.text_type=custom
 // https://fonts.google.com/specimen/Orbitron?preview.text_type=custom
 // 
-// 
