@@ -75,8 +75,8 @@ class Command(models.Model):
         choices=TECHNOLOGIES_02,
         default=TECHNOLOGIES_02[0][0]
     )    
-    description = models.CharField(max_length=100, default='Over 9000!')
-    command = models.CharField(max_length=100, default='Over 9000!')
+    description = models.CharField(max_length=1000, default='Over 9000!')
+    command = models.CharField(max_length=1000, default='Over 9000!')
     type = models.CharField(
         max_length=50,
         choices=TYPES,
