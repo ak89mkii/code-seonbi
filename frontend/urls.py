@@ -6,5 +6,7 @@ urlpatterns = [
     path('bug', index),
     path('bug_add', index),
     path('django', index),
+    path('ps', index),
+    path('link', index),
     path('command_add', index)
 ]

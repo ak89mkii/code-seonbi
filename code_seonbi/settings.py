@@ -27,9 +27,9 @@ load_dotenv(find_dotenv())
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # FOR DEBUG: Comment out.
-DEBUG = False
+# DEBUG = False
 # FOR Deployment: Comment out.
-# DEBUG = True
+DEBUG = True
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'code-seonbi.herokuapp.com']
 ALLOWED_HOSTS = ['*']
@@ -93,9 +93,9 @@ DATABASES = {
 }
 
 # FOR DEBUG: Comment out.
-import dj_database_url
+# import dj_database_url
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
 
 
 # Password validation
