@@ -79,7 +79,7 @@ class Bug extends Component {
                         <Link to="/bug_add"><Button>Add Bug</Button></Link>
                     </figure>
                     <br></br>
-                    { this.state.newData.map((list) => list.replace(/"|"/g, '').trim()(
+                    { this.state.newData.map((list) => list.replace(/"/g, '')(
                         <div>
                         <br></br>
                         <br></br>
