@@ -90,7 +90,7 @@ class Bug extends Component {
                         <Container>
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
-                                    <Card.Header as="h5">Project: {JSON.stringify(list.project)}</Card.Header>
+                                    <Card.Header as="h5">Project: {(list.project)}</Card.Header>
                                     <Card.Body>
                                     <Card.Text>ID: {JSON.stringify(list.id)}</Card.Text>                                <p>Technology: {JSON.stringify(list.technology)}</p>
                                     <p>Status: {JSON.stringify(list.status)}</p>
