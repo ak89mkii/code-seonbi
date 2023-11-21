@@ -92,7 +92,7 @@ class Bug extends Component {
                                 <Card style={{ width: '40rem' }} border="dark">
                                     <Card.Header as="h5">Project: {(list.project)}</Card.Header>
                                     <Card.Body>
-                                    <Card.Text>ID: {JSON.stringify(list.id)}</Card.Text>                                <p>Technology: {JSON.stringify(list.technology)}</p>
+                                    <Card.Text>ID: {(list.id)}</Card.Text>                                <p>Technology: {JSON.stringify(list.technology)}</p>
                                     <p>Status: {JSON.stringify(list.status)}</p>
                                     <p>Description: {JSON.stringify(list.description)}</p>
                                     <p>Error: {JSON.stringify(list.error)}</p>
