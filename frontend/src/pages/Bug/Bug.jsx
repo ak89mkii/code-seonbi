@@ -99,7 +99,7 @@ class Bug extends Component {
                                     <p>Error: {(list.error)}</p>
                                     <p>Links: {(list.links)}</p>
                                     <p>Solution: {(list.solution)}</p>
-                                    <p>Notes: {(list.notes)}</p>
+                                    <p>Notes Goku: {(list.notes)}</p>
                                     <p>Timestamp: {(list.timestamp)}</p>
                                     
                                     <div className="mb-2">
@@ -113,7 +113,7 @@ class Bug extends Component {
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
-                                    <Card.Footer className="text-center">{JSON.stringify(list.id + 177)}</Card.Footer>
+                                    <Card.Footer className="text-center">{JSON.stringify(list.id)}</Card.Footer>
                                 </Card>
                             </Row>
                         </Container>
