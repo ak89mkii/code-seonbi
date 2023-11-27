@@ -99,7 +99,7 @@ class Bug extends Component {
                                     <p>Error: {(list.error)}</p>
                                     <p>Links: {(list.links)}</p>
                                     <p>Solution: {(list.solution)}</p>
-                                    <p>Notes Goku: {(list.notes)}</p>
+                                    <p>Notes: {(list.notes)}</p>
                                     <p>Timestamp: {(list.timestamp)}</p>
                                     
                                     <div className="mb-2">
