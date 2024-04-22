@@ -21,3 +21,7 @@ urlpatterns = [
     path('backend/', include('backend.urls')),
     path('', include('frontend.urls'))
 ]
+
+urlpatterns += [
+    path('api-auth/', include('rest_framework.urls'))
+]

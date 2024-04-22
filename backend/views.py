@@ -3,6 +3,7 @@ from rest_framework import generics
 from .serializers import BugSerializer, CommandSerializer, UserSerializer
 from .models import Bug, Command
 from django.contrib.auth.models import User
+from rest_framework import permissions
 
 # Create your views here.
 
@@ -28,6 +29,7 @@ class DeleteBugItem(generics.DestroyAPIView):
 class CreateCommandItem(generics.CreateAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 # GET requests only.
 class GetCommandAll(generics.ListAPIView):
