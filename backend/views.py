@@ -42,6 +42,6 @@ class DeleteCommandItem(generics.DestroyAPIView):
 
 # User Class:
 # POST requests only.
-class CreateUserItem(generics.CreateAPIView):
+class GetUserAll(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer

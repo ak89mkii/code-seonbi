@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CreateBugItem, GetBugAll, DeleteBugItem, CreateCommandItem, GetCommandAll, DeleteCommandItem
+from .views import CreateBugItem, GetBugAll, DeleteBugItem, CreateCommandItem, GetCommandAll, DeleteCommandItem, GetUserAll
 
 urlpatterns = [
     # Bug:
@@ -15,5 +15,5 @@ urlpatterns = [
     path('command-delete/<int:pk>', DeleteCommandItem.as_view()),
 
     # User:
-    path('command-list', GetCommandAll.as_view()),
+    path('user-list', GetUserAll.as_view()),
 ]
