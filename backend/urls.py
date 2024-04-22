@@ -13,4 +13,7 @@ urlpatterns = [
     path('command-list', GetCommandAll.as_view()),
     # <int:pk> requires id of item in db.
     path('command-delete/<int:pk>', DeleteCommandItem.as_view()),
+
+    # User:
+    path('command-list', GetCommandAll.as_view()),
 ]
