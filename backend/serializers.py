@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from .models import Bug, Command
+from django.contrib.auth.models import User
 
 class BugSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,3 +12,8 @@ class CommandSerializer(serializers.ModelSerializer):
     class Meta:
         model = Command
         fields = ('id', 'technology', 'description', 'type', 'command', 'notes', 'timestamp')
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username')  

@@ -1,6 +1,6 @@
 from django.db import models
 # from django.urls import reverse
-# from django.contrib.auth.models import User
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -91,3 +91,7 @@ class Command(models.Model):
 
     # def get_absolute_url(self):
     #     return reverse('index')
+
+
+    class User(models.Model):
+        username = models.CharField(max_length=50)

@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .serializers import BugSerializer, CommandSerializer
+from .serializers import BugSerializer, CommandSerializer, UserSerializer
 from .models import Bug, Command
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -37,3 +38,10 @@ class GetCommandAll(generics.ListAPIView):
 class DeleteCommandItem(generics.DestroyAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
+
+
+# User Class:
+# POST requests only.
+class CreateUserItem(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
