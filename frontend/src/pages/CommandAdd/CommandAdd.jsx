@@ -51,7 +51,7 @@ class CommandAdd extends Component {
         }
     }
 
-    // Function: POST request for "BugAdd" form.
+    // Function: POST request for "CommandAdd" form.
     postCommandList = (e) => {
         e.preventDefault();
         const command = { description: this.state.description, technology: this.state.technology, type: this.state.type, command: this.state.command, notes: this.state.notes, };

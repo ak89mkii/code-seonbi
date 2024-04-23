@@ -4,6 +4,8 @@ from .serializers import BugSerializer, CommandSerializer, UserSerializer
 from .models import Bug, Command
 from django.contrib.auth.models import User
 from rest_framework import permissions
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+
 
 # Create your views here.
 
@@ -32,6 +34,10 @@ class CreateCommandItem(generics.CreateAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 # GET requests only.
 class GetCommandAll(generics.ListAPIView):

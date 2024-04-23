@@ -151,7 +151,9 @@ class Django extends Component {
                             <Row className="justify-content-md-center">
                                 <Card style={{ width: '40rem' }} border="dark">
                                     <Card.Header><p></p>
-                                    <p><b>Description:</b> {(list.description)}</p></Card.Header>
+                                    <p><b>Created By:</b> {(list.username)}</p>
+                                    <p><b>Description:</b> {(list.description)}</p>
+                                    </Card.Header>
 
 
                                     {/* Fetch test for infinite loop. */}
