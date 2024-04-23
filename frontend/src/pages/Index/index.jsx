@@ -17,7 +17,9 @@ class Home extends Component {
         mode2: 'darkNoText',
         cardMode: 'light',
         icon: moon,
-        show: false
+        show: false,
+        newData: [],   
+        // newData: 'Halo',             
     };
 
     // Mode Toggle.
@@ -63,7 +65,21 @@ class Home extends Component {
         setTimeout(function () { window.location.reload(); }, 10)
     };
 
+    // Function: Sets state to data from backend Bug model.
+    // Need arrow function to use setState.
+    getCommandList = () => {
+        fetch("/backend/user-list")
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState ({
+                    // "Bug" model data.
+                    newData: data.username.stringify
+                })
+            })
+    };
+
     componentDidMount() {
+        this.getCommandList();
         // Retreive mode in localStorage:
         const check = localStorage.getItem('check');
         this.setState({ check });
@@ -80,6 +96,7 @@ class Home extends Component {
         }
     };
 
+    
     render() {
 
         return (
@@ -90,6 +107,7 @@ class Home extends Component {
                         mode={this.state.mode}
                         icon={this.state.icon}
                         toggleMode={this.toggleMode}
+                        userName={this.state.newData}
                     />
                     <Welcome 
                         mode={this.state.mode} 
