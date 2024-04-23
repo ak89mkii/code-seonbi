@@ -12,16 +12,18 @@ from rest_framework import permissions
 class CreateBugItem(generics.CreateAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 # GET requests only.
 class GetBugAll(generics.ListAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
-
+    
 # DELETE requests only.
 class DeleteBugItem(generics.DestroyAPIView):
     queryset = Bug.objects.all()
     serializer_class = BugSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # Command Class:
@@ -40,6 +42,7 @@ class GetCommandAll(generics.ListAPIView):
 class DeleteCommandItem(generics.DestroyAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 # User Class:
