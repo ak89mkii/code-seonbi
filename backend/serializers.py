@@ -15,7 +15,7 @@ class CommandSerializer(serializers.ModelSerializer):
 
 class UserSerializer(serializers.ModelSerializer):
     commands = serializers.PrimaryKeyRelatedField(many=True, queryset=Command.objects.all())
-    owner= serializers.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = User
         fields = ('id', 'username', 'commands', 'owner')  

@@ -28,7 +28,7 @@ const Nav = (props) => {
                 toggleMode={props.toggleMode}
                 />
             </Navbar.Brand>
-            <Navbar.Collapse className="justify-content-end" stackable>            
+            <Navbar.Collapse className="justify-content-end">            
                 <div className='userName'><b>[{props.userName}]</b></div>
             </Navbar.Collapse>
             </Container>
