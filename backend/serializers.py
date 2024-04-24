@@ -11,10 +11,10 @@ class BugSerializer(serializers.ModelSerializer):
 class CommandSerializer(serializers.ModelSerializer):
     class Meta:
         model = Command
-        fields = ('id', 'technology', 'description', 'type', 'command', 'notes', 'timestamp')
+        fields = ('id', 'technology', 'description', 'type', 'command', 'notes', 'timestamp', 'owner')
 
 class UserSerializer(serializers.ModelSerializer):
-    # commands = serializers.PrimaryKeyRelatedField(many=True, queryset=Command.objects.all())
+    commands = serializers.PrimaryKeyRelatedField(many=True, queryset=Command.objects.all())
     owner= serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = User

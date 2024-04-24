@@ -1,0 +1,1540 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 14.7 (Homebrew)
+-- Dumped by pg_dump version 14.7 (Homebrew)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_group (
+    id integer NOT NULL,
+    name character varying(150) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO "spock-117";
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_group_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_group_permissions (
+    id bigint NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO "spock-117";
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO "spock-117";
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_permission_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(150) NOT NULL,
+    first_name character varying(150) NOT NULL,
+    last_name character varying(150) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO "spock-117";
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_user_groups (
+    id bigint NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO "spock-117";
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_user_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.auth_user_user_permissions (
+    id bigint NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO "spock-117";
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO "spock-117";
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_user_user_permissions.id;
+
+
+--
+-- Name: backend_bug; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.backend_bug (
+    id bigint NOT NULL,
+    technology character varying(50) NOT NULL,
+    status character varying(50) NOT NULL,
+    description character varying(1000) NOT NULL,
+    error character varying(1000) NOT NULL,
+    links character varying(1000) NOT NULL,
+    "timestamp" date NOT NULL,
+    project character varying(100) NOT NULL,
+    solution character varying(1000) NOT NULL,
+    notes character varying(1000) NOT NULL
+);
+
+
+ALTER TABLE public.backend_bug OWNER TO "spock-117";
+
+--
+-- Name: backend_bug_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.backend_bug_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.backend_bug_id_seq OWNER TO "spock-117";
+
+--
+-- Name: backend_bug_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.backend_bug_id_seq OWNED BY public.backend_bug.id;
+
+
+--
+-- Name: backend_command; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.backend_command (
+    id bigint NOT NULL,
+    technology character varying(50) NOT NULL,
+    description character varying(1000) NOT NULL,
+    command character varying(1000) NOT NULL,
+    notes character varying(1000) NOT NULL,
+    "timestamp" date NOT NULL,
+    type character varying(50) NOT NULL
+);
+
+
+ALTER TABLE public.backend_command OWNER TO "spock-117";
+
+--
+-- Name: backend_command_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.backend_command_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.backend_command_id_seq OWNER TO "spock-117";
+
+--
+-- Name: backend_command_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.backend_command_id_seq OWNED BY public.backend_command.id;
+
+
+--
+-- Name: backend_user; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.backend_user (
+    id bigint NOT NULL,
+    username character varying(50) NOT NULL
+);
+
+
+ALTER TABLE public.backend_user OWNER TO "spock-117";
+
+--
+-- Name: backend_user_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.backend_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.backend_user_id_seq OWNER TO "spock-117";
+
+--
+-- Name: backend_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.backend_user_id_seq OWNED BY public.backend_user.id;
+
+
+--
+-- Name: dicedex_app_game; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.dicedex_app_game (
+    id bigint NOT NULL,
+    title character varying(100) NOT NULL,
+    genre character varying(100) NOT NULL,
+    min character varying(100) NOT NULL,
+    max character varying(100) NOT NULL,
+    length integer NOT NULL,
+    image character varying(1000) NOT NULL,
+    type character varying(30) NOT NULL,
+    "timestamp" date NOT NULL,
+    user_id integer NOT NULL,
+    note character varying(1000) NOT NULL,
+    link character varying(1000) NOT NULL,
+    coffee_group boolean NOT NULL,
+    hoth_group boolean NOT NULL,
+    gundam_group boolean NOT NULL,
+    cost integer NOT NULL,
+    event boolean NOT NULL,
+    wishlist_user boolean NOT NULL,
+    color character varying(30) NOT NULL
+);
+
+
+ALTER TABLE public.dicedex_app_game OWNER TO "spock-117";
+
+--
+-- Name: dicedex_app_game_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.dicedex_app_game_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.dicedex_app_game_id_seq OWNER TO "spock-117";
+
+--
+-- Name: dicedex_app_game_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.dicedex_app_game_id_seq OWNED BY public.dicedex_app_game.id;
+
+
+--
+-- Name: dicedex_app_theme; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.dicedex_app_theme (
+    id bigint NOT NULL,
+    color character varying(30) NOT NULL,
+    user_id integer NOT NULL
+);
+
+
+ALTER TABLE public.dicedex_app_theme OWNER TO "spock-117";
+
+--
+-- Name: dicedex_app_theme_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.dicedex_app_theme_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.dicedex_app_theme_id_seq OWNER TO "spock-117";
+
+--
+-- Name: dicedex_app_theme_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.dicedex_app_theme_id_seq OWNED BY public.dicedex_app_theme.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO "spock-117";
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.django_admin_log_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO "spock-117";
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO "spock-117";
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.django_content_type_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO "spock-117";
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.django_migrations (
+    id bigint NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_migrations OWNER TO "spock-117";
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: spock-117
+--
+
+CREATE SEQUENCE public.django_migrations_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_migrations_id_seq OWNER TO "spock-117";
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: spock-117
+--
+
+ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: spock-117
+--
+
+CREATE TABLE public.django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO "spock-117";
+
+--
+-- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.auth_group_id_seq'::regclass);
+
+
+--
+-- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('public.auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.auth_user_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('public.auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: backend_bug id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_bug ALTER COLUMN id SET DEFAULT nextval('public.backend_bug_id_seq'::regclass);
+
+
+--
+-- Name: backend_command id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_command ALTER COLUMN id SET DEFAULT nextval('public.backend_command_id_seq'::regclass);
+
+
+--
+-- Name: backend_user id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_user ALTER COLUMN id SET DEFAULT nextval('public.backend_user_id_seq'::regclass);
+
+
+--
+-- Name: dicedex_app_game id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_game ALTER COLUMN id SET DEFAULT nextval('public.dicedex_app_game_id_seq'::regclass);
+
+
+--
+-- Name: dicedex_app_theme id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_theme ALTER COLUMN id SET DEFAULT nextval('public.dicedex_app_theme_id_seq'::regclass);
+
+
+--
+-- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('public.django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval('public.django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_group (id, name) FROM stdin;
+2	Hoth
+1	Coffee
+4	Personal
+5	Gundam
+\.
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
+1	1	4
+2	2	4
+\.
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add game	1	add_game
+2	Can change game	1	change_game
+3	Can delete game	1	delete_game
+4	Can view game	1	view_game
+5	Can add log entry	2	add_logentry
+6	Can change log entry	2	change_logentry
+7	Can delete log entry	2	delete_logentry
+8	Can view log entry	2	view_logentry
+9	Can add permission	3	add_permission
+10	Can change permission	3	change_permission
+11	Can delete permission	3	delete_permission
+12	Can view permission	3	view_permission
+13	Can add group	4	add_group
+14	Can change group	4	change_group
+15	Can delete group	4	delete_group
+16	Can view group	4	view_group
+17	Can add user	5	add_user
+18	Can change user	5	change_user
+19	Can delete user	5	delete_user
+20	Can view user	5	view_user
+21	Can add content type	6	add_contenttype
+22	Can change content type	6	change_contenttype
+23	Can delete content type	6	delete_contenttype
+24	Can view content type	6	view_contenttype
+25	Can add session	7	add_session
+26	Can change session	7	change_session
+27	Can delete session	7	delete_session
+28	Can view session	7	view_session
+29	Can add g_ group	8	add_g_group
+30	Can change g_ group	8	change_g_group
+31	Can delete g_ group	8	delete_g_group
+32	Can view g_ group	8	view_g_group
+33	Can add theme	9	add_theme
+34	Can change theme	9	change_theme
+35	Can delete theme	9	delete_theme
+36	Can view theme	9	view_theme
+37	Can add bug	10	add_bug
+38	Can change bug	10	change_bug
+39	Can delete bug	10	delete_bug
+40	Can view bug	10	view_bug
+41	Can add command	11	add_command
+42	Can change command	11	change_command
+43	Can delete command	11	delete_command
+44	Can view command	11	view_command
+45	Can add user	12	add_user
+46	Can change user	12	change_user
+47	Can delete user	12	delete_user
+48	Can view user	12	view_user
+\.
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$260000$JiCzSzjbfjAzVCjgFCYNOL$REcM7R2kTzAGi2eYT183UkAPaajo/fvJxV4pVNHu4eo=	2023-03-31 13:13:15.484006-04	f	AK89				f	t	2022-08-31 23:56:53-04
+2	pbkdf2_sha256$260000$mBHXE5wLLNJHDhku4S9ENN$x3ilZNHewIXUQtldg3oqgqrduKGFEvad6M+WPWlyzYw=	2024-04-24 12:23:11.73708-04	t	spock-117			aikasem@pondermint.com	t	t	2022-09-01 00:16:30-04
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+6	2	1
+8	1	4
+11	1	2
+12	2	2
+13	2	5
+14	2	4
+\.
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: backend_bug; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.backend_bug (id, technology, status, description, error, links, "timestamp", project, solution, notes) FROM stdin;
+\.
+
+
+--
+-- Data for Name: backend_command; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.backend_command (id, technology, description, command, notes, "timestamp", type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: backend_user; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.backend_user (id, username) FROM stdin;
+\.
+
+
+--
+-- Data for Name: dicedex_app_game; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.dicedex_app_game (id, title, genre, min, max, length, image, type, "timestamp", user_id, note, link, coffee_group, hoth_group, gundam_group, cost, event, wishlist_user, color) FROM stdin;
+14	Apollo: A Game Inspired by NASA Moon Missions (2020)	Strategy	2	5	60	https://cf.geekdo-images.com/Y6PC5moGta-awvovb4tLxQ__imagepage/img/mO_43tfy4OBGQwRj8yaC3kUnbMA=/fit-in/900x600/filters:no_upscale():strip_icc()/pic6149144.jpg	Base Game	2022-09-02	2	None	https://boardgamegeek.com/boardgame/313008/apollo-game-inspired-nasa-moon-missions	t	t	t	0	f	f	border-dark
+13	Terraforming Mars	Strategy	1	5	120	https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__imagepage/img/FS1RE8Ue6nk1pNbPI3l-OSapQGc=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3536616.jpg	Base Game	2022-09-01	2	None	https://boardgamegeek.com/image/3536616/terraforming-mars	t	t	t	0	t	f	border-dark
+24	None	None	None	None	0	/static/06.png	Base Game	2022-09-10	2	None	None	f	f	f	0	f	f	border-dark
+22	Mechs vs. Minions (2016)	Strategy	2	4	120	https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__imagepage/img/TQ5kczQygNzlz4VQ5CnPKrO9-kA=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3184103.jpg	Base Game	2022-09-09	2	None	https://boardgamegeek.com/boardgame/209010/mechs-vs-minions	t	t	t	0	f	f	border-dark
+23	Twilight Imperium: Fourth Edition (2017)	Strategy	3	6	480	https://cf.geekdo-images.com/_Ppn5lssO5OaildSE-FgFA__imagepage/img/0AK9hQgpcOOOLJh8IEZS3Nw57vE=/fit-in/900x600/filters:no_upscale():strip_icc()/pic3727516.jpg	Base Game	2022-09-09	2	None	https://boardgamegeek.com/boardgame/233078/twilight-imperium-fourth-edition	t	t	t	132	t	t	border-dark
+15	Machi Koro (2012)	Strategy	2	4	30	https://cf.geekdo-images.com/_lI2eUDHfesfe5SswJiFAg__imagepage/img/GtnHjYISiiEo3uJE_Ymo2UDYGyo=/fit-in/900x600/filters:no_upscale():strip_icc()/pic4783831.png	Base Game	2022-09-05	2	None	Nonehttps://boardgamegeek.com/boardgame/143884/machi-koro	t	t	t	0	f	f	border-dark
+\.
+
+
+--
+-- Data for Name: dicedex_app_theme; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.dicedex_app_theme (id, color, user_id) FROM stdin;
+32	Dark	2
+33	Dark	1
+\.
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2022-09-01 00:24:57.410494-04	1	Test Group	1	[{"added": {}}]	4	2
+2	2022-09-01 00:28:41.780435-04	1	Test Group	2	[]	4	2
+3	2022-09-01 00:29:27.785428-04	1	test01	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+4	2022-09-01 00:29:45.880422-04	1	Test Group	2	[]	4	2
+5	2022-09-01 00:30:17.323544-04	1	test01	2	[]	5	2
+6	2022-09-01 01:14:37.573119-04	2	Halo	2	[{"changed": {"fields": ["Owner"]}}]	1	2
+7	2022-09-01 11:35:11.924881-04	2	Halo	2	[]	1	2
+8	2022-09-01 11:35:47.767945-04	2	Hoth	2	[{"changed": {"fields": ["Name", "Permissions"]}}]	4	2
+9	2022-09-01 11:36:20.424251-04	1	Coffee	2	[{"changed": {"fields": ["Name"]}}]	4	2
+10	2022-09-01 11:36:29.548949-04	2	Halo	2	[]	1	2
+11	2022-09-01 11:37:41.607928-04	1	test01	2	[]	5	2
+12	2022-09-01 11:47:05.031933-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+13	2022-09-01 13:22:40.276716-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+14	2022-09-01 13:28:17.961591-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+15	2022-09-01 13:29:00.973581-04	2	spock-117	2	[]	5	2
+16	2022-09-01 20:28:50.361085-04	1	AK89	2	[{"changed": {"fields": ["Username"]}}]	5	2
+17	2022-09-06 20:44:36.690182-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+18	2022-09-06 20:44:46.668853-04	1	AK89	2	[]	5	2
+19	2022-09-06 21:56:16.218598-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+20	2022-09-06 22:36:16.409629-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+21	2022-09-06 22:36:28.338484-04	2	spock-117	2	[]	5	2
+22	2022-09-07 14:41:30.009204-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+23	2022-09-07 14:52:20.529563-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+24	2022-09-07 15:10:58.20268-04	4	Personal	1	[{"added": {}}]	4	2
+25	2022-09-07 15:11:02.648487-04	1	AK89	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+26	2022-09-07 15:11:11.661195-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+27	2022-09-07 15:12:03.391953-04	5	Gundam	1	[{"added": {}}]	4	2
+28	2022-09-07 15:12:06.121479-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+29	2022-09-07 15:13:07.38235-04	1	AK89	2	[]	5	2
+30	2022-09-07 15:18:57.565027-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+31	2022-09-07 15:19:12.371557-04	1	AK89	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+32	2022-09-07 15:42:23.163539-04	15	Machi Koro (2012)	2	[{"changed": {"fields": ["User", "Group"]}}]	1	2
+33	2022-09-07 16:28:33.794748-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+34	2022-09-07 20:25:20.321191-04	1	AK89	2	[]	5	2
+35	2022-09-07 21:08:03.537748-04	2	spock-117	2	[]	5	2
+36	2022-09-07 21:14:55.508368-04	18	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+37	2022-09-07 21:15:55.031512-04	18	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+38	2022-09-07 21:22:44.5983-04	18	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+39	2022-09-07 21:23:53.032216-04	18	Light	2	[]	9	2
+40	2022-09-07 21:24:38.999301-04	1	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+41	2022-09-07 21:33:14.093744-04	18	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+42	2022-09-07 21:33:43.035645-04	1	Dark	2	[{"changed": {"fields": ["User"]}}]	9	2
+43	2022-09-07 21:34:00.380411-04	18	Dark	2	[]	9	2
+44	2022-09-07 21:34:54.787632-04	18	Dark	3		9	2
+45	2022-09-07 21:34:54.790772-04	17	Light	3		9	2
+46	2022-09-07 21:34:54.792042-04	16	Light	3		9	2
+47	2022-09-07 21:34:54.793611-04	15	Dark	3		9	2
+48	2022-09-07 21:34:54.79474-04	14	Dark	3		9	2
+49	2022-09-07 21:34:54.795805-04	13	Dark	3		9	2
+50	2022-09-07 21:34:54.796682-04	12	Light	3		9	2
+51	2022-09-07 21:34:54.797563-04	11	Light	3		9	2
+52	2022-09-07 21:34:54.798521-04	10	Light	3		9	2
+53	2022-09-07 21:34:54.799322-04	9	Light	3		9	2
+54	2022-09-07 21:34:54.800201-04	8	Light	3		9	2
+55	2022-09-07 21:34:54.80113-04	7	Light	3		9	2
+56	2022-09-07 21:34:54.802183-04	6	Dark	3		9	2
+57	2022-09-07 21:34:54.803136-04	5	Light	3		9	2
+58	2022-09-07 21:34:54.804306-04	4	Light	3		9	2
+59	2022-09-07 21:34:54.805304-04	3	Light	3		9	2
+60	2022-09-07 21:34:54.806454-04	2	Light	3		9	2
+61	2022-09-07 21:34:54.807327-04	1	Dark	3		9	2
+62	2022-09-07 21:35:50.029285-04	19	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+63	2022-09-07 21:36:28.727082-04	20	Light	1	[{"added": {}}]	9	2
+64	2022-09-07 21:36:35.455601-04	19	Dark	2	[]	9	2
+65	2022-09-07 21:36:44.445724-04	19	Dark	2	[]	9	2
+66	2022-09-07 21:37:01.073767-04	19	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+67	2022-09-07 21:37:16.184404-04	20	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+68	2022-09-07 21:37:57.372014-04	19	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+69	2022-09-07 21:38:12.197895-04	19	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+70	2022-09-07 21:38:37.544279-04	19	Dark	2	[{"changed": {"fields": ["Color"]}}]	9	2
+71	2022-09-07 21:38:52.951636-04	19	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+72	2022-09-07 21:43:14.982395-04	19	Light	2	[]	9	2
+73	2022-09-07 22:16:41.42783-04	19	Dark	3		9	2
+74	2022-09-07 22:22:19.328619-04	20	Light	3		9	2
+75	2022-09-08 10:49:14.700337-04	21	Dark	2	[]	9	2
+76	2022-09-08 10:50:02.66235-04	21	Dark	2	[{"changed": {"fields": ["User"]}}]	9	2
+77	2022-09-08 10:50:09.169622-04	21	Light	2	[{"changed": {"fields": ["Color"]}}]	9	2
+78	2022-09-08 10:51:23.018207-04	21	Light	2	[{"changed": {"fields": ["User"]}}]	9	2
+79	2022-09-08 11:14:58.285927-04	22	Light	1	[{"added": {}}]	9	2
+80	2022-09-08 11:20:37.730696-04	22	Light	2	[]	9	2
+81	2022-09-08 11:20:41.710281-04	21	Light	2	[{"changed": {"fields": ["User"]}}]	9	2
+82	2022-09-08 11:22:04.108505-04	22	Light	2	[]	9	2
+83	2022-09-08 11:22:06.49621-04	21	Light	2	[]	9	2
+84	2022-09-08 11:23:19.223221-04	21	Light	2	[{"changed": {"fields": ["User"]}}]	9	2
+85	2022-09-08 11:28:31.204303-04	21	Light	2	[{"changed": {"fields": ["User"]}}]	9	2
+86	2022-09-08 17:37:04.01118-04	25	Dark	3		9	2
+87	2022-09-08 17:37:04.013989-04	24	Dark	3		9	2
+88	2022-09-08 17:37:04.015226-04	23	Dark	3		9	2
+89	2022-09-08 17:37:04.016414-04	22	Light	3		9	2
+90	2022-09-08 17:37:04.017571-04	21	Light	3		9	2
+91	2022-09-08 21:26:29.85192-04	28	Light	3		9	2
+92	2022-09-08 21:26:29.85576-04	27	Light	3		9	2
+93	2022-09-08 21:26:29.857031-04	26	Light	3		9	2
+94	2022-09-08 21:52:12.397683-04	31	Light	3		9	2
+95	2022-09-08 21:52:12.401545-04	30	Light	3		9	2
+96	2022-09-08 21:52:12.403038-04	29	Light	3		9	2
+97	2022-09-09 20:56:42.015883-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+98	2022-09-12 01:51:53.976304-04	2	spock-117	2	[{"changed": {"fields": ["Groups"]}}]	5	2
+99	2022-10-03 17:20:52.164854-04	19	Command object (19)	2	[{"changed": {"fields": ["Type", "Notes"]}}]	11	2
+100	2022-10-03 17:21:06.161628-04	7	Command object (7)	2	[]	11	2
+101	2022-10-03 17:21:14.520618-04	19	Command object (19)	2	[]	11	2
+102	2022-10-03 17:42:17.759018-04	16	Command object (16)	3		11	2
+103	2022-10-03 17:42:24.140192-04	19	Command object (19)	3		11	2
+104	2022-10-03 17:42:29.245067-04	15	Command object (15)	3		11	2
+105	2022-10-03 17:42:36.483811-04	7	Command object (7)	2	[]	11	2
+106	2023-03-31 13:12:43.100783-04	1	AK89	2	[{"changed": {"fields": ["password"]}}]	5	2
+107	2024-04-24 12:23:32.002376-04	6	Bug object (6)	3		10	2
+108	2024-04-24 12:23:32.014981-04	5	Bug object (5)	3		10	2
+109	2024-04-24 12:23:32.016402-04	4	Bug object (4)	3		10	2
+110	2024-04-24 12:23:32.017611-04	2	Bug object (2)	3		10	2
+111	2024-04-24 12:23:32.018595-04	1	Bug object (1)	3		10	2
+112	2024-04-24 12:31:00.318417-04	37	Command object (37)	3		11	2
+113	2024-04-24 12:31:00.322606-04	36	Command object (36)	3		11	2
+114	2024-04-24 12:31:00.324555-04	35	Command object (35)	3		11	2
+115	2024-04-24 12:31:00.326087-04	34	Command object (34)	3		11	2
+116	2024-04-24 12:31:00.327312-04	33	Command object (33)	3		11	2
+117	2024-04-24 12:31:00.328513-04	32	Command object (32)	3		11	2
+118	2024-04-24 12:31:00.329683-04	30	Command object (30)	3		11	2
+119	2024-04-24 12:31:00.330845-04	29	Command object (29)	3		11	2
+120	2024-04-24 12:31:00.332005-04	28	Command object (28)	3		11	2
+121	2024-04-24 12:31:00.333678-04	27	Command object (27)	3		11	2
+122	2024-04-24 12:31:00.334926-04	26	Command object (26)	3		11	2
+\.
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.django_content_type (id, app_label, model) FROM stdin;
+1	dicedex_app	game
+2	admin	logentry
+3	auth	permission
+4	auth	group
+5	auth	user
+6	contenttypes	contenttype
+7	sessions	session
+8	dicedex_app	g_group
+9	dicedex_app	theme
+10	backend	bug
+11	backend	command
+12	backend	user
+\.
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2022-08-26 17:29:52.390277-04
+2	auth	0001_initial	2022-08-26 17:29:52.456293-04
+3	admin	0001_initial	2022-08-26 17:29:52.479394-04
+4	admin	0002_logentry_remove_auto_add	2022-08-26 17:29:52.488136-04
+5	admin	0003_logentry_add_action_flag_choices	2022-08-26 17:29:52.497454-04
+6	contenttypes	0002_remove_content_type_name	2022-08-26 17:29:52.520598-04
+7	auth	0002_alter_permission_name_max_length	2022-08-26 17:29:52.529141-04
+8	auth	0003_alter_user_email_max_length	2022-08-26 17:29:52.538582-04
+9	auth	0004_alter_user_username_opts	2022-08-26 17:29:52.547345-04
+10	auth	0005_alter_user_last_login_null	2022-08-26 17:29:52.560254-04
+11	auth	0006_require_contenttypes_0002	2022-08-26 17:29:52.563847-04
+12	auth	0007_alter_validators_add_error_messages	2022-08-26 17:29:52.57336-04
+13	auth	0008_alter_user_username_max_length	2022-08-26 17:29:52.588412-04
+14	auth	0009_alter_user_last_name_max_length	2022-08-26 17:29:52.597582-04
+15	auth	0010_alter_group_name_max_length	2022-08-26 17:29:52.610252-04
+16	auth	0011_update_proxy_permissions	2022-08-26 17:29:52.651005-04
+17	auth	0012_alter_user_first_name_max_length	2022-08-26 17:29:52.659772-04
+18	sessions	0001_initial	2022-08-26 17:29:52.668769-04
+19	dicedex_app	0001_initial	2022-08-26 22:34:38.337432-04
+20	dicedex_app	0002_game_owner	2022-08-27 18:21:47.074902-04
+21	dicedex_app	0003_alter_game_owner	2022-08-27 18:22:29.731995-04
+22	dicedex_app	0004_alter_game_owner	2022-08-27 18:24:46.693281-04
+23	dicedex_app	0005_game_notes	2022-08-29 14:01:14.427443-04
+24	dicedex_app	0006_rename_notes_game_note	2022-08-29 14:09:54.994296-04
+25	dicedex_app	0007_game_link	2022-08-29 15:27:38.678137-04
+26	dicedex_app	0008_alter_game_owner	2022-08-31 22:48:00.473334-04
+27	dicedex_app	0009_auto_20220901_0213	2022-08-31 22:54:22.238815-04
+28	dicedex_app	0010_alter_game_owner	2022-08-31 22:54:22.249032-04
+29	dicedex_app	0011_alter_game_user	2022-08-31 22:54:22.26724-04
+30	dicedex_app	0012_auto_20220901_0240	2022-08-31 22:54:22.288222-04
+31	dicedex_app	0013_remove_game_user	2022-08-31 22:54:22.302529-04
+32	dicedex_app	0014_alter_game_owner	2022-08-31 22:54:22.30741-04
+33	dicedex_app	0015_game_user	2022-08-31 23:05:36.364624-04
+34	dicedex_app	0016_auto_20220901_0347	2022-08-31 23:54:45.155902-04
+35	dicedex_app	0017_game_group	2022-09-01 00:44:51.445033-04
+36	dicedex_app	0018_remove_game_group	2022-09-01 01:08:13.99709-04
+37	dicedex_app	0019_game_group	2022-09-01 01:32:30.947463-04
+38	dicedex_app	0020_rename_owner_game_user	2022-09-01 12:04:23.764355-04
+39	dicedex_app	0021_auto_20220902_0155	2022-09-01 21:55:40.348698-04
+40	dicedex_app	0022_remove_game_group	2022-09-01 22:07:11.029387-04
+41	dicedex_app	0023_game_gundam_group	2022-09-02 14:28:32.020985-04
+42	dicedex_app	0024_alter_game_length	2022-09-06 20:41:09.428015-04
+43	dicedex_app	0025_auto_20220907_0041	2022-09-06 20:41:09.544483-04
+44	dicedex_app	0026_alter_game_group	2022-09-06 20:54:51.919934-04
+45	dicedex_app	0027_alter_game_group	2022-09-06 20:55:27.329869-04
+46	dicedex_app	0028_alter_game_group	2022-09-06 21:55:26.902613-04
+47	dicedex_app	0029_auto_20220907_0212	2022-09-06 22:12:25.077906-04
+48	dicedex_app	0030_g_group_user	2022-09-06 22:21:18.586519-04
+49	dicedex_app	0031_game_group	2022-09-07 15:25:08.751492-04
+50	dicedex_app	0032_auto_20220907_2327	2022-09-07 19:27:11.306983-04
+51	dicedex_app	0033_auto_20220908_0018	2022-09-07 20:18:39.165769-04
+52	dicedex_app	0034_auto_20220909_2116	2022-09-09 17:16:40.121798-04
+53	dicedex_app	0035_alter_game_image	2022-09-09 21:52:18.724424-04
+54	dicedex_app	0036_alter_game_image	2022-09-12 01:28:09.242363-04
+55	dicedex_app	0037_game_color	2022-09-12 16:18:58.69189-04
+56	dicedex_app	0038_alter_game_color	2022-09-12 16:25:54.926252-04
+57	backend	0001_initial	2022-09-28 14:54:02.948911-04
+58	backend	0002_auto_20220301_1415	2022-09-28 14:54:02.967654-04
+59	backend	0003_auto_20220301_1417	2022-09-28 14:54:02.972704-04
+60	backend	0004_auto_20220315_2216	2022-09-28 14:54:02.982198-04
+61	backend	0005_auto_20220428_2048	2022-09-28 14:54:02.989089-04
+62	backend	0006_alter_bug_technology	2022-09-28 14:54:03.03386-04
+63	backend	0007_auto_20221001_1357	2022-10-01 09:57:49.782344-04
+64	backend	0008_command_toggle	2022-10-03 16:47:42.576754-04
+65	backend	0009_rename_toggle_command_type	2022-10-03 17:00:20.059487-04
+66	backend	0010_alter_command_technology	2023-11-06 14:29:51.034654-05
+67	backend	0011_auto_20231110_1912	2023-11-10 14:20:40.088932-05
+68	backend	0012_user	2024-04-22 12:37:19.960123-04
+69	backend	0013_command_username	2024-04-23 16:13:22.028011-04
+70	backend	0014_remove_command_username	2024-04-23 16:45:54.853301-04
+\.
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: spock-117
+--
+
+COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
+vmnl84vpuicgno7q13lqb6rqinn14a3e	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oVve3:oL6FH4hStLkSonkWdY-n2l3r9av5LigeX6vG90eD6fg	2022-09-21 10:03:11.805011-04
+qt3a0p6bdfh9p5mo6251kjt36tuzglpg	.eJxVjEEOwiAQRe_C2pAO4IAu3fcMZAamUjU0Ke3KeHfbpAvd_vfef6tI61Li2mSOY1ZXBer0uzGlp9Qd5AfV-6TTVJd5ZL0r-qBN91OW1-1w_w4KtbLVQtYN4r1hAxnFdsmbQGgJMQkHOkMHMGTvAMEFK9mwJEa3dcGTu6jPF-hSN_U:1oTbK1:HJ5VI1NLlfC9pNvqMz4nTzgY9nYENA89a0fj3Y65cbE	2022-09-14 23:56:53.354196-04
+2apld4t25l6xhmcwctavh7qkai9y4dr2	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oTbdH:Nn2I2gOyqlWMtNNORpmMAoS6Z6Di_Ne5SrbAej9UEmU	2022-09-15 00:16:47.555193-04
+ys42yhj6sqrrh0exeisrh3hv9fr873wg	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oW2EJ:jboK1TTS-36kN42KRA9BEgq4KqOP5XI-ShimqhMn5W4	2022-09-21 17:05:03.502702-04
+lunomb0yhzal5j1ju8wnp45gaql32qv3	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oWfOa:1_atxiZ_VF_3Z7JxpxN4EGSnb9UdrFiRnstAGZHY7wI	2022-09-23 10:54:16.315645-04
+glwbpzxj290eg7toy7tix0g2ld8nphug	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oX1wP:EeP3zE5CF4eXZ1JTdydJXGTZKYCpQxM3LKkyF5N7V1c	2022-09-24 10:58:41.4381-04
+bi5vsa9lvwuyww36zmkyyf3uxx5mn0me	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oX5iC:GibOfmDqF2ZFqzFXFGJatKXyK9902nxMtgPz7qt3wxY	2022-09-24 15:00:16.769619-04
+0tlu5boudbziodgyzestwf24r615gcc9	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oX5nw:dLqZNerBbvwjIgHMa1tQs6dVv_T_97l8I-EqHdJ5iv8	2022-09-24 15:06:12.994596-04
+z0v0l66hl9x0oups06vvjglei7apjsr0	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oXa5a:AKV1WtJJ-ZAv0LZzZqQwNnv878NNkzcCV7LoYhNzmnA	2022-09-25 23:26:26.487206-04
+6ai8u1nfzlyr6ijhz9r7n6qi1y5k37pm	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oXqQd:XCtM50lgBpfnVwDtj2-JBge9KVEZjTzOdUDsjhd8P0o	2022-09-26 16:53:15.181622-04
+c72ggxlpx9dyx0b91hbvv4ugt2qrjly3	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oXr0p:SotLCb7Ra0OGWU6Fg5tg1cc8mPPhkU5BKMDpEKOQIz0	2022-09-26 17:30:39.632373-04
+o42cvhb8ddqlawscxlfe5yqbacu5pjm7	.eJxVjDsOwjAQBe_iGlnxyj8o6TmDtetd4wBypDipIu4OkVJA-2bmbSrhutS0dpnTyOqiQJ1-N8L8lLYDfmC7TzpPbZlH0ruiD9r1bWJ5XQ_376Bir9_axDNl8MUhuVCyG8gLhEIuDsVGa4gDgjhjbSGxVlz2CD5kZAYgCer9AfNrOJA:1ojiGj:efZqJAmWJO8XaoI9HINdTnW4URIDrXt2YQr6-E8ffNw	2022-10-29 10:36:05.633434-04
+ra4g5freq65togxqxja8amapg65lfcjv	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oVGXV:kvyCq936w0Q6h8tUcpWKP021Wj5XbZv7F56ZdIWeyZQ	2022-09-19 14:09:41.076273-04
+31jgh8tunhtnwp1yxjg42x14sqof89it	.eJxVjEEOwiAQRe_C2hBgplJcuu8ZyDADUjVtUtqV8e7apAvd_vfef6lI21rj1vISR1EXZdXpd0vEjzztQO403WbN87QuY9K7og_a9DBLfl4P9--gUqvfmtzZFTSBOnZgMwJRQMNowII3BZzHvmcwyKZLRbyQ9SBFJBAwZVTvD8JEN7E:1piIJP:92uqIinunGgU5m6z7W7yptBSfUFGY8pVeVo657zpfvI	2023-04-14 13:13:15.486909-04
+f5gimz99rmn4rz8qs1s87mh1xn26c3w4	.eJxVjDsOwjAQBe_iGlnxyj8o6TmDtetd4wBypDipIu4OkVJA-2bmbSrhutS0dpnTyOqiQJ1-N8L8lLYDfmC7TzpPbZlH0ruiD9r1bWJ5XQ_376Bir9_axDNl8MUhuVCyG8gLhEIuDsVGa4gDgjhjbSGxVlz2CD5kZAYgCer9AfNrOJA:1pub31:MOglqwF25ctIiqgC4CZdAbEw0CoCoCOAlfFuFfhJtLM	2023-05-18 11:39:11.297876-04
+lc6exgbye1k75l8ugtnvypz54t692dtl	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oVGoM:Do1vhY8NeXA6HrBCZ2OviwULvzvQJ8jEybuUqC3HMmY	2022-09-19 14:27:06.16677-04
+vkgoyp5mdw80pnigbvdnjg67490fjo3c	.eJxVjMEOwiAQRP-FsyEu7CJ49N5vIFAWqRpISnsy_rtt0oNmbvPezFv4sC7Fr51nPyVxFUqcfrsYxifXHaRHqPcmx1aXeYpyV-RBuxxa4tftcP8OSuhlW3MCtwWjs0AXQmtBZcxWkwlsjNIKTCZiZdEgasekzqQhos4WXADx-QKgPDXX:1oWeq3:uZa0iE1tNY4M_CcqAZQU74-bGWgh5TijqjP2EQ1hrPU	2022-09-23 10:18:35.299538-04
+nf22rfabmt2a7oll2mf303qclvzjqhig	.eJxVjDsOwjAQBe_iGlnxyj8o6TmDtetd4wBypDipIu4OkVJA-2bmbSrhutS0dpnTyOqiQJ1-N8L8lLYDfmC7TzpPbZlH0ruiD9r1bWJ5XQ_376Bir9_axDNl8MUhuVCyG8gLhEIuDsVGa4gDgjhjbSGxVlz2CD5kZAYgCer9AfNrOJA:1rzLx1:slSL2QFKRlJh_IyKHryJrjcoGcreNl-vrmrVXLZYMkk	2024-05-07 15:37:11.698012-04
+502jv0jtchzhw1dslnkiwgt7pd8wwmxf	.eJxVjDsOwjAQBe_iGlnxyj8o6TmDtetd4wBypDipIu4OkVJA-2bmbSrhutS0dpnTyOqiQJ1-N8L8lLYDfmC7TzpPbZlH0ruiD9r1bWJ5XQ_376Bir9_axDNl8MUhuVCyG8gLhEIuDsVGa4gDgjhjbSGxVlz2CD5kZAYgCer9AfNrOJA:1rzMX9:5_UACa93x2o8Av4AMzRWSJUP3wdLcSncp7OGTgQ-tB8	2024-05-07 16:14:31.19457-04
+mlfb35xyzqcsoc6h8e3wu0kup799ouco	.eJxVjDsOwjAQBe_iGlnxyj8o6TmDtetd4wBypDipIu4OkVJA-2bmbSrhutS0dpnTyOqiQJ1-N8L8lLYDfmC7TzpPbZlH0ruiD9r1bWJ5XQ_376Bir9_axDNl8MUhuVCyG8gLhEIuDsVGa4gDgjhjbSGxVlz2CD5kZAYgCer9AfNrOJA:1rzfOp:6tF36h6cYVtfCYs4F0NIKa3CLAQE-hzeLhsvy0L0gRc	2024-05-08 12:23:11.747706-04
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 5, true);
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 2, true);
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 48, true);
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 14, true);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 2, true);
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Name: backend_bug_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.backend_bug_id_seq', 6, true);
+
+
+--
+-- Name: backend_command_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.backend_command_id_seq', 37, true);
+
+
+--
+-- Name: backend_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.backend_user_id_seq', 1, false);
+
+
+--
+-- Name: dicedex_app_game_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.dicedex_app_game_id_seq', 25, true);
+
+
+--
+-- Name: dicedex_app_theme_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.dicedex_app_theme_id_seq', 33, true);
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 122, true);
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 12, true);
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: spock-117
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 70, true);
+
+
+--
+-- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_permission_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_codename_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_group_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_permission_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: backend_bug backend_bug_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_bug
+    ADD CONSTRAINT backend_bug_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: backend_command backend_command_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_command
+    ADD CONSTRAINT backend_command_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: backend_user backend_user_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.backend_user
+    ADD CONSTRAINT backend_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: dicedex_app_game dicedex_app_game_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_game
+    ADD CONSTRAINT dicedex_app_game_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: dicedex_app_theme dicedex_app_theme_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_theme
+    ADD CONSTRAINT dicedex_app_theme_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_app_label_model_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: dicedex_app_game_owner_id_2bb58ea9; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX dicedex_app_game_owner_id_2bb58ea9 ON public.dicedex_app_game USING btree (user_id);
+
+
+--
+-- Name: dicedex_app_theme_user_id_01686d48; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX dicedex_app_theme_user_id_01686d48 ON public.dicedex_app_theme USING btree (user_id);
+
+
+--
+-- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: spock-117
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissio_permission_id_84c5c92e_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_2f476e4b_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: dicedex_app_game dicedex_app_game_user_id_c92f679f_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_game
+    ADD CONSTRAINT dicedex_app_game_user_id_c92f679f_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: dicedex_app_theme dicedex_app_theme_user_id_01686d48_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.dicedex_app_theme
+    ADD CONSTRAINT dicedex_app_theme_user_id_01686d48_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_content_type_id_c4bce8eb_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: spock-117
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
