@@ -23,16 +23,14 @@ const Nav = (props) => {
                 {' '}
                 Code Seonbi
                 </div>
-            </Navbar.Brand>
-            <Navbar.Collapse className="justify-content-end">
-            <Toggle
+                <Toggle
                 icon={props.icon}
                 toggleMode={props.toggleMode}
-            />
-        </Navbar.Collapse>
-        <Navbar.Collapse className="justify-content-end">            
-            <div className='userName'><b>{props.userName}</b></div>
-        </Navbar.Collapse>
+                />
+            </Navbar.Brand>
+            <Navbar.Collapse className="justify-content-end" stackable>            
+                <div className='userName'><b>[{props.userName}]</b></div>
+            </Navbar.Collapse>
             </Container>
         </Navbar>
         <br></br>

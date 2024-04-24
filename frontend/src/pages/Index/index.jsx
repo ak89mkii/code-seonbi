@@ -71,9 +71,10 @@ class Home extends Component {
         fetch("/backend/user-list")
             .then((response) => response.json())
             .then((data) => {
+                console.log(data[1].username)
                 this.setState ({
                     // "Bug" model data.
-                    newData: data.username.stringify
+                    newData: data[1].username
                 })
             })
     };

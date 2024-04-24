@@ -89,9 +89,18 @@ html, body {
 
 .userName {
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-family: 'Nanum Brush Script', cursive;
   color: white;
+}
+
+@media (max-width: 750px) {
+  .userName {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Nanum Brush Script', cursive;
+    color: white;
+  }
 }
 
 .sectTitle {
