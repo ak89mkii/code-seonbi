@@ -86,6 +86,8 @@ https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 // https://stackoverflow.com/questions/40477245/is-it-possible-to-use-if-else-statement-in-react-render-function
 // https://stackoverflow.com/questions/30641512/create-database-from-command-line-in-postgresql
 // https://www.redswitches.com/blog/drop-postgresql-database-examples/#:~:text=Step%20%231%3A%20Open%20pgAdmin%20and,menu%2C%20choose%20Delete%2FDrop.
+// https://stackoverflow.com/questions/65194508/django-rest-framework-response-is-not-defined-error
+// https://stackoverflow.com/questions/15770488/return-the-current-user-with-django-rest-framework
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
