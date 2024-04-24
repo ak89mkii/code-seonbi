@@ -5,6 +5,7 @@ from .models import Bug, Command
 from django.contrib.auth.models import User
 from rest_framework import permissions
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
+from rest_framework.response import Response
 
 
 # Create your views here.
@@ -34,7 +35,7 @@ class CreateCommandItem(generics.CreateAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    authentication_classes = [SessionAuthentication, BasicAuthentication]
+    # authentication_classes = [SessionAuthentication, BasicAuthentication]
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -52,7 +53,13 @@ class DeleteCommandItem(generics.DestroyAPIView):
 
 
 # User Class:
-# POST requests only.
+# GET requests only.
 class GetUserAll(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+# GET requests only.
+class GetUserCurent(generics.ListAPIView):
+   def get(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)

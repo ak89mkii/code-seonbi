@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import CreateBugItem, GetBugAll, DeleteBugItem, CreateCommandItem, GetCommandAll, DeleteCommandItem, GetUserAll
+from .views import CreateBugItem, GetBugAll, DeleteBugItem, CreateCommandItem, GetCommandAll, DeleteCommandItem, GetUserAll, GetUserCurent
 
 urlpatterns = [
     # Bug:
@@ -16,4 +16,5 @@ urlpatterns = [
 
     # User:
     path('user-list', GetUserAll.as_view()),
+    path('user-logged_in', GetUserCurent.as_view()),
 ]

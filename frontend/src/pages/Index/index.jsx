@@ -68,13 +68,14 @@ class Home extends Component {
     // Function: Sets state to data from backend Bug model.
     // Need arrow function to use setState.
     getCommandList = () => {
-        fetch("/backend/user-list")
+        fetch("/backend/user-logged_in")
             .then((response) => response.json())
             .then((data) => {
-                console.log(data[1].username)
+                console.log(data.username)
+                console.log(data.id)
                 this.setState ({
                     // "Bug" model data.
-                    newData: data[1].username
+                    newData: data.username
                 })
             })
     };
