@@ -18,4 +18,4 @@ class UserSerializer(serializers.ModelSerializer):
     owner= serializers.ReadOnlyField(source='owner.username')
     class Meta:
         model = User
-        fields = ('id', 'username', 'owner')  
+        fields = ('id', 'username', 'commands', 'owner')  

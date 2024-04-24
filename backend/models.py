@@ -84,7 +84,7 @@ class Command(models.Model):
     )    
     notes = models.CharField(max_length=1000, default='Over 9000!')
     timestamp = models.DateField(auto_now_add=True)
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey('auth.user', related_name='commands', on_delete=models.CASCADE)
 
     # def __str__(self):
     #     return self.skill
@@ -93,5 +93,8 @@ class Command(models.Model):
     #     return reverse('index')
 
 
-    class User(models.Model):
-        username = models.CharField(max_length=50)
+    # class User(models.Model):
+    #     username = models.CharField(max_length=50)
+
+
+# Spock
