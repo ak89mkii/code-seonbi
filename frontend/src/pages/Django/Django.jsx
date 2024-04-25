@@ -12,7 +12,8 @@ import {CopyToClipboard} from 'react-copy-to-clipboard';
 class Django extends Component {
     state = {
         // Temporary array before JSON data mapped from fetch.
-        newData: [],        
+        newData: [],
+        user: [], 
         // Determines whether state should be rendred from localStorage check.
         check: 0,
         // Dark Mode state.
@@ -62,6 +63,21 @@ class Django extends Component {
         localStorage.setItem('icon', moon);
     };
 
+    // Function: Sets state to data from backend authenticated User.
+    // Need arrow function to use setState.
+    getUserLoggedIn = () => {
+        fetch("/backend/user-logged_in")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data.username)
+                console.log(data.id)
+                this.setState ({
+                    // "Bug" model data.
+                    user: data.username
+                })
+            })
+    };
+
     // Function: Sets state to data from backend Command model.
     // Need arrow function to use setState.
     getCommandList = () => {
@@ -85,6 +101,7 @@ class Django extends Component {
     };
 
     componentDidMount() {
+        this.getUserLoggedIn();
         this.getCommandList();
         // Retreive mode in localStorage:
         const check = localStorage.getItem('check');
@@ -122,6 +139,7 @@ class Django extends Component {
                         mode={this.state.mode}
                         icon={this.state.icon}
                         toggleMode={this.toggleMode}
+                        userName={this.state.user}
                     />
                     <figure class="text-center">
                         <div className={this.state.mode}>

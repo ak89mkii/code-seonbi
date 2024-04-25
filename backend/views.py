@@ -7,6 +7,8 @@ from rest_framework import permissions
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework.response import Response
 
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
 
 # Create your views here.
 
@@ -35,10 +37,17 @@ class CreateCommandItem(generics.CreateAPIView):
     queryset = Command.objects.all()
     serializer_class = CommandSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    # authentication_classes = [SessionAuthentication, BasicAuthentication]
+    authentication_classes = [SessionAuthentication, BasicAuthentication]
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+    # def perform_create(self, serializer):
+    #     serializer.save(owner=self.request.user)
+
+    def get(self, request, format=None):
+        content = {
+            'user': str(request.user),  # `django.contrib.auth.User` instance.
+            'auth': str(request.auth),  # None
+        }
+        return Response(content)
 
 # GET requests only.
 class GetCommandAll(generics.ListAPIView):

@@ -15,6 +15,7 @@ class CommandAdd extends Component {
             description: '' ,
             command: '', 
             notes: '', 
+            owner: 1,
             // Dark mode state.
             open: false,
             mode: 'dark',
@@ -51,11 +52,18 @@ class CommandAdd extends Component {
         }
     }
 
+    componentDidMount() {
+        console.log(this.state.owner)   
+    }
+
     // Function: POST request for "CommandAdd" form.
     postCommandList = (e) => {
         e.preventDefault();
-        const command = { description: this.state.description, technology: this.state.technology, type: this.state.type, command: this.state.command, notes: this.state.notes, };
+        const command = { description: this.state.description, technology: this.state.technology, type: this.state.type, command: this.state.command, notes: this.state.notes, owner: this.state.owner};
         console.log(command)
+
+        // const csrfToken = getCookie('CSRF-TOKEN');
+        // console.log(csrfToken)
 
         fetch("/backend/command-add", {
             credentials: 'include',
@@ -64,7 +72,7 @@ class CommandAdd extends Component {
             body: JSON.stringify(command)
         })
 
-        window.location.href = "/"
+        // window.location.href = "/"
     }
 
     render() {
