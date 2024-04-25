@@ -65,9 +65,9 @@ class Home extends Component {
         setTimeout(function () { window.location.reload(); }, 10)
     };
 
-    // Function: Sets state to data from backend Bug model.
+    // Function: Sets state to data from backend authenticated User.
     // Need arrow function to use setState.
-    getCommandList = () => {
+    getUserLoggedIn = () => {
         fetch("/backend/user-logged_in")
             .then((response) => response.json())
             .then((data) => {
@@ -81,7 +81,7 @@ class Home extends Component {
     };
 
     componentDidMount() {
-        this.getCommandList();
+        this.getUserLoggedIn();
         // Retreive mode in localStorage:
         const check = localStorage.getItem('check');
         this.setState({ check });

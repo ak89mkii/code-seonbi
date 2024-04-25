@@ -59,7 +59,7 @@ class GetUserAll(generics.ListAPIView):
     serializer_class = UserSerializer
 
 # GET requests only.
-class GetUserCurent(generics.ListAPIView):
+class GetUserCurrent(generics.ListAPIView):
    def get(self, request):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)

@@ -62,14 +62,14 @@ class Django extends Component {
         localStorage.setItem('icon', moon);
     };
 
-    // Function: Sets state to data from backend Bug model.
+    // Function: Sets state to data from backend Command model.
     // Need arrow function to use setState.
     getCommandList = () => {
         fetch("/backend/command-list")
             .then((response) => response.json())
             .then((data) => {
                 this.setState ({
-                    // "Bug" model data.
+                    // "Command" model data.
                     newData: data
                 })
             })
