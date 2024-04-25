@@ -88,6 +88,9 @@ https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 // https://www.redswitches.com/blog/drop-postgresql-database-examples/#:~:text=Step%20%231%3A%20Open%20pgAdmin%20and,menu%2C%20choose%20Delete%2FDrop.
 // https://stackoverflow.com/questions/65194508/django-rest-framework-response-is-not-defined-error
 // https://stackoverflow.com/questions/15770488/return-the-current-user-with-django-rest-framework
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+// https://www.geeksforgeeks.org/csrf-token-in-django/
+// https://www.youtube.com/watch?v=_nZygPQ3gmo
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:

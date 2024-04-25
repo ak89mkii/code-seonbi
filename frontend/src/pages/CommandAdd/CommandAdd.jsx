@@ -15,7 +15,8 @@ class CommandAdd extends Component {
             description: '' ,
             command: '', 
             notes: '', 
-            owner: 1,
+            owner: '',
+            user: '',
             // Dark mode state.
             open: false,
             mode: 'dark',
@@ -52,8 +53,56 @@ class CommandAdd extends Component {
         }
     }
 
-    componentDidMount() {
+    // Save mode: light in local Storage:
+    handleFormSubmitLight = () => {
+        localStorage.setItem('check', 1);
+        localStorage.setItem('mode', 'light');
+        localStorage.setItem('mode2', 'lightNoText');
+        localStorage.setItem('icon', sun);
+    };
 
+    // Save mode: dark in local Storage:
+    handleFormSubmitDark = () => {
+        // localStorage.setItem('check', 1);
+        localStorage.setItem('mode', 'dark');
+        localStorage.setItem('mode2', 'darkNoText');
+        localStorage.setItem('icon', moon);
+    };
+
+    // Function: Sets state to data from backend authenticated User.
+    // Need arrow function to use setState.
+    getUserLoggedIn = () => {
+        fetch("/backend/user-logged_in")
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data.username)
+                console.log(data.id)
+                this.setState ({
+                    // "Bug" model data.
+                    owner: data.id,
+                    user: data.username
+                })
+            })
+    };
+
+    componentDidMount() {
+        this.getUserLoggedIn();
+        // Retreive mode in localStorage:
+        const check = localStorage.getItem('check');
+        this.setState({ check });
+        console.log({check})
+
+        if (check == 1) {
+        // console.log("halo")
+
+        const mode = localStorage.getItem('mode');
+        this.setState({ mode });
+        const mode2 = localStorage.getItem('mode2');
+        this.setState({ mode2 });
+        const icon = localStorage.getItem('icon');
+        this.setState({ icon });
+        
+        }
     }
 
     // Function: POST request for "CommandAdd" form.
@@ -88,6 +137,7 @@ class CommandAdd extends Component {
                     mode={this.state.mode}
                     icon={this.state.icon}
                     toggleMode={this.toggleMode}
+                    userName={this.state.user}
                 />
                 <figure class="text-center">
                     <div>
