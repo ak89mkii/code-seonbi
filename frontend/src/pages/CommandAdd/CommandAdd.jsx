@@ -53,22 +53,26 @@ class CommandAdd extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.owner)   
+
     }
 
     // Function: POST request for "CommandAdd" form.
-    postCommandList = (e) => {
+    postCommandList = (e, name) => {
         e.preventDefault();
         const command = { description: this.state.description, technology: this.state.technology, type: this.state.type, command: this.state.command, notes: this.state.notes, owner: this.state.owner};
         console.log(command)
 
-        // const csrfToken = getCookie('CSRF-TOKEN');
-        // console.log(csrfToken)
+        // Retreives the CSRF Token for protected POST.
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        let token = value.slice(12)
+        console.log(token)
 
         fetch("/backend/command-add", {
             credentials: 'include',
             method: 'POST',
-            headers: {'Content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json', 'X-CSRFToken': token},
             body: JSON.stringify(command)
         })
 
