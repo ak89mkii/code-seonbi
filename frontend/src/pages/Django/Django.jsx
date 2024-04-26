@@ -156,7 +156,7 @@ class Django extends Component {
     componentDidUpdate() {
         if (this.state.copied == true) {
             clearTimeout(this.timer);
-            this.timer = setTimeout(() => this.setState({idCheck: undefined}), 5000)
+            this.timer = setTimeout(() => this.setState({idCheck: undefined, copied: false}), 5000)
         }
     }
 
@@ -208,7 +208,6 @@ class Django extends Component {
                                 <Card style={{ width: '40rem' }} border="dark">
                                     <Card.Header><p></p>
                                     {console.log(list.owner)}
-                                    <p><b>Created By:</b> {(list.owner)}</p>
                                     <p><b>Description:</b> {(list.description)}</p>
                                     </Card.Header>
 
@@ -265,7 +264,7 @@ class Django extends Component {
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
                                     <Card.Footer className="text-center">
                                     <p><b>{(list.technology)}</b></p>
-                                    <p>{(list.timestamp)}</p>
+                                    <p><b>Owner:</b> {(list.owner)} <b>| Created or Edited:</b> {(list.timestamp)}</p>
                                     </Card.Footer>
                                 </Card>
                             </Row>
