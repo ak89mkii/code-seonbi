@@ -92,8 +92,16 @@ class Django extends Component {
     };
 
     // Function: Sends delete request to backend based on id.
-    deleteCommandList  = (id) => {
-        fetch('/backend/command-delete/' + id, {method: 'DELETE',})
+    deleteCommandList  = (id, name) => {
+        // Retreives the CSRF Token for protected POST.
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        let token = value.slice(12)
+        console.log(token)
+
+        fetch('/backend/command-delete/' + id, {method: 'DELETE', headers: {'Content-Type': 'application/json', 'X-CSRFToken': token},
+    })
             .then(res => {
                 return res.json()
             }) 
