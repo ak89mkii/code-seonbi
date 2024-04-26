@@ -144,6 +144,23 @@ class Django extends Component {
     }
 
     render() {
+        let addCommandButton;
+        let editButton;
+        let deleteButton;
+        if (this.state.user == 'Not_Signed_In') {
+            addCommandButton = undefined;
+            editButton = undefined;
+            deleteButton= undefined;
+        } else {
+        addCommandButton = <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>;
+        editButton = <Button variant="warning">Edit</Button>;
+        deleteButton = <Button 
+            variant="danger" 
+            onClick={ () => this.deleteCommandList(list.id) }
+            >
+            Delete
+            </Button>
+        }
         
         return (
             <div className={this.state.mode2}>
@@ -162,7 +179,8 @@ class Django extends Component {
                                 <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
                         </div>
-                        <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>
+                        {addCommandButton}
+                        {/* <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link> */}
                     </figure>
                     
 
@@ -210,13 +228,8 @@ class Django extends Component {
                                     {(list.notes)}
                                     </Alert>
                                     <div className="mb-2">
-                                    <Button variant="warning">Edit</Button>{' '}
-                                    <Button 
-                                        variant="danger" 
-                                        onClick={ () => this.deleteCommandList(list.id) }
-                                    >
-                                        Delete
-                                    </Button>{' '}
+                                    {editButton}{' '}
+                                    {deleteButton}{' '}
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}
