@@ -22,13 +22,51 @@ const CardsMain = (props) => {
                     <Container>
                         <CardGroup className='cardGroup'>
                             <Card border={props.cardMode}>                            
-                                <Link to="/bug">
+                                {/* <Link to="/bug"> */}
                                 <Card.Img id='bugImage' variant="top" src='https://qph.cf2.quoracdn.net/main-qimg-c7bf8a644276ec5ad35d658a19bc938e' onClick={props.handleShow}/>
-                                </Link>
+                                {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Bug Tracker</div></Card.Title>
                                     <Card.Text>
                                         Keep track of your programming bugs in an organized and efficicent manner.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>CLI | MacOS Zsh</div></Card.Title>
+                                    <Card.Text>
+                                    JavaScript Framework for Android and iOS Native Applications
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                {/* <Link to="/bug"> */}
+                                <Card.Img variant="top" src={link} onClick={props.handleShow}/>
+                                {/* </Link> */}
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>CLI | Linux Bash</div></Card.Title>
+                                    <Card.Text>
+                                    JavaScript Framework for Android and iOS Native Applications
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>                            
+                            </CardGroup>
+
+                            <CardGroup className='cardGroup'>
+                            <Card>
+                                <Link to="/ps">
+                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>PowerShell CLI</div></Card.Title>
+                                    <Card.Text>
+                                    Windows OS Scripting | <b>Command Line Interface</b>
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -64,9 +102,9 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={git} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>Git & GitHub</div></Card.Title>
+                                    <Card.Title><div className='title2'>Git | GitHub</div></Card.Title>
                                     <Card.Text>
-                                        Version Control & Remote Repository | Terminal Commands | Setup
+                                        Version Control | Remote Repository
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -78,7 +116,7 @@ const CardsMain = (props) => {
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Heroku</div></Card.Title>
                                     <Card.Text>
-                                    Hosting Platform | Heroku CLI | Setup
+                                    Hosting Platform | Heroku CLI
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -90,25 +128,13 @@ const CardsMain = (props) => {
                                 <Card.Body>
                                     <Card.Title><div className='title2'>PostgreSQL</div></Card.Title>
                                     <Card.Text>
-                                    Relational Database | Shell & Terminal Commands
+                                    Relational Database | Shell Commands
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                         </CardGroup>
 
                         <CardGroup className='cardGroup'>
-                            <Card>
-                                <Link to="/ps">
-                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
-                                </Link>
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>PowerShell CLI</div></Card.Title>
-                                    <Card.Text>
-                                    Windows OS Scripting | <b>Command Line Interface</b>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <p className='break'>-</p>
                             <Card>                            
                                 {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={python} onClick={props.handleShow}/>
@@ -132,39 +158,13 @@ const CardsMain = (props) => {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
-                        </CardGroup>
-
-                        <CardGroup className="cardGroup">
+                            <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
                                 <Card.Img variant="top" src={rn} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
                                     <Card.Title><div className='title2'>React Native</div></Card.Title>
-                                    <Card.Text>
-                                    JavaScript Framework for Android and iOS Native Applications
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <p className='break'>-</p>
-                            <Card>
-                                {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
-                                {/* </Link> */}
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>Linux | MacOS Terminal</div></Card.Title>
-                                    <Card.Text>
-                                    JavaScript Framework for Android and iOS Native Applications
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <p className='break'>-</p>
-                            <Card>
-                                {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src={link} onClick={props.handleShow}/>
-                                {/* </Link> */}
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>Hyperlink Share</div></Card.Title>
                                     <Card.Text>
                                     JavaScript Framework for Android and iOS Native Applications
                                     </Card.Text>
