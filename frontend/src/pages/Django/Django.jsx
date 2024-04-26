@@ -97,6 +97,23 @@ class Django extends Component {
             })
     };
 
+    // Function: Sends update request to backend based on id.
+    updateCommandList  = (id, name) => {
+        // Retreives the CSRF Token for protected POST.
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        let token = value.slice(12)
+        console.log(token)
+
+        fetch('/backend/command-update/' + id, {method: 'UPDATE', headers: {'Content-Type': 'application/json', 'X-CSRFToken': token},
+    })
+            .then(res => {
+                return res.json()
+            }) 
+            .then(window.location.reload())
+    };
+
     // Function: Sends delete request to backend based on id.
     deleteCommandList  = (id, name) => {
         // Retreives the CSRF Token for protected POST.
@@ -152,14 +169,20 @@ class Django extends Component {
             editButton = undefined;
             deleteButton= undefined;
         } else {
-        addCommandButton = <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>;
-        editButton = <Button variant="warning">Edit</Button>;
-        deleteButton = <Button 
-            variant="danger" 
-            onClick={ () => this.deleteCommandList(list.id) }
-            >
-            Delete
-            </Button>
+            addCommandButton = <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>;
+            editButton = <Button 
+                variant="warning"
+                // onClick={ () => this.updateCommandList(list.id) }
+                >
+                    Edit 
+                </Button>;
+            deleteButton = 
+                <Button 
+                variant="danger" 
+                onClick={ () => this.deleteCommandList(list.id) }
+                >
+                    Delete
+                </Button>
         }
         
         return (
@@ -228,8 +251,34 @@ class Django extends Component {
                                     {(list.notes)}
                                     </Alert>
                                     <div className="mb-2">
-                                    {editButton}{' '}
-                                    {deleteButton}{' '}
+
+                                    {(() => {
+                                        if (this.state.user == 'Not_Signed_In') {
+                                            return(
+                                                <div></div>
+                                            );
+                                        } else {
+                                            return (
+                                                <div>
+                                                    <Button 
+                                                        variant="warning"
+                                                        onClick={ () => this.updateCommandList(list.id) }
+                                                        >
+                                                        Edit 
+                                                    </Button>{' '}
+                                                    <Button 
+                                                        variant="danger" 
+                                                        onClick={ () => this.deleteCommandList(list.id) }
+                                                    >
+                                                        Delete
+                                                    </Button>{' '}
+                                                </div>
+                                            )
+                                        }
+                                    })()}
+
+                                    {/* {editButton}{' '}
+                                    {deleteButton}{' '} */}
                                     </div>
                                     </Card.Body>
                                     {/* <Card.Img variant="bottom" src="https://assets.nintendo.com/image/upload/ar_16:9,b_auto,c_pad,dpr_3.0,f_auto,q_auto,w_500/b_rgb:ffffff/v1/ncom/en_US/games/switch/s/sonic-mania-switch/hero" /> */}

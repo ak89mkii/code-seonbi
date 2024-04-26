@@ -60,6 +60,12 @@ class DeleteCommandItem(generics.DestroyAPIView):
     serializer_class = CommandSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
+# UPDATE requests only.
+class UpdateCommandItem(generics.UpdateAPIView):
+    queryset = Command.objects.all()
+    serializer_class = CommandSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
 
 # User Class:
 # GET requests only.
