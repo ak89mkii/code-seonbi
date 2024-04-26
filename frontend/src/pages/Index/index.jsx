@@ -11,6 +11,7 @@ class Home extends Component {
     state = {
         // Determines whether state should be rendred from localStorage check.
         check: 0,
+        user: '',
         // Dark Mode state.
         open: false,
         mode: 'dark',
@@ -73,10 +74,16 @@ class Home extends Component {
             .then((data) => {
                 console.log(data.username)
                 console.log(data.id)
-                this.setState ({
-                    // "Bug" model data.
-                    newData: data.username
-                })
+                if (data.username == '') {
+                    this.setState ({
+                        // "User" model data.
+                        user: "Not_Signed_In"
+                    })
+                } else {
+                    this.setState ({
+                        user: data.username
+                    })
+                }
             })
     };
 
@@ -109,7 +116,7 @@ class Home extends Component {
                         mode={this.state.mode}
                         icon={this.state.icon}
                         toggleMode={this.toggleMode}
-                        userName={this.state.newData}
+                        userName={this.state.user}
                     />
                     <Welcome 
                         mode={this.state.mode} 

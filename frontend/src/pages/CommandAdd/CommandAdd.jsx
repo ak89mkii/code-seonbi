@@ -82,11 +82,16 @@ class CommandAdd extends Component {
             .then((data) => {
                 console.log(data.username)
                 console.log(data.id)
-                this.setState ({
-                    // "Bug" model data.
-                    owner: data.id,
-                    user: data.username
-                })
+                if (data.username == '') {
+                    this.setState ({
+                        // "User" model data.
+                        user: "Not_Signed_In"
+                    })
+                } else {
+                    this.setState ({
+                        user: data.username
+                    })
+                }
             })
     };
 
