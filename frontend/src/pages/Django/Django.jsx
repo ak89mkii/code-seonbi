@@ -71,10 +71,16 @@ class Django extends Component {
             .then((data) => {
                 console.log(data.username)
                 console.log(data.id)
-                this.setState ({
-                    // "Bug" model data.
-                    user: data.username
-                })
+                if (data.username == '') {
+                    this.setState ({
+                        // "Bug" model data.
+                        user: "Not_Signed_In"
+                    })
+                } else {
+                    this.setState ({
+                        user: data.username
+                    })
+                }
             })
     };
 
