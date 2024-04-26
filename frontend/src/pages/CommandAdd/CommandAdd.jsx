@@ -17,11 +17,14 @@ class CommandAdd extends Component {
             notes: '', 
             owner: '',
             user: '',
+            // Determines whether state should be rendred from localStorage check.
+            check: 0,
             // Dark mode state.
             open: false,
             mode: 'dark',
             mode2: 'darkNoText',
             icon: moon,
+            value:''
         };
 
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -43,13 +46,15 @@ class CommandAdd extends Component {
                 mode: 'dark',
                 mode2: 'darkNoText',
                 icon: moon,
-            })
+            })            
+            this.handleFormSubmitDark();
         } else if (this.state.mode == 'dark') {
             this.setState({
                 mode: 'light',
                 mode2: 'lightNoText',
                 icon: sun,
             })
+            this.handleFormSubmitLight();
         }
     }
 
