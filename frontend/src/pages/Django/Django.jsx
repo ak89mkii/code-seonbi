@@ -162,27 +162,10 @@ class Django extends Component {
 
     render() {
         let addCommandButton;
-        let editButton;
-        let deleteButton;
         if (this.state.user == 'Not_Signed_In') {
             addCommandButton = undefined;
-            editButton = undefined;
-            deleteButton= undefined;
         } else {
             addCommandButton = <Link to="/command_add"><Button>Add Command or Docs Link</Button></Link>;
-            editButton = <Button 
-                variant="warning"
-                // onClick={ () => this.updateCommandList(list.id) }
-                >
-                    Edit 
-                </Button>;
-            deleteButton = 
-                <Button 
-                variant="danger" 
-                onClick={ () => this.deleteCommandList(list.id) }
-                >
-                    Delete
-                </Button>
         }
         
         return (
