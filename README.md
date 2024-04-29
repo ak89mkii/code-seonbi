@@ -91,6 +91,7 @@ https://stackoverflow.com/questions/6358030/how-to-reset-django-admin-password
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 // https://www.geeksforgeeks.org/csrf-token-in-django/
 // https://www.youtube.com/watch?v=_nZygPQ3gmo
+// https://stackoverflow.com/questions/40477245/is-it-possible-to-use-if-else-statement-in-react-render-function
 // 
 #### Images References / Credits:
 #### Sounds References / Credits:
