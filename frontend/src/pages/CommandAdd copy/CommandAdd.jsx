@@ -11,7 +11,7 @@ class CommandAdd extends Component {
         super(props);
         this.state = {
             //  Temporary array state before JSON data mapped from fetch.
-            technology: 'Django',
+            technology: '',
             description: '' ,
             command: '', 
             notes: '', 
@@ -82,11 +82,16 @@ class CommandAdd extends Component {
             .then((data) => {
                 console.log(data.username)
                 console.log(data.id)
-                this.setState ({
-                    // "Bug" model data.
-                    owner: data.id,
-                    user: data.username
-                })
+                if (data.username == '') {
+                    this.setState ({
+                        // "User" model data.
+                        user: "Not_Signed_In"
+                    })
+                } else {
+                    this.setState ({
+                        user: data.username
+                    })
+                }
             })
     };
 
@@ -130,7 +135,7 @@ class CommandAdd extends Component {
             body: JSON.stringify(command)
         })
 
-        window.location.href = "/"
+        // window.location.href = "/"
     }
 
     render() {
@@ -179,7 +184,7 @@ class CommandAdd extends Component {
                                         <option value="CLI | Zsh">CLI | Zsh</option>
                                         <option value="Django">Django</option>
                                         <option value="Django REST Framework">Django REST Framework</option>
-                                        <option value="Git & GitHub">Git & GitHub</option>
+                                        <option value="Git | GitHub">Git & GitHub</option>
                                         <option value="Heroku">Heroku</option>
                                         <option value="PostgreSQL">PostgreSQL</option>
                                         <option value="Python 3">Python 3</option>
