@@ -38,21 +38,21 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | MacOS Zsh</div></Card.Title>
+                                    <Card.Title><div className='title2'>CLI | MacOS (Zsh)</div></Card.Title>
                                     <Card.Text>
-                                    JavaScript Framework for Android and iOS Native Applications
+                                    Command Line Interface Commands                                    
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
                             <p className='break'>-</p>
                             <Card>
                                 {/* <Link to="/bug"> */}
-                                <Card.Img variant="top" src={link} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | Linux Bash</div></Card.Title>
+                                    <Card.Title><div className='title2'>CLI | Linux (Bash)</div></Card.Title>
                                     <Card.Text>
-                                    JavaScript Framework for Android and iOS Native Applications
+                                    Command Line Interface Commands                                    
                                     </Card.Text>
                                 </Card.Body>
                             </Card>                            
@@ -64,9 +64,9 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>PowerShell CLI</div></Card.Title>
+                                    <Card.Title><div className='title2'>CLI | Command Prompt | PowerShell</div></Card.Title>
                                     <Card.Text>
-                                    Windows OS Scripting | <b>Command Line Interface</b>
+                                    Command Line Interface Commands                                    
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
