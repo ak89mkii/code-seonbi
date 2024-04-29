@@ -29,7 +29,7 @@ class Footer extends Component {
                         </div>
                         <div class="col">
                             <a href='http://127.0.0.1:8000/api-auth/login/?next=/backend/command-list' target='_blank'>
-                            <Button variant='outline-light'>Admin Login | Logout</Button>
+                            <Button variant='outline-light'>Admin Login</Button>
                             </a>
                         </div>
                     </div>
