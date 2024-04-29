@@ -18,6 +18,8 @@ import BugAdd from './pages/BugAdd/BugAdd.jsx'
 import Django from './pages/Django/Django.jsx'
 import CommandAdd from './pages/CommandAdd/CommandAdd.jsx'
 import PowerShell from './pages/PowerShell/PowerShell.jsx';
+import Bash from './pages/Bash/Bash.jsx';
+import Zsh from './pages/Zsh/Zsh.jsx';
 
 class App extends Component {
   state = {
@@ -33,10 +35,11 @@ class App extends Component {
             {/* All our Routes goes here! */}
             <Route exact path="/" component={Home} />
             <Route exact path="/bug" component={Bug} />
-            <Route exact path="/bug_add" component={BugAdd} />
+            <Route exact path="/cli_bash" component={Bash} />
+            <Route exact path="/cli_zsh" component={Zsh} />
             <Route exact path="/django" component={Django} />
-            <Route exact path="/ps" component={PowerShell} />
-            <Route exact path="/command_add" component={CommandAdd} />
+            <Route exact path="/cli_ps" component={PowerShell} />
+            <Route exact path="/command_add" component={CommandAdd} />zsh
             <Route component={Error404} />
           </Switch>
         </Router>      

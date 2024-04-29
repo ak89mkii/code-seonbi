@@ -34,9 +34,9 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card>
-                                {/* <Link to="/bug"> */}
+                                <Link to="/cli_zsh">
                                 <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
-                                {/* </Link> */}
+                                </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>CLI | MacOS (Zsh)</div></Card.Title>
                                     <Card.Text>
@@ -46,7 +46,7 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card>
-                                {/* <Link to="/bug"> */}
+                                {/* <Link to="/cli_bash"> */}
                                 <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
@@ -60,7 +60,7 @@ const CardsMain = (props) => {
 
                             <CardGroup className='cardGroup'>
                             <Card>
-                                <Link to="/ps">
+                                <Link to="/cli_ps">
                                 <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>

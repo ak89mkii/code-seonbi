@@ -27,12 +27,15 @@ STATUSES = (
 
 # Command Class:
 TECHNOLOGIES_02 = (
+    ('CLI | Bash', 'CLI | Bash'),    
+    ('CLI | Command Prompt', 'CLI | Command Prompt'),    
+    ('CLI | PowerShell', 'CLI | PowerShell'),    
+    ('CLI | Zsh', 'CLI | Zsh'),    
     ('Django', 'Django'),
     ('Django REST Framework', 'Django REST Framework'),
-    ('Git & GitHub', 'Git & GitHub'),
+    ('Git | GitHub', 'Git | GitHub'),
     ('Heroku', 'Heroku'),
     ('PostgreSQL', 'PostgreSQL'),
-    ('PowerShell', 'PowerShell'),    
     ('Python 3', 'Python 3'),    
     ('React.js', 'React.js'),
     ('React Native', 'React Native'),
