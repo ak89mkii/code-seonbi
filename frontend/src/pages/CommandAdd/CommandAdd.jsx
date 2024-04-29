@@ -11,7 +11,7 @@ class CommandAdd extends Component {
         super(props);
         this.state = {
             //  Temporary array state before JSON data mapped from fetch.
-            technology: 'Django',
+            technology: '',
             description: '' ,
             command: '', 
             notes: '', 
@@ -178,12 +178,15 @@ class CommandAdd extends Component {
                                         className='dropdown'
                                         onChange={(e) => this.setState({ technology: e.target.value })}
                                     >
+                                        <option value="CLI | Bash">CLI | Bash</option>
+                                        <option value="CLI | Command Prompt">CLI | Command Prompt</option>                                        
+                                        <option value="CLI | PowerShell">CLI |  PowerShell</option>
+                                        <option value="CLI | Zsh">CLI | Zsh</option>
                                         <option value="Django">Django</option>
                                         <option value="Django REST Framework">Django REST Framework</option>
-                                        <option value="Git & GitHub">Git & GitHub</option>
+                                        <option value="Git | GitHub">Git & GitHub</option>
                                         <option value="Heroku">Heroku</option>
                                         <option value="PostgreSQL">PostgreSQL</option>
-                                        <option value="PowerShell">PowerShell</option>
                                         <option value="Python 3">Python 3</option>
                                         <option value="React.js">React.js</option>
                                         <option value="React Native">React Native</option>

@@ -46,9 +46,9 @@ const CardsMain = (props) => {
                             </Card>
                             <p className='break'>-</p>
                             <Card>
-                                {/* <Link to="/cli_bash"> */}
+                                <Link to="/cli_bash">
                                 <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
-                                {/* </Link> */}
+                                </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>CLI | Linux (Bash)</div></Card.Title>
                                     <Card.Text>

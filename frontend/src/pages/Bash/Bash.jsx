@@ -180,7 +180,7 @@ class Django extends Component {
                     />
                     <figure class="text-center">
                         <div className={this.state.mode}>
-                            <h1 className='title2'>Django References and Commands</h1>
+                            <h1 className='title2'>CLI | Linux (Bash) References and Commands</h1>
                             <blockquote class="blockquote">
                                 <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
@@ -199,7 +199,7 @@ class Django extends Component {
                         <h1 className='sectTitle'>Commands:</h1>
                     </div>
                     {/* { this.getCommandList() } */}
-                    { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Command').map((list) => (
+                    { this.state.newData.filter(list => list.technology === 'CLI | Bash' && list.type === 'Command').map((list) => (
                         <div>
                         <br></br>
                         <br></br>
@@ -281,7 +281,7 @@ class Django extends Component {
                         <h1 className='sectTitle'>Documentation Links:</h1>
                     </div>
                     {/* { this.getCommandList() } */}
-                    { this.state.newData.filter(list => list.technology === 'Django' && list.type === 'Documentation Link').map((list) => (
+                    { this.state.newData.filter(list => list.technology === 'CLI | Bash' && list.type === 'Documentation Link').map((list) => (
                         <div>
                         <br></br>
                         <br></br>
