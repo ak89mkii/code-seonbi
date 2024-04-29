@@ -28,7 +28,8 @@ class Footer extends Component {
                             <The404Button />
                         </div>
                         <div class="col">
-                            <a href='http://127.0.0.1:8000/api-auth/login/?next=/backend/command-list' target='_blank'>
+                            {/* <a href='http://127.0.0.1:8000/api-auth/login/?next=/backend/command-list' target='_blank'> */}
+                            <a href='www.codeseonbi.com/api-auth/login/?next=/backend/command-list' target='_blank'>
                             <Button variant='outline-light'>Admin Login</Button>
                             </a>
                         </div>
