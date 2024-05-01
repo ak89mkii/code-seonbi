@@ -11,7 +11,7 @@ class CommandAdd extends Component {
         super(props);
         this.state = {
             //  Temporary array state before JSON data mapped from fetch.
-            technology: 'Django',
+            technology: 'CLI | Bash',
             description: '' ,
             command: '', 
             notes: '', 
