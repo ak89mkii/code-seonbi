@@ -38,7 +38,7 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | Bash (Command)</div></Card.Title>
+                                    <Card.Title><div className='title2'>CLI | Bash (Linux)</div></Card.Title>
                                     <Card.Text>
                                     Command Line Interface Commands                                    
                                     </Card.Text>
