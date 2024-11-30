@@ -10,9 +10,6 @@ import react from '../../Img/react.png'
 import rn from '../../Img/rn.png'
 import git from '../../Img/git.png'
 import db from '../../Img/db.png'
-import terminal from '../../Img/terminal.png'
-import link from '../../Img/link.png'
-import ps from '../../Img/ps.png'
 
 const CardsMain = (props) => {
     return (
@@ -22,51 +19,13 @@ const CardsMain = (props) => {
                     <Container>
                         <CardGroup className='cardGroup'>
                             <Card border={props.cardMode}>                            
-                                {/* <Link to="/bug"> */}
+                                <Link to="/bug">
                                 <Card.Img id='bugImage' variant="top" src='https://qph.cf2.quoracdn.net/main-qimg-c7bf8a644276ec5ad35d658a19bc938e' onClick={props.handleShow}/>
-                                {/* </Link> */}
+                                </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Bug Tracker</div></Card.Title>
                                     <Card.Text>
                                         Keep track of your programming bugs in an organized and efficicent manner.
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <p className='break'>-</p>
-                            <Card>
-                                <Link to="/cli_zsh">
-                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
-                                </Link>
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | MacOS (Zsh)</div></Card.Title>
-                                    <Card.Text>
-                                    Command Line Interface Commands                                    
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
-                            <p className='break'>-</p>
-                            <Card>
-                                <Link to="/cli_bash">
-                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
-                                </Link>
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | Linux (Bash)</div></Card.Title>
-                                    <Card.Text>
-                                    Command Line Interface Commands                                    
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>                            
-                            </CardGroup>
-
-                            <CardGroup className='cardGroup'>
-                            <Card>
-                                <Link to="/cli_ps">
-                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
-                                </Link>
-                                <Card.Body>
-                                    <Card.Title><div className='title2'>CLI | Command Prompt | PowerShell</div></Card.Title>
-                                    <Card.Text>
-                                    Command Line Interface Commands                                    
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -102,9 +61,9 @@ const CardsMain = (props) => {
                                 <Card.Img variant="top" src={git} onClick={props.handleShow}/>
                                 {/* </Link> */}
                                 <Card.Body>
-                                    <Card.Title><div className='title2'>Git | GitHub</div></Card.Title>
+                                    <Card.Title><div className='title2'>Git & GitHub</div></Card.Title>
                                     <Card.Text>
-                                        Version Control | Remote Repository
+                                        Version Control & Remote Repository | Terminal Commands | Setup
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -116,7 +75,7 @@ const CardsMain = (props) => {
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Heroku</div></Card.Title>
                                     <Card.Text>
-                                    Hosting Platform | Heroku CLI
+                                    Hosting Platform | Heroku CLI | Setup
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
@@ -128,7 +87,7 @@ const CardsMain = (props) => {
                                 <Card.Body>
                                     <Card.Title><div className='title2'>PostgreSQL</div></Card.Title>
                                     <Card.Text>
-                                    Relational Database | Shell Commands
+                                    Relational Database | Shell & Terminal Commands
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
