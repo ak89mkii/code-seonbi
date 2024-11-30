@@ -13,6 +13,7 @@ import db from '../../Img/db.png'
 import terminal from '../../Img/terminal.png'
 import link from '../../Img/link.png'
 import ps from '../../Img/ps.png'
+// goku
 
 const CardsMain = (props) => {
     return (
