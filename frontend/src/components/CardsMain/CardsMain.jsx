@@ -10,7 +10,8 @@ import react from '../../Img/react.png'
 import rn from '../../Img/rn.png'
 import git from '../../Img/git.png'
 import db from '../../Img/db.png'
-import terminal from '../../Img/terminal.png'
+import terminal_b from '../../Img/terminal_b.jpg'
+import terminal_z from '../../Img/terminal_z.jpg'
 import link from '../../Img/link.png'
 import ps from '../../Img/ps.png'
 // Goku
@@ -36,7 +37,7 @@ const CardsMain = (props) => {
                             <p className='break'>-</p>
                             <Card>
                                 <Link to="/cli_bash">
-                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={terminal_b} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>CLI | Bash (Linux)</div></Card.Title>
@@ -48,7 +49,7 @@ const CardsMain = (props) => {
                             <p className='break'>-</p>
                             <Card>
                                 <Link to="/cli_ps">
-                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>CLI | Command Prompt | PowerShell</div></Card.Title>
@@ -62,7 +63,7 @@ const CardsMain = (props) => {
                             <CardGroup className='cardGroup'>
                             <Card>
                                 <Link to="/cli_zsh">
-                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
+                                <Card.Img variant="top" src={terminal_z} onClick={props.handleShow}/>
                                 </Link>
                                 <Card.Body>
                                     <Card.Title><div className='title2'>CLI | Zsh (MacOS)</div></Card.Title>
