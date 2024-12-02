@@ -180,7 +180,7 @@ class Django extends Component {
                     />
                     <figure class="text-center">
                         <div className={this.state.mode}>
-                            <h1 className='title2'>CLI  | MacOS (Zsh) References and Commands</h1>
+                            <h1 className='title2'>CLI  | Zsh (MacOS) References and Commands</h1>
                             <blockquote class="blockquote">
                                 <p className='title2Alt'>Terminal Commands, Documentation Links, and References</p>
                             </blockquote>
