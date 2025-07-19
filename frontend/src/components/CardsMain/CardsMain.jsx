@@ -30,7 +30,7 @@ const CardsMain = (props) => {
                                 <Card.Body>
                                     <Card.Title><div className='title2'>Bug Tracker</div></Card.Title>
                                     <Card.Text>
-                                        Keep track of your programming bugs in an organized and efficicent manner.
+                                        Keep track of your programming bugs in an organized and efficient manner.
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
