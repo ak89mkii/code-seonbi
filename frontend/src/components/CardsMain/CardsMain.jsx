@@ -14,7 +14,6 @@ import terminal from '../../Img/terminal.png'
 import terminal_z from '../../Img/terminal_z.png'
 import link from '../../Img/link.png'
 import ps from '../../Img/ps.png'
-// Goku
 
 const CardsMain = (props) => {
     return (
