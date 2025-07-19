@@ -10,6 +10,11 @@ import react from '../../Img/react.png'
 import rn from '../../Img/rn.png'
 import git from '../../Img/git.png'
 import db from '../../Img/db.png'
+import terminal from '../../Img/terminal.png'
+import terminal_z from '../../Img/terminal_z.png'
+import link from '../../Img/link.png'
+import ps from '../../Img/ps.png'
+// Goku
 
 const CardsMain = (props) => {
     return (
@@ -26,6 +31,44 @@ const CardsMain = (props) => {
                                     <Card.Title><div className='title2'>Bug Tracker</div></Card.Title>
                                     <Card.Text>
                                         Keep track of your programming bugs in an organized and efficicent manner.
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                <Link to="/cli_bash">
+                                <Card.Img variant="top" src={terminal} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>CLI | Bash (Linux)</div></Card.Title>
+                                    <Card.Text>
+                                    Command Line Interface Commands                                    
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <p className='break'>-</p>
+                            <Card>
+                                <Link to="/cli_ps">
+                                <Card.Img variant="top" src={ps} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>CLI | Command Prompt | PowerShell</div></Card.Title>
+                                    <Card.Text>
+                                    Command Line Interface Commands                                    
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>                            
+                            </CardGroup>
+
+                            <CardGroup className='cardGroup'>
+                            <Card>
+                                <Link to="/cli_zsh">
+                                <Card.Img variant="top" src={terminal_z} onClick={props.handleShow}/>
+                                </Link>
+                                <Card.Body>
+                                    <Card.Title><div className='title2'>CLI | Zsh (MacOS)</div></Card.Title>
+                                    <Card.Text>
+                                    Command Line Interface Commands                                    
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
