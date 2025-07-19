@@ -22,7 +22,7 @@ class Footer extends Component {
                 <div class="container">
                     <div class='row'>
                         <div class="col">
-                            © 2022 - 2024 Code Seonbi | Ponder Code | Ponder Enterprises LLC 
+                            © 2022 - 2025 Code Seonbi | Ponder Code | Ponder Enterprises LLC 
                         </div>
                         <div class="col">
                             <The404Button />
